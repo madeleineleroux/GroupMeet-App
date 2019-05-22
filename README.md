@@ -32,8 +32,8 @@ GroupMeet is a tool to make organizing group school work simple. The web app wil
 * Time intervals as small as 15 minutes
 ## Mock-ups:
 #### Overview:
-![Overview page](overview_sketch.png)
+![Overview page](../master/images/overview_sketch.png)
 #### Tasks:
-![Tasks page](tasks_sketch.png)
+![Tasks page](../master/images/tasks_sketch.png)
 #### Group calendar:
-![Group calendar](calendar_sketch.png)
+![Group calendar](../master/images/calendar_sketch.png)
