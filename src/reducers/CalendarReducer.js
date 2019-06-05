@@ -1,10 +1,8 @@
-const initState = new Array(7);
-initState.map(day => {
+const initState = {
+};
 
-})
-
-const cells = (state = initState, action) => {
-    switch(action.type) {
-        //Fill all of this in later
-    }
+const CalendarReducer = (state = initState, action) => {
+    return state;
 }
+
+export default CalendarReducer

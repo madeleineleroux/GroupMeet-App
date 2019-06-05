@@ -15,3 +15,5 @@ const CellReducer = (state = initState, action) => {
             return state;
     }
 }
+
+export default CellReducer
