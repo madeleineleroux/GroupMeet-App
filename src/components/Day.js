@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-class Calendar extends Component {
-
+class Day extends Component {
     render() {
         return (
             <div>
+
             </div>
         );
     }
 }
 
-Calendar.propTypes = {};
+Day.propTypes = {};
 
-export default Calendar;
+export default Day;
