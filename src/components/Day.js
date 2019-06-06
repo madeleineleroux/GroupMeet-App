@@ -1,16 +1,38 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'tls';
 
-class Day extends Component {
-    render() {
-        return (
-            <div>
+// function getStyle = (availabilityAtTime) => {
 
-            </div>
-        );
-    }
+// }
+
+// function onClick = () => {
+//     //This should change the state using toggleAvail, which I should input above and map
+// }
+
+const Day = ({times, key}) => {
+    return (
+        <div id = "hourButtons">
+
+            <button id = 'cell'>8</button>
+            <br></br>
+            <button id = 'cell'>9</button>
+            <br></br>
+            <button id = 'cell'>10</button>
+            <br></br>
+            <button id = 'cell'>11</button>
+            <br></br>
+            <button id = 'cell'>12</button>
+            <br></br>
+            <button id = 'cell'>13</button>
+            <br></br>
+            <button id = 'cell'>14</button>
+            <br></br>
+            <button id = 'cell'>15</button>
+            <br></br>
+            <button id = 'cell'>16</button>
+        </div>
+    )
 }
 
-Day.propTypes = {};
-
-export default Day;
+export default Day
