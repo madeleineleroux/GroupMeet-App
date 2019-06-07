@@ -44,11 +44,11 @@ body {
 }
 
 .cell:hover {
-  background-color: #124E78;
+  background-color: #1CCAD8;
 }
 
 .cell:focus {
-  background-color: #124E78;
+  background-color: #1CCAD8;
 }
 
 #week {
