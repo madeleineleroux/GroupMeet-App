@@ -1,6 +1,8 @@
-export const toggleAvail = (time) => {
+export const toggleAvail = (time, avail) => {
     return {
         type: 'TOGGLE_AVAIL',
-        time: time
+        time: time,
+        avail: avail
+
     }
-}
+};

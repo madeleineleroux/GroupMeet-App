@@ -23,11 +23,12 @@ const initState = {
 const DayReducer = (state = initState, action) => {
     switch(action.type) {
         case 'TOGGLE_AVAIL':
-
+            let curHour = action.time
+            console.log(curHour);
             return {
                 ...state,
                 times : {
-                    // action.time = !state.action.time
+                    curHour: !action.avail
                 }
             }
         default:
