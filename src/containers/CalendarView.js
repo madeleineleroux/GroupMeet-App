@@ -1,44 +1,27 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'net';
+import { toggleAvail } from '../actions/DayAction'
+import Day from '../components/Day' 
 
 class CalendarView extends Component {
-    constructor(props) {
-        super(props);
 
-    }
-
-    componentWillMount() {
-
-    }
-
-    componentDidMount() {
-
-    }
-
-    componentWillReceiveProps(nextProps) {
-
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-
-    }
-
-    componentWillUpdate(nextProps, nextState) {
-
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-
-    }
-
-    componentWillUnmount() {
-
+    generateWeek = (curDate) => {
+        return 
     }
 
     render() {
-        return (
-            <div>
 
+        return (
+            <div id="calendarBody">
+                {/*rename the state below */}
+                <Day id="first" times = {this.props.times} id = {this.props.key}/>
+                <Day times = {this.props.times} id = {this.props.key}/>
+                <Day times = {this.props.times} id = {this.props.key}/>
+                <Day times = {this.props.times} id = {this.props.key}/>
+                <Day times = {this.props.times} id = {this.props.key}/>
+                <Day times = {this.props.times} id = {this.props.key}/>
+                <Day times = {this.props.times} id = {this.props.key}/>
             </div>
         );
     }
@@ -46,4 +29,9 @@ class CalendarView extends Component {
 
 CalendarView.propTypes = {};
 
-export default CalendarView;
+const mapStateToProps = dispatch => ({
+    toggleAvail: time => dispatch(toggleAvail(time))
+})
+
+// export default connect(mapStateToProps)(Day)
+export default CalendarView
