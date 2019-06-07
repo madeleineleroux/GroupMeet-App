@@ -12,8 +12,14 @@ class CalendarView extends Component {
     render() {
 
         return (
-            <div>
+            <div id="calendarBody">
                 {/*rename the state below */}
+                <Day id="first" times = {this.props.times} id = {this.props.key}/>
+                <Day times = {this.props.times} id = {this.props.key}/>
+                <Day times = {this.props.times} id = {this.props.key}/>
+                <Day times = {this.props.times} id = {this.props.key}/>
+                <Day times = {this.props.times} id = {this.props.key}/>
+                <Day times = {this.props.times} id = {this.props.key}/>
                 <Day times = {this.props.times} id = {this.props.key}/>
             </div>
         );
