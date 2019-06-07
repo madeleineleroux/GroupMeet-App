@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'net';
 import { toggleAvail } from '../actions/DayAction'
+import { connect } from 'net'
 import Day from '../components/Day' 
 
 class CalendarView extends Component {
@@ -23,9 +22,11 @@ class CalendarView extends Component {
 
 CalendarView.propTypes = {};
 
-const mapStateToProps = dispatch => ({
-    toggleAvail: time => dispatch(toggleAvail(time))
-})
+const mapStateToProps = (state) => {
+    return {
+        times: state
+    }
+}
 
-// export default connect(mapStateToProps)(Day)
-export default CalendarView
+
+export default connect(mapStateToProps)(CalendarView)
