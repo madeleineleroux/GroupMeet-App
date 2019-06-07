@@ -1,24 +1,38 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
-// import { connect } from 'tls';
-import Cell from './Cell'
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'tls';
 
 // function getStyle = (availabilityAtTime) => {
+
+// }
 
 // function onClick = () => {
 //     //This should change the state using toggleAvail, which I should input above and map
 // }
 
 const Day = ({times, key}) => {
-        console.log(times.DayReducer.times);
-        const hours = Object.entries(times.DayReducer.times);
     return (
-        <div>
-                {hours.map(hour => (
-                    <Cell time={hour[1]} id={key} name={hour[0]}/>
-                ))}
+        <div id = "hourButtons">
+
+            <button id = 'cell'>8</button>
+            <br></br>
+            <button id = 'cell'>9</button>
+            <br></br>
+            <button id = 'cell'>10</button>
+            <br></br>
+            <button id = 'cell'>11</button>
+            <br></br>
+            <button id = 'cell'>12</button>
+            <br></br>
+            <button id = 'cell'>13</button>
+            <br></br>
+            <button id = 'cell'>14</button>
+            <br></br>
+            <button id = 'cell'>15</button>
+            <br></br>
+            <button id = 'cell'>16</button>
         </div>
     )
-};
+}
 
 export default Day
