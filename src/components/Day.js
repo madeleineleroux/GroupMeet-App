@@ -12,25 +12,16 @@ import { connect } from 'tls';
 
 const Day = ({times, key}) => {
     return (
-        <div id = "hourButtons">
-
-            <button id = 'cell'>8</button>
-            <br></br>
-            <button id = 'cell'>9</button>
-            <br></br>
-            <button id = 'cell'>10</button>
-            <br></br>
-            <button id = 'cell'>11</button>
-            <br></br>
-            <button id = 'cell'>12</button>
-            <br></br>
-            <button id = 'cell'>13</button>
-            <br></br>
-            <button id = 'cell'>14</button>
-            <br></br>
-            <button id = 'cell'>15</button>
-            <br></br>
-            <button id = 'cell'>16</button>
+        <div className = "hourButtons">
+            <button className = 'cell'>8</button>
+            <button className = 'cell'>9</button>
+            <button className = 'cell'>10</button>
+            <button className = 'cell'>11</button>
+            <button className = 'cell'>12</button>
+            <button className = 'cell'>13</button>
+            <button className = 'cell'>14</button>
+            <button className = 'cell'>15</button>
+            <button className = 'cell'>16</button>
         </div>
     )
 }
