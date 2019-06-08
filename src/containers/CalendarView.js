@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { toggleAvail } from '../actions/DayAction'
-import { connect } from 'net'
+import { connect } from 'react-redux'
 import Day from '../components/Day' 
 
 class CalendarView extends Component {
