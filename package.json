@@ -1,38 +1,21 @@
 {
-  "name": "group-meet",
-  "version": "0.1.0",
+  "name": "GroupMeet-App",
   "private": true,
-  "dependencies": {
-    "js2coffee": "^2.2.0",
-    "node-cron": "^2.0.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.0.3",
-    "react-scripts": "3.0.1",
-    "redux": "^4.0.1"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "@babel/runtime": "^7.3.4",
+    "meteor-node-stubs": "^0.4.1"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "redux-devtools": "^3.5.0"
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
   }
 }
