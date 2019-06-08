@@ -1,6 +1,4 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'tls';
+import React from 'react';
 
 // function getStyle = (availabilityAtTime) => {
 
