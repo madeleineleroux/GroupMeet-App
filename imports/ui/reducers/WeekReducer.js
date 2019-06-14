@@ -60,10 +60,9 @@ const initState = {
 const WeekReducer = (state = initState, action) => {
     switch(action.type) {
         case 'TOGGLE_AVAIL':
-
             return {
                 ...state,
-                times : {
+                week : {
                     // action.time = !state.action.time
                 }
             }
