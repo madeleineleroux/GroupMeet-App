@@ -70,12 +70,19 @@ const initState = {
 const WeekReducer = (state = initState, action) => {
     switch(action.type) {
         case 'TOGGLE_AVAIL':
-            return ... state,
-            Object.values(state.week).map(hour =>
-            (hour.id === action.id)
-            ? {...hour, avail: !hour.avail}
-            : avail
-            );
+            return {
+                ...state,
+                week: {
+                    ...state.week,
+                    //week.weekday === action.weekday
+                    //update timestate array
+                }
+                // Object.entries(state.week).map(hour = >
+                // (hour.id === action.id)
+                //     ? {...hour, avail: !hour.avail}
+                //     : avail
+                // )
+            };
         default:
             return state
     }
