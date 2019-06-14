@@ -1,27 +1,13 @@
 import React from 'react';
+import Cell from './Cell';
 
-// function getStyle = (availabilityAtTime) => {
-
-// }
-
-// function onClick = () => {
-//     //This should change the state using toggleAvail, which I should input above and map
-// }
-
-const Day = ({times, key}) => {
-    return (
-        <div className = "hourButtons">
-            <button className = 'cell'>8</button>
-            <button className = 'cell'>9</button>
-            <button className = 'cell'>10</button>
-            <button className = 'cell'>11</button>
-            <button className = 'cell'>12</button>
-            <button className = 'cell'>13</button>
-            <button className = 'cell'>14</button>
-            <button className = 'cell'>15</button>
-            <button className = 'cell'>16</button>
-        </div>
-    )
-}
+const Day = (props) => (
+<div className = "hourButtons">
+    {this.props.hours.map(hour => (
+    <Cell key={hour.id} id={hour.id} availabilitity={hour.avail}
+{...hour}/>
+))}
+</div>
+);
 
 export default Day

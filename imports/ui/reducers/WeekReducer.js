@@ -1,52 +1,62 @@
 import uuid from 'uuid';
 
-const timeState = {
-    eight : {
+const timeState = [
+    //8 corresponds with time 8:00 to 8:59
+    {
+        id: 8,
         avail : false,
         tasks : [],
     },
-    nine : {
+    {
+        id: 9,
         avail : false,
         tasks : [],
     },
-    ten : {
+    {
+        id: 10,
         avail : false,
         tasks : [],
     },
-    eleven : {
+    {
+        id: 11,
         avail : false,
         tasks : [],
     },
-    twelve : {
+    {
+        id: 12,
         avail : false,
         tasks : [],
     },
-    one : {
+    {
+        id: 13,
         avail : false,
         tasks : [],
     },
-    two : {
+    {
+        id: 14,
         avail : false,
         tasks : [],
     },
-    three : {
+    {
+        id: 15,
         avail : false,
         tasks : [],
     },
-    four : {
+    {
+        id: 16,
         avail : false,
         tasks : [],
     },
-    five : {
+    {
+        id: 17,
         avail : false,
         tasks : [],
     },
-}
+]
 
 const initState = {
-    //eight corresponds with time 8:00 to 8:59
+    key: uuid.v4(),
     week : {
-        key: uuid.v4(),
         monday : timeState,
         tuesday : timeState,
         wednesday : timeState,
@@ -60,13 +70,12 @@ const initState = {
 const WeekReducer = (state = initState, action) => {
     switch(action.type) {
         case 'TOGGLE_AVAIL':
-
-            return {
-                ...state,
-                times : {
-                    // action.time = !state.action.time
-                }
-            }
+            return ... state,
+            Object.values(state.week).map(hour =>
+            (hour.id === action.id)
+            ? {...hour, avail: !hour.avail}
+            : avail
+            );
         default:
             return state
     }
