@@ -12,8 +12,7 @@ class Cell extends React.Component {
 
     handleClick() {
         this.props.toggleAvail(this.props.id);
-        console.log(this.props.id);
-        console.log(this.props.availability);
+        console.log(this.props.id,this.props.availability);
     };
 
     render() {
@@ -22,19 +21,11 @@ class Cell extends React.Component {
             <button className = 'cell' onClick={this.handleClick}
         style={{background: this.props.availability ? '#1CCAD8' : '#E2E2E2'}}>
         {/*{this.props.availability ? 'Available' : 'Unavailable'}*/}
-        {this.props.id}:00
+        {this.props.id}
         </button>
         </div>
     )
     }
 }
 
-
-
-const mapStateToProps = state => {
-    return {
-        WeekReducer: state.WeekReducer
-    }
-};
-
-export default connect(mapStateToProps, { toggleAvail })(Cell)
+export default connect(null,{ toggleAvail })(Cell)

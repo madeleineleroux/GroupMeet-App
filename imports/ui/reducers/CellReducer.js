@@ -1,6 +1,6 @@
 import uuid from 'uuid'
 let initState = {
-    keu: uuid.v4(),
+    key: uuid.v4(),
     available: true
 }
 

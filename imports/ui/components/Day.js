@@ -1,13 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Cell from './Cell';
 
-const Day = (props) => (
-<div className = "hourButtons">
-    {this.props.hours.map(hour => (
-    <Cell key={hour.id} id={hour.id} availabilitity={hour.avail}
-{...hour}/>
-))}
-</div>
-);
+const Day = ({ hours, hourByIds }) => {
+    return (
+        <div className = "hourButtons">
+            {hours.map(hour => (
+                <Cell key={hour} id={hour} availability={hourByIds[hour].availability}
+                      {...hour}/>
+            ))}
+        </div>
+    )
+}
 
-export default Day
+const mapStateToProps = state => ({
+    hourByIds: state.WeekReducer.hours.byId
+})
+
+export default connect(mapStateToProps)(Day);
