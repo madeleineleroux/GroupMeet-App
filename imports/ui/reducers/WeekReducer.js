@@ -1,3 +1,4 @@
+//TODO: consider renaming?
 
 /* generates array of strings for hours, can change range, currently 8 - 17 inclusive */
 const hourIds = Array.from({length: 10}, (v, i) => (i+8).toString());
@@ -70,7 +71,7 @@ const WeekReducer = (state = initState, action) => {
                         ...state.hours.byId,
                         [action.id] : {
                             ...state.hours.byId[action.id],
-                            availability: ![action.id].availability
+                            availability: !state.hours.byId[action.id].availability
                         }
                     }
 

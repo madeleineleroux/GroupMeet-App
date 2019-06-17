@@ -2,8 +2,6 @@ import React from 'react'
 import { toggleAvail } from "../actions/DayAction";
 import { connect } from 'react-redux';
 
-
-
 class Cell extends React.Component {
     constructor(props) {
         super(props);
@@ -19,12 +17,11 @@ class Cell extends React.Component {
         return (
             <div>
             <button className = 'cell' onClick={this.handleClick}
-        style={{background: this.props.availability ? '#1CCAD8' : '#E2E2E2'}}>
-        {/*{this.props.availability ? 'Available' : 'Unavailable'}*/}
-        {this.props.id}
-        </button>
+            style={{background: this.props.availability ? '#1CCAD8' : '#E2E2E2'}}>
+            {this.props.id}
+            </button>
         </div>
-    )
+        )
     }
 }
 
