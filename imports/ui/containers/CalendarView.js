@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import { toggleAvail } from '../actions/DayAction'
 import { connect } from 'react-redux'
-import Day from '../components/Day' 
+import Day from '../components/Day'
+import Container from "react-bootstrap/Container";
+import Footer from '../components/Footer'
+import Col from "react-bootstrap/Col";
+import Sidebar from "../components/Sidebar";
+import Header from '../components/Header';
 
 class CalendarView extends Component {
 
@@ -12,15 +17,20 @@ class CalendarView extends Component {
     render() {
 
         return (
-            <div id="calendarBody">
+            <div>
+            <Container>
                 {/*rename the state below */}
-                <Day id="first" times = {this.props.times} id = {this.props.key}/>
+                <Header />
+                <Sidebar/>
                 <Day times = {this.props.times} id = {this.props.key}/>
                 <Day times = {this.props.times} id = {this.props.key}/>
                 <Day times = {this.props.times} id = {this.props.key}/>
                 <Day times = {this.props.times} id = {this.props.key}/>
                 <Day times = {this.props.times} id = {this.props.key}/>
                 <Day times = {this.props.times} id = {this.props.key}/>
+                <Day times = {this.props.times} id = {this.props.key}/>
+            </Container>
+            <Footer />
             </div>
         );
     }

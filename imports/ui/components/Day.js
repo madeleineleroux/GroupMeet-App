@@ -1,4 +1,8 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Container from "react-bootstrap/Container";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import Row from "react-bootstrap/Row";
 
 // function getStyle = (availabilityAtTime) => {
 
@@ -10,17 +14,21 @@ import React from 'react';
 
 const Day = ({times, key}) => {
     return (
-        <div className = "hourButtons">
-            <button className = 'cell'>8</button>
-            <button className = 'cell'>9</button>
-            <button className = 'cell'>10</button>
-            <button className = 'cell'>11</button>
-            <button className = 'cell'>12</button>
-            <button className = 'cell'>13</button>
-            <button className = 'cell'>14</button>
-            <button className = 'cell'>15</button>
-            <button className = 'cell'>16</button>
-        </div>
+        <ButtonGroup id="day" vertical>
+            <Button variant="outline-primary">8</Button>
+            <Button variant="outline-primary">9</Button>
+            <Button variant="outline-primary">10</Button>
+            <Button variant="outline-primary">11</Button>
+            <Button variant="outline-primary">12</Button>
+            <Button variant="outline-primary">13</Button>
+            <Button variant="outline-primary">14</Button>
+            <Button variant="outline-primary">15</Button>
+            <Button variant="outline-primary">16</Button>
+            <Button variant="outline-primary">17</Button>
+            <Button variant="outline-primary">18</Button>
+            <Button variant="outline-primary">19</Button>
+            <Button variant="outline-primary">20</Button>
+        </ButtonGroup>
     )
 }
 
