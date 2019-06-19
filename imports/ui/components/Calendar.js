@@ -1,25 +1,26 @@
-import React, {Component} from 'react';
-
-import PropTypes from 'prop-types';
+import React from 'react';
+import { connect } from 'react-redux';
 import Day from './Day';
 
-class Calendar extends Component {
-
-    render() {
-        return (
-            <div>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-            </div>
-        );
-    }
+// displays calendar week view -> rename to Week?
+// days prop passed in
+const Calendar = ({ days }) => {
+    return (
+        <div style={style}>
+            {Object.keys(days).map(weekday => (
+            <Day key={weekday} hours={days[weekday].hours} {...weekday}/>
+            ))}
+        </div>
+    )
 }
 
-Calendar.propTypes = {};
+const style = {
+    display: 'flex',
+    flexDirection: 'row'
+}
 
-export default Calendar;
+const mapStateToProps = state => ({
+    days: state.WeekReducer.days.byId
+})
+
+export default connect(mapStateToProps)(Calendar)

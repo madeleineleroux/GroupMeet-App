@@ -1,36 +1,10 @@
-import React, {Component} from 'react';
-import { toggleAvail } from '../actions/DayAction'
-import { connect } from 'react-redux'
-import Day from '../components/Day' 
+import React from 'react';
+import Calendar from "../components/Calendar";
 
-class CalendarView extends Component {
+const CalendarView = () => (
+    <div>
+        <Calendar/>
+    </div>
+);
 
-    render() {
-
-        console.log(this.props)
-
-        return (
-            <div id="calendarBody">
-                {/*rename the state below */}
-                <Day id="first" times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-            </div>
-        );
-    }
-}
-
-CalendarView.propTypes = {};
-
-const mapStateToProps = (state) => {
-    return {
-        times: state
-    }
-}
-
-
-export default connect(mapStateToProps)(CalendarView)
+export default CalendarView
