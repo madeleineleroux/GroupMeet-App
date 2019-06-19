@@ -7,42 +7,23 @@ import Footer from '../components/Footer'
 import Col from "react-bootstrap/Col";
 import Sidebar from "../components/Sidebar";
 import Header from '../components/Header';
+import Calendar from "../components/Calendar";
+
 
 class CalendarView extends Component {
-
-    generateWeek = (curDate) => {
-        return 
-    }
-
     render() {
-
         return (
-            <div>
-            <Container>
+            <div id="calendarBody">
+                <Container>
+                    <Header />
+                    <Sidebar/>
                 {/*rename the state below */}
-                <Header />
-                <Sidebar/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-                <Day times = {this.props.times} id = {this.props.key}/>
-            </Container>
-            <Footer />
+                    <Calendar/>
+                </Container>
+                <Footer />
             </div>
         );
     }
 }
 
-CalendarView.propTypes = {};
-
-const mapStateToProps = (state) => {
-    return {
-        times: state
-    }
-}
-
-
-export default connect(mapStateToProps)(CalendarView)
+export default CalendarView

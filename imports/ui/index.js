@@ -5,14 +5,8 @@ import { Provider } from 'react-redux'
 import App from './components/App'
 import rootReducer from './reducers'
 import "./index.css"
-import { combineReducers } from "redux";
-import CalendarReducer from './CalendarReducer';
-import DayReducer from './DayReducer';
-import CellReducer from './CellReducer';
 
-const store = createStore({
-    DayReducer
-})
+const store = createStore(rootReducer)
 
 render(
     <Provider store={store}>
