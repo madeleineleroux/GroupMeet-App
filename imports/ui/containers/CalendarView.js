@@ -5,11 +5,9 @@ import Day from '../components/Day'
 
 class CalendarView extends Component {
 
-    generateWeek = (curDate) => {
-        return 
-    }
-
     render() {
+
+        console.log(this.props)
 
         return (
             <div id="calendarBody">

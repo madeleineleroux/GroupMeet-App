@@ -4,13 +4,12 @@ import { render } from 'react-dom';
 import App from '/imports/ui/App'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import reducers from '../imports/ui/reducers/index'
-//Import css later!!
+import rootReducer from '../imports/ui/reducers/index'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = createStore(
-  reducers
+  rootReducer
 );
-
 
 Meteor.startup(() => {
   render(
@@ -19,4 +18,3 @@ Meteor.startup(() => {
     </Provider>, document.getElementById('react-target')
   );
 });
-

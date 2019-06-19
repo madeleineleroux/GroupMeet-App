@@ -1,6 +1,7 @@
 import uuid from 'uuid';
 
 const timeState = {
+    //eight corresponds with time 8:00 to 8:59
     eight : {
         avail : false,
         tasks : [],
@@ -21,32 +22,31 @@ const timeState = {
         avail : false,
         tasks : [],
     },
-    one : {
+    thirteen : {
         avail : false,
         tasks : [],
     },
-    two : {
+    fourteen : {
         avail : false,
         tasks : [],
     },
-    three : {
+    fifteen : {
         avail : false,
         tasks : [],
     },
-    four : {
+    sixteen : {
         avail : false,
         tasks : [],
     },
-    five : {
+    seventeen : {
         avail : false,
         tasks : [],
     },
 }
 
 const initState = {
-    //eight corresponds with time 8:00 to 8:59
+    key: uuid.v4(),
     week : {
-        key: uuid.v4(),
         monday : timeState,
         tuesday : timeState,
         wednesday : timeState,
