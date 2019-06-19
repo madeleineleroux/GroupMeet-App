@@ -1,13 +1,6 @@
-
-export const toggleAvail = (time) => {
+export const toggleAvail = id => {
     return {
         type: 'TOGGLE_AVAIL',
-        time: time
-    }
-}
-
-export const clearAvail = () => {
-    return {
-        type: 'CLEAR_AVAIL',
+        id
     }
 }
