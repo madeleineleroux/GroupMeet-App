@@ -17,9 +17,6 @@ const Sidebar = () => {
             <Button>15</Button>
             <Button>16</Button>
             <Button>17</Button>
-            <Button>18</Button>
-            <Button>19</Button>
-            <Button>20</Button>
         </ButtonGroup>
 
     )
