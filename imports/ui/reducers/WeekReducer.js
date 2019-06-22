@@ -76,6 +76,9 @@ const WeekReducer = (state = initState, action) => {
                 }
 
             };
+        case 'RESET_CAL':
+            console.log(state);
+            return initState;
         default:
             return state
     }
