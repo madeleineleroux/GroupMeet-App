@@ -6,17 +6,12 @@ import Day from './Day';
 // days prop passed in
 const Calendar = ({ days }) => {
     return (
-        <div style={style}>
+        <div className="weekdays">
             {Object.keys(days).map(weekday => (
             <Day key={weekday} hours={days[weekday].hours} {...weekday}/>
             ))}
         </div>
     )
-}
-
-const style = {
-    display: 'flex',
-    flexDirection: 'row'
 }
 
 const mapStateToProps = state => ({

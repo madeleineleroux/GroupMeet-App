@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Header = () => {
-    return <div>
-        <div id="weekdays">
+    return (
+        <div id="week">
         <span id="firstId">S</span>
         <span>M</span>
         <span>T</span>
@@ -11,6 +11,6 @@ const Header = () => {
         <span>F</span>
         <span id="lastId">S</span>
     </div>
-    </div>
+    )
 }
 export default Header;

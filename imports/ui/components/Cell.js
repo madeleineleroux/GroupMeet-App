@@ -16,12 +16,13 @@ class Cell extends React.Component {
 
     render() {
         return (
-            <div>
-            <Button variant='outline-primary' onClick={this.handleClick}
-            style={{background: this.props.availability ? '#1CCAD8' : '#E2E2E2'}}>
-            {this.props.id}
+            <Button
+                className={this.props.availability ? 'active' : 'album'}
+                variant='outline-primary'
+                onDrag={this.handleClick}
+                onMouseDown={this.handleClick}
+            >
             </Button>
-        </div>
         )
     }
 }
