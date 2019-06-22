@@ -1,8 +1,13 @@
 import React from 'react';
-import Container from "react-bootstrap/Container";
+import ResetCalButton from "./ResetCalButton";
 
 const Footer = () => {
-    return <p id="footer">Select the times you are busy. </p>
-}
+    return (
+        <div>
+            <p id="footer">Select the times you are busy. </p>
+            <ResetCalButton/>
+        </div>
+    )
+};
 
 export default Footer
