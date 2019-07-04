@@ -18,17 +18,18 @@ export const submitSchedule = () => ({
     type: 'SUBMIT_SCHEDULE'
 });
 
-export const fetchSchedule = () => {
-    return dispatch => {
-        Meteor.call('fetchAvailability', err => {
-            if (!err) {
-                dispatch(fetchScheduleSuccess())
-            } else {
-                console.log(err);
-            }
-        });
-    }
-};
+export const fetchSchedule = () => ({
+    type: 'FETCH_SCHEDULE'
+    // return dispatch => {
+    //     Meteor.call('fetchAvailability', err => {
+    //         if (!err) {
+    //             dispatch(fetchScheduleSuccess())
+    //         } else {
+    //             console.log(err);
+    //         }
+    //     });
+    // }
+});
 
 
 

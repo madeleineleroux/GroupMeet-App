@@ -64,6 +64,7 @@ const initState = {
 
 const WeekReducer = (state = initState, action) => {
     switch(action.type) {
+
         case 'TOGGLE_AVAIL':
             return {
                 ...state,
@@ -80,18 +81,29 @@ const WeekReducer = (state = initState, action) => {
                 }
 
             };
+
         case 'RESET_CAL':
             console.log(state);
             return initState;
+
         case 'SUBMIT_SCHEDULE':
             Meteor.call('updateAvailability', state);
             console.log(Availability.find({}).fetch());
             return state;
+
         case 'FETCH_SCHEDULE':
-            console.log("Reducer");
-            let newState =  Meteor.call('fetchAvailability');
-            console.log(Availability.find({}).count());
-            return state;
+            Meteor.call('fetchAvailability', err => {
+                if (!err) {
+                    let newState =  Meteor.call('fetchAvailability');
+                    console.log(Availability.find({}).count());
+                    return newState;
+                } else {
+                    console.log(err);
+                    console.log('Availabilities did not update!')
+                    return state;
+                }
+            });
+    
         default:
             return state
     }
