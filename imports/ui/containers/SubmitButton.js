@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Button } from 'react-bootstrap';
 import { submitSchedule } from "../actions/DayAction";
 
+
 class SubmitButton extends Component {
     render() {
         return <Button onClick={this.handleSubmitSchedule}> Submit </Button>
@@ -10,20 +11,25 @@ class SubmitButton extends Component {
 
     handleSubmitSchedule = e => {
         e.preventDefault();
-        this.props.onSubmitSchedule()
+        console.log(this.props.schedule);
+        this.props.onSubmitSchedule(this.props.schedule);
 
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onSubmitSchedule: schedule => {
-            dispatch(submitSchedule());
+        onSubmitSchedule: sched => {
+            dispatch(submitSchedule(sched));
         }
     }
-}
+};
+
+const mapStateToProps = (state) => {
+    return { schedule: state.WeekReducer };
+};
 
 export default connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
 )(SubmitButton);

@@ -52,6 +52,7 @@ function daysById() {
 }
 
 const initState = {
+    _id: null,
     days : {
       byId: daysById(),
       allIds : weekdays
@@ -64,7 +65,6 @@ const initState = {
 
 const WeekReducer = (state = initState, action) => {
     switch(action.type) {
-
         case 'TOGGLE_AVAIL':
             return {
                 ...state,
@@ -84,25 +84,19 @@ const WeekReducer = (state = initState, action) => {
 
         case 'RESET_CAL':
             console.log(state);
-            return initState;
+            return {
+                ...state,
+                hours: {
+                    ...state.hours,
+                    byId: hoursById()
+                }
+            };
 
         case 'SUBMIT_SCHEDULE':
-            Meteor.call('updateAvailability', state);
-            return state;
+            return action.schedule;
 
         case 'FETCH_SCHEDULE':
-            Meteor.call('fetchAvailability', err => {
-                if (!err) {
-                    let newState =  Meteor.call('fetchAvailability');
-                    console.log(newState);
-                    console.log(Availability.find({}, ).fetch()[0]);
-                    return Availability.find({}, ).fetch()[0];
-                } else {
-                    console.log(err);
-                    console.log('Availabilities did not update!')
-                    return state;
-                }
-            });
+            return action.schedule;
     
         default:
             return state
