@@ -1,3 +1,7 @@
+import { Meteor } from 'meteor/meteor';
+import Availability from "../../collections";
+import Links from '../../api/links';
+
 /* generates array of strings for hours, can change range, currently 8 - 17 inclusive */
 const hourIds = Array.from({length: 10}, (v, i) => (i+8).toString());
 
@@ -79,6 +83,15 @@ const WeekReducer = (state = initState, action) => {
         case 'RESET_CAL':
             console.log(state);
             return initState;
+        case 'SUBMIT_SCHEDULE':
+            Meteor.call('updateAvailability', state);
+            console.log(Availability.find({}).fetch());
+            return state;
+        case 'FETCH_SCHEDULE':
+            console.log("Reducer");
+            let newState =  Meteor.call('fetchAvailability');
+            console.log(Availability.find({}).count());
+            return state;
         default:
             return state
     }
