@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5796488-aabd-496e-9fe7-576d4382a733" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/NavbarA.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/NavbarA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/ResetCalButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/ResetCalButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/containers/SubmitButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/containers/SubmitButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/index.js" beforeDir="false" />
-    </list>
+    <list default="true" id="c5796488-aabd-496e-9fe7-576d4382a733" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -43,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="156" column="22" lean-forward="true" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="22" />
+            <state relative-caret-position="45">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -143,11 +130,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="123" />
-    <option name="y" value="35" />
-    <option name="width" value="954" />
-    <option name="height" value="798" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-54" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="811" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -304,11 +291,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562269063895</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added CSS to schedule">
+      <created>1562273682007</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562273682007</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added CSS to schedule">
+      <created>1562273714392</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1562273714392</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23163000" />
+    <option name="totallyTimeSpent" value="23838000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -385,7 +386,8 @@
     <MESSAGE value="Added Mongo, hit roadblock with asynchronous call" />
     <MESSAGE value="Mongodb has been added, but the fetch call is returning undefined" />
     <MESSAGE value="Made async functions, weekreducer now connects to Mongo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made async functions, weekreducer now connects to Mongo" />
+    <MESSAGE value="Added CSS to schedule" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CSS to schedule" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -613,8 +615,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="156" column="22" lean-forward="true" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="22" />
+        <state relative-caret-position="45">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="23" />
         </state>
       </provider>
     </entry>
