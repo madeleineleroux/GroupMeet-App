@@ -88,15 +88,15 @@ const WeekReducer = (state = initState, action) => {
 
         case 'SUBMIT_SCHEDULE':
             Meteor.call('updateAvailability', state);
-            console.log(Availability.find({}).fetch());
             return state;
 
         case 'FETCH_SCHEDULE':
             Meteor.call('fetchAvailability', err => {
                 if (!err) {
                     let newState =  Meteor.call('fetchAvailability');
-                    console.log(Availability.find({}).count());
-                    return newState;
+                    console.log(newState);
+                    console.log(Availability.find({}, ).fetch()[0]);
+                    return Availability.find({}, ).fetch()[0];
                 } else {
                     console.log(err);
                     console.log('Availabilities did not update!')

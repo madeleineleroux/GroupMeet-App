@@ -8,7 +8,6 @@ Meteor.methods({
         return sched;
     },
     fetchAvailability() {
-        let val = Availability.find({}).fetch();
-        return {};
+        return Availability.find({}).fetch()[0];
     }
 });
