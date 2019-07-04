@@ -6,7 +6,7 @@ import { submitSchedule } from "../actions/DayAction";
 
 class SubmitButton extends Component {
     render() {
-        return <Button onClick={this.handleSubmitSchedule}> Submit </Button>
+        return <Button  id="footer-button"  onClick={this.handleSubmitSchedule}> Submit </Button>
     }
 
     handleSubmitSchedule = e => {

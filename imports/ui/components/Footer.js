@@ -6,8 +6,10 @@ const Footer = () => {
     return (
         <div>
             <p id="footer">Select the times you are busy. </p>
+            <div id="footer-div">
             <ResetCalButton/>
             <SubmitButton />
+            </div>
         </div>
     )
 };

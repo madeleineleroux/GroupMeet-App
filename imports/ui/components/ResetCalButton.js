@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { resetCal } from "../actions/DayAction";
+import { Button } from 'react-bootstrap';
 
 class ResetCalButton extends React.Component {
     constructor(props) {
@@ -14,9 +15,7 @@ class ResetCalButton extends React.Component {
     //TODO: add styling for reset cal - > centering/width
     render() {
         return (
-            <div>
-                <button className={'ResetCal'} onClick={this.handleClick}>Reset Calendar</button>
-            </div>
+                <Button id="footer-button" className={'ResetCal'} onClick={this.handleClick}>Reset Calendar</Button>
         )
     }
 
