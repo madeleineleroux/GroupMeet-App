@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5796488-aabd-496e-9fe7-576d4382a733" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/imports/collections.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imports/startup/server/fixtures.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imports/startup/server/register-api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imports/ui/containers/SubmitButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.meteor/packages" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.meteor/versions" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/versions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/api/links.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/api/links.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/actions/DayAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/actions/DayAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/reducers/WeekReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/reducers/WeekReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="c5796488-aabd-496e-9fe7-576d4382a733" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -47,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/actions/DayAction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+            <state relative-caret-position="382">
+              <caret line="34" column="3" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -309,12 +292,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562183773688</updated>
-      <workItem from="1562183775234" duration="11930000" />
+      <workItem from="1562183775234" duration="12289000" />
     </task>
+    <task id="LOCAL-00001" summary="Added Mongo, hit roadblock with asynchronous call">
+      <created>1562205142966</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1562205142966</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12430000" />
+    <option name="totallyTimeSpent" value="12789000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="34" width="872" height="798" extended-state="0" />
@@ -341,6 +332,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Mongo, hit roadblock with asynchronous call" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Mongo, hit roadblock with asynchronous call" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -513,8 +508,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/actions/DayAction.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        <state relative-caret-position="382">
+          <caret line="34" column="3" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
