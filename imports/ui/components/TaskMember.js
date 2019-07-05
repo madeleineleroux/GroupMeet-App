@@ -7,12 +7,9 @@ import TaskInputForm from "./TaskInputForm";
 import TaskProgressBar from "./TaskProgressBar";
 
 const TaskMember = ({tasksByIds, tasks, name}) => {
-    //TODO: possibly do checklist with form?
-    //TODO center title in /client/main.css
-    //TODO: <TaskInputForm key={name} groupMember={name}/> <- groupMember redundant potentially
         return (
             <Card>
-                <Card.Title class="text-center">{name}</Card.Title>
+                <Card.Title className="text-center">{name}</Card.Title>
                 <Card.Body>
                     <TaskInputForm key={name} groupMember={name}/>
                 </Card.Body>
