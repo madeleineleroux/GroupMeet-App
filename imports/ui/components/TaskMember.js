@@ -12,7 +12,7 @@ const TaskMember = ({tasksByIds, tasks, name}) => {
     //TODO: <TaskInputForm key={name} groupMember={name}/> <- groupMember redundant potentially
         return (
             <Card>
-                <Card.Title>{name}</Card.Title>
+                <Card.Title class="text-center">{name}</Card.Title>
                 <Card.Body>
                     <TaskInputForm key={name} groupMember={name}/>
                 </Card.Body>
