@@ -1,6 +1,8 @@
 import { Mongo } from 'meteor/mongo';
 import { Meteor } from 'meteor/meteor';
-import Availability from '../collections'
+
+const Availability = new Mongo.Collection('availability');
+export default Availability;
 
 Meteor.methods({
     updateAvailability(sched) {

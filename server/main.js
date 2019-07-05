@@ -1,7 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import '../imports/api/availability';
-import Availability from '/imports/collections';
+import Availability from '/imports/api/availability';
 import Links from '/imports/api/links';
+import { initState } from '../imports/ui/reducers/WeekReducer';
 
 function insertLink(title, url) {
     Links.insert({ title, url, createdAt: new Date() });
@@ -9,25 +10,7 @@ function insertLink(title, url) {
 
 Meteor.startup(() => {
     // If the Links collection is empty, add some data.
-    if (Links.find().count() === 0) {
-        insertLink(
-            'Do the Tutorial',
-            'https://www.meteor.com/tutorials/react/creating-an-app'
-        );
-
-        insertLink(
-            'Follow the Guide',
-            'http://guide.meteor.com'
-        );
-
-        insertLink(
-            'Read the Docs',
-            'https://docs.meteor.com'
-        );
-
-        insertLink(
-            'Discussions',
-            'https://forums.meteor.com'
-        );
+    if (Availability.find().count() === 0) {
+        Availability.insert(initState);
     }
 });
