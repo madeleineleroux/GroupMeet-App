@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CalendarView from "./containers/CalendarView";
+import WeekView from "./containers/WeekView";
 import NavbarA from './components/NavbarA'
 import TaskView from './containers/TaskView';
 
@@ -8,7 +8,7 @@ class App extends Component {
         return (
         <div>
             <NavbarA />
-            <CalendarView />
+            <WeekView />
         </div>
         )
     }

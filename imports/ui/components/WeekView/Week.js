@@ -2,9 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Day from './Day';
 
-// displays calendar week view -> rename to Week?
-// days prop passed in
-const Calendar = ({ days }) => {
+const Week = ({ days }) => {
     return (
         <div className="weekdays">
             {Object.keys(days).map(weekday => (
@@ -18,4 +16,4 @@ const mapStateToProps = state => ({
     days: state.WeekReducer.days.byId
 })
 
-export default connect(mapStateToProps)(Calendar)
+export default connect(mapStateToProps)(Week)

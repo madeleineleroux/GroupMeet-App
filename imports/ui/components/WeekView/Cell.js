@@ -1,5 +1,5 @@
 import React from 'react'
-import { toggleAvail } from "../actions/DayAction";
+import { toggleAvail } from "../../actions/DayAction";
 import { connect } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 

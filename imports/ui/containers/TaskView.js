@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Container from "react-bootstrap/Container";
-import TaskGroup from "../components/TaskGroup";
+import TaskGroup from "../components/TaskView/TaskGroup";
 
 class TaskView extends Component {
     render() {

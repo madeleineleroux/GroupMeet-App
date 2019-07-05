@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const WeekHeader = () => {
     return (
         <div id="week">
         <span id="firstId">S</span>
@@ -13,4 +13,4 @@ const Header = () => {
     </div>
     )
 }
-export default Header;
+export default WeekHeader;

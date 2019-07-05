@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button } from 'react-bootstrap';
-import { submitSchedule } from "../actions/DayAction";
+import { submitSchedule } from "../../actions/DayAction";
 import { Modal} from "react-bootstrap";
 
 

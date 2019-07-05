@@ -1,8 +1,8 @@
 import React from 'react';
 import ResetCalButton from "./ResetCalButton";
-import SubmitButton from '../containers/SubmitButton'
+import SubmitButton from './SubmitButton'
 
-const Footer = () => {
+const WeekFooter = () => {
     return (
         <div>
             <p id="footer">Select the times you are busy. </p>
@@ -14,4 +14,4 @@ const Footer = () => {
     )
 };
 
-export default Footer
+export default WeekFooter

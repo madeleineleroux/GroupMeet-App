@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { resetCal } from "../actions/DayAction";
+import { resetCal } from "../../actions/DayAction";
 import { Button } from 'react-bootstrap';
 
 class ResetCalButton extends React.Component {
