@@ -174,4 +174,13 @@ html body {
    text-align: center;
  }
 
+ .resetDiv {
+   margin: 0;
+   display: inline ;
+ }
+
+ .Modal.Header {
+   text-align: center;
+ }
+
 

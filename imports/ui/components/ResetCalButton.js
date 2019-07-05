@@ -15,7 +15,7 @@ class ResetCalButton extends React.Component {
     //TODO: add styling for reset cal - > centering/width
     render() {
         return (
-                <Button id="footer-button" className={'ResetCal'} onClick={this.handleClick}>Reset Calendar</Button>
+            <Button id="footer-button" className={'ResetCal'} onClick={this.handleClick}>Reset Calendar</Button>
         )
     }
 
