@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ListGroupItem from "react-bootstrap/ListGroupItem";
 import {toggleStatus} from "../actions/TaskAction";
-//TODO: make it a checkbox?
 
 class Task extends React.Component {
     constructor(props) {

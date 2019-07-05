@@ -6,7 +6,6 @@ import InputGroup from "react-bootstrap/InputGroup";
 import {FormControl} from "react-bootstrap";
 import uuid from "uuid";
 
-//TODO limit length add scrolling
 //For individual group member - displayed in TaskMember Component
 class TaskInputForm extends React.Component {
     groupMember;
