@@ -1,5 +1,4 @@
 import { Meteor } from 'meteor/meteor';
-import Availability from "../../collections";
 import Links from '../../api/links';
 
 /* generates array of strings for hours, can change range, currently 8 - 17 inclusive */
@@ -8,7 +7,7 @@ const hourIds = Array.from({length: 10}, (v, i) => (i+8).toString());
 const weekdays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
 /* creates object with all hour objects in the week */
-function hoursById() {
+export function hoursById() {
     const hourState = {};
     //right now hour ids are formatted as "weekday_hourNumber"
     // We should probably consider using JS date object in future to generate unique ids
@@ -26,7 +25,7 @@ function hoursById() {
 }
 
 /* generates ids for all hours in the week */
-function hoursAllIds() {
+export function hoursAllIds() {
     const hourIdsArray = [];
     for (let i = 0; i < weekdays.length; i++) {
         for (let j = 0; j < hourIds.length; j++) {
@@ -38,7 +37,7 @@ function hoursAllIds() {
 
 /* creates object with all weekdays containing their respective hours:
 * hourId is format "weekday_hour" -> all hourIds with matching weekday contained in id:weekday obj */
-function daysById() {
+export function daysById() {
     let allHourIds = hoursAllIds();
     const weekState = {};
     for (let i = 0; i < weekdays.length; i++) {
@@ -51,7 +50,7 @@ function daysById() {
     return weekState;
 }
 
-const initState = {
+export const initState = {
     _id: null,
     days : {
       byId: daysById(),
@@ -103,6 +102,6 @@ const WeekReducer = (state = initState, action) => {
     }
 };
 
-export default WeekReducer
+export default WeekReducer;
 
 
