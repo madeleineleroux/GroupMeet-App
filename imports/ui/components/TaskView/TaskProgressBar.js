@@ -10,15 +10,16 @@ class TaskProgressBar extends React.Component {
     }
 
     getProgress() {
-        let numTotalTasks = this.props.tasks.length;
+        let numTotalTasks = this.props.tasks.length; //right
+
         if (numTotalTasks == 0) {
             return 0;
         }
-        let thisMemberTasks = this.props.tasks;
-        let allTasks = this.props.tasksByIds;
-        let memberTasks = Object.values(allTasks).filter(task => thisMemberTasks.includes(task.id));
-        let completedMemberTasks = memberTasks.filter(task => task.complete);
-        return (completedMemberTasks.length / numTotalTasks)*100;
+
+        let completedMemberTasks = this.props.tasks.filter(task => task.status % 2 == 1).length;
+        //console.log(completedMemberTasks);
+        //return (completedMemberTasks.length / numTotalTasks)*100;
+        return (completedMemberTasks/numTotalTasks) * 100;
     };
 
     render() {
@@ -32,7 +33,7 @@ class TaskProgressBar extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    tasksByIds: state.TaskReducer.Tasks
+    tasksByIds: state.TaskReducer
 });
 
 export default connect(mapStateToProps)(TaskProgressBar)

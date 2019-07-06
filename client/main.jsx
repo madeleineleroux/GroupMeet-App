@@ -10,6 +10,7 @@ import thunk from 'redux-thunk';
 import './main.css';
 import {fetchSchedule} from "../imports/ui/actions/DayAction";
 import {BrowserRouter as Router} from "react-router-dom"
+import {fetchTasks} from "../imports/ui/actions/TaskAction";
 //Import css later!!
 
 const store = createStore(reducers,
@@ -19,6 +20,7 @@ const store = createStore(reducers,
   ));
 
 store.dispatch(fetchSchedule());
+store.dispatch(fetchTasks());
 
 
 Meteor.startup(() => {

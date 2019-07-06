@@ -6,28 +6,29 @@ import Task from "./Task";
 import TaskInputForm from "./TaskInputForm";
 import TaskProgressBar from "./TaskProgressBar";
 
-const TaskMember = ({tasksByIds, tasks, name}) => {
+const TaskMember = ({tasksByIds, tasks, name, idKey}) => {
+    //console.log(tasksByIds);
         return (
             <Card>
                 <Card.Title className="text-center">{name}</Card.Title>
                 <Card.Body>
-                    <TaskInputForm key={name} groupMember={name}/>
+                    <TaskInputForm key={idKey} groupMember={idKey}/>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
                     {tasks && tasks.map(task => (
-                        <Task key={task} id={task} status={tasksByIds[task].complete}
-                              text={tasksByIds[task].description}/>
+                        <Task member={idKey} key={task.taskId} id={task.taskId} status={task.status}
+                              text={task.description}/>
                     ))}
                 </ListGroup>
                 <Card.Body>
-                    <TaskProgressBar key={name} tasks={tasks}/>
+                    <TaskProgressBar key={idKey} tasks={tasks}/>
                 </Card.Body>
             </Card>
         )
 };
 
 const mapStateToProps = state => ({
-    tasksByIds: state.TaskReducer.Tasks
+    tasksByIds: state.TaskReducer
 });
 
 export default connect(mapStateToProps)(TaskMember)

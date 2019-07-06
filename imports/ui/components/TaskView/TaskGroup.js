@@ -7,8 +7,8 @@ import TaskMember from "./TaskMember";
 const TaskGroup = ({ groupMembers }) => {
         return (
             <CardDeck>
-                {Object.keys(groupMembers).map(member => (
-                    <TaskMember key={member} name={member} tasks={groupMembers[member].tasks} {...member}/>
+                {Object.keys(groupMembers).map(id => (
+                    <TaskMember key={id} name={groupMembers[id].name} tasks={groupMembers[id].tasks} idKey={id} {...id}/>
                 ))}
             </CardDeck>
         )
@@ -16,7 +16,7 @@ const TaskGroup = ({ groupMembers }) => {
 
 
 const mapStateToProps = state => ({
-    groupMembers: state.TaskReducer.Members
+    groupMembers: state.TaskReducer
 });
 
 export default connect(mapStateToProps)(TaskGroup);

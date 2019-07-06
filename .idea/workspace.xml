@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d353829-4084-4531-ad3b-4c4086f72552" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/Week.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekFooter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekSidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imports/ui/containers/WeekView.js" afterDir="false" />
+    <list default="true" id="c5796488-aabd-496e-9fe7-576d4382a733" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/api/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/Cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/Cell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/Day.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/Day.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/ResetCalButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/ResetCalButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/Task.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/Task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskInputForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskProgressBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskProgressBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/containers/CalendarView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/containers/SubmitButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/SubmitButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/containers/TaskView.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/containers/TaskView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/api/availability.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/availability.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/api/links.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/startup/server/fixtures.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/startup/server/register-api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/actions/TaskAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/actions/TaskAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/Task.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/Task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskProgressBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskProgressBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/reducers/TaskReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/reducers/TaskReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/reducers/WeekReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/reducers/WeekReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +29,75 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/containers/WeekView.js">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskGroup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+            <state relative-caret-position="150">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskProgressBar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/imports/ui/reducers/TaskReducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="109" selection-start-line="109" selection-end-line="109" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/Task.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/containers/TaskView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -40,19 +105,34 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/imports/ui/App.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/actions/TaskAction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="118">
+              <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/api/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>progress</find>
+      <find>id</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,20 +157,89 @@
         <option value="$PROJECT_DIR$/imports/ui/containers/CalendarView.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/WeekFooter.js" />
         <option value="$PROJECT_DIR$/imports/ui/containers/WeekView.js" />
+        <option value="$PROJECT_DIR$/imports/ui/reducers/WeekReducer.js" />
+        <option value="$PROJECT_DIR$/server/main.js" />
+        <option value="$PROJECT_DIR$/client/main.jsx" />
+        <option value="$PROJECT_DIR$/imports/ui/components/TaskView/TaskGroup.js" />
+        <option value="$PROJECT_DIR$/imports/ui/components/TaskView/TaskProgressBar.js" />
+        <option value="$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js" />
+        <option value="$PROJECT_DIR$/imports/api/users.js" />
+        <option value="$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js" />
+        <option value="$PROJECT_DIR$/imports/ui/actions/TaskAction.js" />
+        <option value="$PROJECT_DIR$/imports/ui/components/TaskView/Task.js" />
+        <option value="$PROJECT_DIR$/imports/ui/reducers/TaskReducer.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="711" />
-    <option name="y" value="-12" />
-    <option name="width" value="1218" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="98" />
+    <option name="y" value="23" />
+    <option name="width" value="1189" />
+    <option name="height" value="707" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
+              <item name="imports" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
+              <item name="imports" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
+              <item name="imports" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
+              <item name="imports" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
+              <item name="imports" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -150,57 +299,18 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
-              <item name="imports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
-              <item name="imports" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
-              <item name="imports" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
-              <item name="imports" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="HbShouldOpenHtmlAsHb" value="enabled" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="js.meteor.library.cached" value="$PROJECT_DIR$/.meteor" />
+    <property name="js.meteor.library.was.enabled" value="true" />
+    <property name="js.meteor.project" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -227,7 +337,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1435000" />
+    <option name="totallyTimeSpent" value="9069000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -239,13 +349,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="98" y="23" width="1189" height="707" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24324325" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24914384" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32768363" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -253,7 +363,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.27886322" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3428064" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3428064" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -319,34 +429,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/api/availability.js">
+    <entry file="file://$PROJECT_DIR$/server/api/availability.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/api/links.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -365,27 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/actions/TaskAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/Task.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -421,15 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/containers/TaskView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/containers/WeekView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -440,13 +497,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/imports/api/links.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="240">
           <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/reducers/WeekReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskProgressBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/containers/TaskView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskGroup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/actions/TaskAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/Task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/reducers/TaskReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
         </state>
       </provider>
     </entry>

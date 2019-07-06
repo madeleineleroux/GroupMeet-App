@@ -9,15 +9,17 @@ class Task extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
+    //status, text, prints correctly, nothing else
     handleClick() {
-        this.props.toggleStatus(this.props.id);
+        console.log(this.props.member);
+        this.props.toggleStatus(this.props.id, this.props.member);
     };
 
     render() {
         return (
             <ListGroupItem onClick={this.handleClick}
                            style={{
-                               textDecoration: this.props.status ? 'line-through' : 'none'}}>
+                               textDecoration: this.props.status % 2 === 1 ? 'line-through' : 'none'}}>
                 {this.props.text}
             </ListGroupItem>
         )

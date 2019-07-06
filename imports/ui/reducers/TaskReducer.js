@@ -86,38 +86,30 @@ const initialState =  {
     }
 };
 
-const TaskReducer = (state = initialState, action) => {
+const TaskReducer = (state = {}, action) => {
     switch(action.type) {
         case 'ADD_TASK':
-            return {
-                Members : {
-                    ...state.Members,
-                    [action.member] : {
-                        ...state.Members[action.member],
-                        tasks: state.Members[action.member].tasks.concat(action.id)
-                    }
-                },
-                Tasks : {
-                    ...state.Tasks,
-                    [action.id] : {
-                        id: action.id,
-                        description: action.payload,
-                        complete: false,
-                        member: action.member
-                    }
-                }
-            };
+            return {...state,
+                [action.member]:
+                    {...state[action.member],
+                        tasks: state[action.member].tasks.concat({
+                            id: action.id,
+                            description: action.payload,
+                            status: 0
+                        })}};
         case 'TOGGLE_STATUS':
-            return {
-                ...state,
-                Tasks : {
-                    ...state.Tasks,
-                    [action.id] : {
-                        ...state.Tasks[action.id],
-                        complete : !state.Tasks[action.id].complete
-                    }
-                }
-            };
+            console.log(action.member);
+            return {...state,
+            [action.member]:
+                {...state[action.member],
+                    tasks: state[action.member].tasks.map(task =>
+                        (task.taskId === action.id)
+                    ? {...task, status: task.status + 1}
+                    : task)
+                }};
+
+        case 'FETCH_TASKS':
+            return action.payload;
         default:
             return state;
     }

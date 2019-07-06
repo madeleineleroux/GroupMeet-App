@@ -16,9 +16,10 @@ class TaskInputForm extends React.Component {
     }
 
     submitTask() {
+        //console.log(this.props.groupMember);
         const input = this.taskInput.current.value;
         this.props.addTask(input, this.props.groupMember, uuid.v4());
-        console.log(input, this.props.groupMember);
+        //console.log(input, this.props.groupMember);
     };
 
     render() {
