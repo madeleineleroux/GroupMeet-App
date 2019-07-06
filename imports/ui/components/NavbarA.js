@@ -17,14 +17,14 @@ const NavbarA = () => (
 
                         {/*Dropdown*/}
                         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="/">Calendar</NavDropdown.Item>
-                            <NavDropdown.Item href="/">Tasks</NavDropdown.Item>
+                            <NavDropdown.Item href="/calendar">Calendar</NavDropdown.Item>
+                            <NavDropdown.Item href="/tasks">Tasks</NavDropdown.Item>
                             <NavDropdown.Divider />
                         </NavDropdown>
                         
                         </Nav>
                         <Nav>
-                        <Nav.Link href="#deets">More deets</Nav.Link>
+                        <Nav.Link href="/">More deets</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

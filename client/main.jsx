@@ -9,6 +9,7 @@ import {applyMiddleware, compose } from "redux";
 import thunk from 'redux-thunk';
 import './main.css';
 import {fetchSchedule} from "../imports/ui/actions/DayAction";
+import {BrowserRouter as Router} from "react-router-dom"
 //Import css later!!
 
 const store = createStore(reducers,
@@ -23,7 +24,9 @@ store.dispatch(fetchSchedule());
 Meteor.startup(() => {
   render(
     <Provider store = {store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>, document.getElementById('react-target')
   );
 });

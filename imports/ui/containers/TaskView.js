@@ -14,4 +14,4 @@ class TaskView extends Component {
     }
 }
 
-export default TaskView
+export default TaskView;

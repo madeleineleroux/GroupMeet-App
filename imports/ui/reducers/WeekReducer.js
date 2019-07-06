@@ -51,7 +51,6 @@ export function daysById() {
 }
 
 export const initState = {
-    _id: null,
     days : {
       byId: daysById(),
       allIds : weekdays
