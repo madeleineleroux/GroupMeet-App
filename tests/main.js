@@ -1,9 +1,9 @@
 import assert from "assert";
 
-describe("GroupMeet-App", function () {
+describe("GroupMeet", function () {
   it("package.json has correct name", async function () {
     const { name } = await import("../package.json");
-    assert.strictEqual(name, "GroupMeet-App");
+    assert.strictEqual(name, "GroupMeet");
   });
 
   if (Meteor.isClient) {
