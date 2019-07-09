@@ -23,6 +23,7 @@ Meteor.methods({
         allUsers.forEach((user => {
             userObj[user._id] = {
                 name: user.name,
+                avatar:user.avatar,
                 tasks: user.tasks
             }
         }));

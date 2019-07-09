@@ -1,9 +1,9 @@
-import { Meteor } from 'meteor/meteor';
+
 
 /* generates array of strings for hours, can change range, currently 8 - 17 inclusive */
 const hourIds = Array.from({length: 10}, (v, i) => (i+8).toString());
 
-const weekdays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+export const weekdays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
 /* creates object with all hour objects in the week */
 export function hoursById() {
@@ -22,6 +22,22 @@ export function hoursById() {
     }
     return hourState;
 }
+
+export function booleanHours() {
+    const hourState = {};
+    //right now hour ids are formatted as "weekday_hourNumber"
+    // We should probably consider using JS date object in future to generate unique ids
+    for (let i = 0; i < weekdays.length; i++) {
+        for (let j = 0; j < hourIds.length; j++) {
+            hourState[weekdays[i].concat("_",hourIds[j])] = {
+                availability: true
+                //tasks: [] add functionality later
+            }
+        }
+    }
+    return hourState;
+}
+
 
 /* generates ids for all hours in the week */
 export function hoursAllIds() {
@@ -80,7 +96,6 @@ const WeekReducer = (state = initState, action) => {
             };
 
         case 'RESET_CAL':
-            console.log(state);
             return {
                 ...state,
                 hours: {

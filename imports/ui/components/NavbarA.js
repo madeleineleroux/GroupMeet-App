@@ -19,6 +19,7 @@ const NavbarA = () => (
                         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="/calendar">Calendar</NavDropdown.Item>
                             <NavDropdown.Item href="/tasks">Tasks</NavDropdown.Item>
+                            <NavDropdown.Item href="/group">Group Schedule</NavDropdown.Item>
                             <NavDropdown.Divider />
                         </NavDropdown>
                         

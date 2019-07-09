@@ -6,7 +6,7 @@ class TaskView extends Component {
     render() {
         return (
             <div>
-                <Container>
+                <Container id="cardContainer">
                     <TaskGroup />
                 </Container>
             </div>

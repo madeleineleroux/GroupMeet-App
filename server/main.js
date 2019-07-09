@@ -2,8 +2,10 @@ import { Meteor } from 'meteor/meteor';
 import './api/availability';
 import Availability from '/server/api/availability';
 import Users from '/server/api/users';
+import GroupSchedule from '/server/api/group'
+import './api/group'
 import './api/users';
-import { initState } from '../imports/ui/reducers/WeekReducer';
+import {booleanHours, hoursById, initState} from '../imports/ui/reducers/WeekReducer';
 
 Meteor.startup(() => {
     // If the Links collection is empty, add some data.
@@ -11,10 +13,22 @@ Meteor.startup(() => {
         Availability.insert(initState);
     }
 
+    if (GroupSchedule.find().count() === 0) {
+        let moment = require('moment');
+        moment.defaultFormat = "YYYYMMDD";
+        let start = (moment().startOf('week').format());
+        const allHours = booleanHours();
+        const gsInitState = Object.assign({}, allHours, {_id: start});
+
+        GroupSchedule.insert(gsInitState);
+
+    }
+
     if (Users.find().count() == 0) {
         Users.insert(
             {
                 name: "Claire",
+                avatar: "FOX",
                 tasks: []
             }
         );
@@ -22,6 +36,7 @@ Meteor.startup(() => {
         Users.insert(
             {
                 name: "Ben",
+                avatar: "PENGUIN",
                 tasks: []
             }
         );
@@ -30,6 +45,7 @@ Meteor.startup(() => {
         Users.insert(
             {
                 name: "Madie",
+                avatar: "GIRAFFE",
                 tasks: []
             }
         );
@@ -38,13 +54,16 @@ Meteor.startup(() => {
         Users.insert(
             {
                 name: "Hannah",
+                avatar: "PIG",
                 tasks: []
             }
         );
 
         Users.insert(
+
             {
                 name: "Katrin",
+                avatar: "LIZARD",
                 tasks: []
             }
         );

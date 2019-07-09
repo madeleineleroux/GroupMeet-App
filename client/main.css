@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+
 .btn.btn-outline-primary {
   border-color: #E2E2E2;
   background-color: #E2E2E2;
@@ -180,9 +181,147 @@ html body {
    display: inline ;
  }
 
- .Modal.Header {
-   text-align: center;
- }
+ .avatar {
+     width: 50%;
+     text-align: center;
+     margin: auto;
+     border-radius: 50%;
+     margin-top: 5%;
+}
+
+.input-group>.input-group-append>.btn {
+    background-color: #1CCAD8;
+    color: white;
+    border: transparent;
+}
+
+.input-group>.input-group-append>.btn:hover {
+    background-color: #F99820;
+}
+
+html .progress-bar {
+    background: -webkit-linear-gradient(left, #18D7D8 0%,#1CCAD8 100%);
+    background-color: #1CCAD8;
+    vertical-align: bottom;
+
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+#scrollable {
+    max-height: 500px;
+}
+
+#scrollableBody {
+    height: 75%;
+    overflow-y: auto;
+}
+
+
+html .card-deck {
+    width: 100%;
+    margin-top: 13%;
+}
+
+#cardContainer {
+    max-width: 90%;
+}
+
+html .groupTable {
+    background-color: #E2E2E2;
+    text-align: center;
+}
+
+html thead {
+    background-color: #5FAD56;
+    color: #E2E2E2;
+    font-family: Roboto;
+    font-size: 180%;
+    border-color: transparentr;
+}
+
+#groupSide {
+    background-color: #1CCAD8;
+    color: #E2E2E2;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 9%;
+    border-right: 2px solid #E2E2E2;
+}
+
+html .table td {
+    border-top: 0px solid transparent;
+    width: 14%
+}
+
+.triangle-left {
+    border-top: 12px solid transparent;
+    border-right: 25px solid #E2E2E2;
+    border-bottom: 12px solid transparent;
+    margin-right: 1%;
+}
+
+.triangle-right {
+    border-top: 12px solid transparent;
+    border-left: 25px solid #E2E2E2;
+    border-bottom: 12px solid transparent;
+    margin-left: 1%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    vertical-align: text-top;
+    margin-top: 1%;
+}
+
+.triangle-right:hover {
+    cursor: pointer;
+    border-top: 12px solid transparent;
+    border-left: 25px solid #F99820;
+    border-bottom: 12px solid transparent;
+}
+
+.triangle-left:hover {
+    cursor: pointer;
+    border-top: 12px solid transparent;
+    border-right: 25px solid #F99820;
+    border-bottom: 12px solid transparent;
+}
+
+#table {
+    display: inline-block;
+    vertical-align: top;
+    width: 80%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.groupDiv {
+    text-align: center;
+}
+
+.busyBox {
+    background-color: #E2E2E2;
+    border: 2px solid #E2E2E2;
+    width: 9%;
+    height: 30px;
+    display: inline-block;
+}
+
+
+.availableBox {
+    color: #E2E2E2;
+    background-color: #1CCAD8;
+    border: 2px solid #1CCAD8;
+    width: 9%;
+    height: 30px;
+    display: inline-block;
+}
 
 
 

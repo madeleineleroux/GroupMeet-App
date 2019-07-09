@@ -1,4 +1,6 @@
 //initial state loaded with sample data SINGLE GROUP
+import {daysById, hoursAllIds} from "./WeekReducer";
+
 const initialState =  {
     Members : {
         "Claire": {
