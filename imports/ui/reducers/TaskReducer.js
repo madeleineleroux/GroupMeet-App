@@ -95,7 +95,7 @@ const TaskReducer = (state = {}, action) => {
                 [action.member]:
                     {...state[action.member],
                         tasks: state[action.member].tasks.concat({
-                            id: action.id,
+                            taskId: action.id,
                             description: action.payload,
                             status: 0
                         })}};

@@ -17,7 +17,7 @@ const TaskMember = ({tasksByIds, tasks, name, idKey}) => {
                 </Card.Body>
                 <ListGroup id="scrollableBody" className="list-group-flush">
                     {tasks && tasks.map(task => (
-                        <Task member={idKey} key={task.taskId} id={task.taskId} status={task.status}
+                        <Task member={idKey} id={task.taskId} status={task.status}
                               text={task.description}/>
                     ))}
                 </ListGroup>

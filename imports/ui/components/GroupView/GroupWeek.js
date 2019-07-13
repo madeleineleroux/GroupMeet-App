@@ -6,6 +6,7 @@ import TaskMember from "../TaskView/TaskMember";
 import {nextWeekGroup, prevWeekGroup} from "../../actions/GroupAction";
 import Button from "react-bootstrap/Button";
 import GroupReducer from "../../reducers/GroupReducer";
+import Container from "react-bootstrap/Container";
 
 
 class GroupWeek extends Component {

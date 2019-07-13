@@ -11,7 +11,8 @@ class Task extends React.Component {
 
     //status, text, prints correctly, nothing else
     handleClick() {
-        console.log(this.props.member);
+        console.log(this.props.key);
+        console.log(this.props.id);
         this.props.toggleStatus(this.props.id, this.props.member);
     };
 

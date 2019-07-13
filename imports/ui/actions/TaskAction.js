@@ -10,6 +10,7 @@ export const addTaskSuccess = ( text, member, id ) => {
 
 export const addTask = (text, member, id) => {
     return (dispatch) => {
+        console.log(id);
         return Meteor.call('addTask', member, {taskId: id, description: text, status: 0}, (err, result) => {
             if (!err) {
                 dispatch(addTaskSuccess(text, member, id));
