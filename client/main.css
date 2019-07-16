@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One&display=swap');
 
+
+#month {
+    color: #E2E2E2;
+    font-family: 'Fugaz One', cursive;
+    font-size: 3.5rem;
+    padding-bottom: 2%;
+}
 
 .btn.btn-outline-primary {
     border-color: #E2E2E2;
@@ -211,7 +219,7 @@ html .progress-bar {
 }
 
 #scrollable {
-    max-height: 500px;
+    height: 500px;
 }
 
 #scrollableBody {
@@ -239,12 +247,12 @@ html thead {
     color: #E2E2E2;
     font-family: Roboto;
     font-size: 180%;
-    border-color: transparentr;
+    border-color: transparent;
 }
 
 #groupSide {
     background-color: #1CCAD8;
-    color: #E2E2E2;
+    color: white;
     padding: 0;
     text-align: center;
     vertical-align: middle;
@@ -253,7 +261,7 @@ html thead {
 
 html .table td {
     border-top: 0px solid transparent;
-    height: 39px;
+    height:39px;
 }
 
 .triangle-left {
@@ -275,7 +283,7 @@ html .table td {
     height: 0;
     display: inline-block;
     vertical-align: text-top;
-    margin-top: 1%;
+    margin-top: 10%;
 }
 
 .triangle-right:hover {
@@ -284,7 +292,7 @@ html .table td {
     border-left: 25px solid #F99820;
     border-bottom: 12px solid transparent;
 }
-
+x
 .triangle-left:hover {
     cursor: pointer;
     border-top: 12px solid transparent;
@@ -295,13 +303,13 @@ html .table td {
 #table {
     display: inline-block;
     vertical-align: top;
-    width: 75%;
+    width: 80%;
     margin-left: 2%;
     margin-right: 2%;
+    margin-top: 2%;
 }
 
 .groupDiv {
-    padding-top: 4%;
     text-align: center;
 }
 
@@ -323,7 +331,18 @@ html .table td {
     display: inline-block;
 }
 
-.table thead th {
-    padding-bottom: 0;
-    border-top: 0 solid transparent;
+html .table thead th {
+    border-top: transparent;
+    border-bottom: transparent;
+    padding: 0;
+}
+
+#spinning {
+    color: #E2E2E2;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
 }

@@ -1,10 +1,15 @@
 import { Mongo } from 'meteor/mongo';
 import { Meteor } from 'meteor/meteor';
 
-const Users = new Mongo.Collection('users');
+export const Users = new Mongo.Collection('users');
 // https://stackoverflow.com/questions/10506878/how-to-toggle-a-boolean-field-in-an-array-element-in-mongodb
 
-//update the return values
+//only runs on the server
+if (Meteor.isServer) {
+    Meteor.publish('users', function userPublication() {
+        return Users.find();
+    })
+}
 Meteor.methods({
     addTask(memberId, task) {
         console.log(task);

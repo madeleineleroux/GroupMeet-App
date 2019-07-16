@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {fetchGroup} from "../../actions/GroupAction";
 
 class HourCell extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     render() {
+        if (typeof this.props.hours !== 'undefined' ) {
+            return <td style={this.props.hours.availability ? {backgroundColor: "#1CCAD8"} : {backgroundColor: "#E2E2E2"}}></td>
+        }
         return (
-            <td style={this.props.allIds[this.props.id] ? {backgroundColor: "#1CCAD8"} : {}}></td>
+            <td></td>
         )
     }
 }
 
-const mapStateToProps = state => ({
-    allIds: state.GroupReducer
-});
-
-export default connect(mapStateToProps)(HourCell);
+export default HourCell;

@@ -11,7 +11,6 @@ export const fetchGroup = () => {
     return (dispatch) => {
         return Meteor.call('fetchGroupSchedule', (err, result) => {
             if (!err) {
-                console.log(result);
                 dispatch(fetchGroupScheduleSuccess(result));
             } else {
                 console.log("Couldn't fetch group schedule");
@@ -30,7 +29,6 @@ export const getNextWeekSuccess = (payload) => {
 export const nextWeekGroup = (currWeek) => {
     return (dispatch) => {
         return Meteor.call('getNextWeek', currWeek, (err, result) => {
-            console.log(result);
             if (!err) {
                 dispatch(getNextWeekSuccess(result));
             } else {

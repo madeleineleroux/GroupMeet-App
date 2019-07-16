@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CardDeck from "react-bootstrap/CardDeck";
 import TaskMember from "./TaskMember";
+import {withTracker} from "meteor/react-meteor-data";
+import {Meteor} from "meteor/meteor";
 
 //this is a design decision to use card deck. Alternates: CardColumns, CardGroup
 const TaskGroup = ({ groupMembers }) => {
@@ -14,9 +16,10 @@ const TaskGroup = ({ groupMembers }) => {
         )
 }
 
+export default TaskGroup
 
-const mapStateToProps = state => ({
-    groupMembers: state.TaskReducer
-});
-
-export default connect(mapStateToProps)(TaskGroup);
+// const mapStateToProps = state => ({
+//     groupMembers: state.TaskReducer
+// });
+//
+// export default connect(mapStateToProps)(TaskGroup);

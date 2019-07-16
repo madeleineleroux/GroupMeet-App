@@ -1,10 +1,10 @@
 import { Mongo } from 'meteor/mongo';
 import { Meteor } from 'meteor/meteor';
-import {booleanHours} from "../../imports/ui/reducers/WeekReducer";
+import {booleanHours} from "../ui/reducers/WeekReducer";
 const GroupSchedule = new Mongo.Collection('group');
 
 
-let moment = require('moment');
+let moment = require('moment/moment');
 moment.defaultFormat = "YYYYMMDD";
 
 Meteor.methods({

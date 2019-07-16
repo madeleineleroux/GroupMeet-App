@@ -13,12 +13,27 @@ class TaskInputForm extends React.Component {
         super(props);
         this.taskInput = React.createRef();
         this.submitTask = this.submitTask.bind(this);
+        this.state = {
+            body: ''
+        }
+    }
+
+    handleInputChange = e => {
+        this.setState( {
+            body: e.target.value
+        })
     }
 
     submitTask() {
         const input = this.taskInput.current.value;
         this.props.addTask(input, this.props.groupMember, uuid.v4());
-        //console.log(input, this.props.groupMember);
+        this.handleReset();
+    };
+
+    handleReset = e => {
+        this.setState({
+            body:''
+        })
     };
 
     render() {
@@ -28,6 +43,8 @@ class TaskInputForm extends React.Component {
                     placeholder="Add a new task"
                     aria-label="Add a new task"
                     ref={this.taskInput}
+                    value={this.state.body}
+                    onChange={this.handleInputChange}
                 />
                 <InputGroup.Append>
                     <Button variant="outline-secondary" onClick={this.submitTask}>Add</Button>
