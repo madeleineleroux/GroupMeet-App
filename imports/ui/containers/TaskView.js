@@ -13,7 +13,7 @@ import Tracker from 'tracker-component';
 class TaskView extends Tracker.Component {
     constructor(props) {
         super(props);
-        this.subscribe('users');
+        this.subscribe('users_tasks');
     }
 
     render() {
@@ -28,8 +28,8 @@ class TaskView extends Tracker.Component {
 }
 
 export const TaskTracker = withTracker(({ groupMembers }) => {
-    Meteor.subscribe('users');
-    const handle = Meteor.subscribe('users');
+    Meteor.subscribe('users_tasks');
+    const handle = Meteor.subscribe('users_tasks');
     const isReady = handle.ready();
 
     if (!isReady) {
