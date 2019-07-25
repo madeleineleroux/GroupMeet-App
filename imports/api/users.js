@@ -12,8 +12,8 @@ if (Meteor.isServer) {
 }
 Meteor.methods({
     editTaskText(id, member, text) {
-        Users.update({ _id: member, "tasks.taskId": id }, { $set: {"tasks.$.description" : text}});
         console.log(text);
+        Users.update({ _id: member, "tasks.taskId": id }, { $set: {"tasks.$.description" : text}});
         return;
     },
     addTask(memberId, task) {
