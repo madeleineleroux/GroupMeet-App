@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d353829-4084-4531-ad3b-4c4086f72552" name="Default Changelist" comment="" />
+    <list default="true" id="2d353829-4084-4531-ad3b-4c4086f72552" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/GroupTasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/reducers/TaskReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="135" column="2" lean-forward="true" selection-start-line="90" selection-end-line="135" selection-end-column="2" />
+            <state relative-caret-position="2295">
+              <caret line="135" column="2" selection-start-line="90" selection-end-line="135" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -36,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/reducers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="119">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -52,7 +55,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/GroupTasks.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -147,8 +154,8 @@
         <option value="$PROJECT_DIR$/imports/ui/reducers/OverviewReducer.js" />
         <option value="$PROJECT_DIR$/imports/ui/reducers/index.js" />
         <option value="$PROJECT_DIR$/imports/ui/actions/OverviewAction.js" />
-        <option value="$PROJECT_DIR$/imports/ui/components/TaskView/GroupTasks.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/Accounts/AccountsUIWrapper.js" />
+        <option value="$PROJECT_DIR$/imports/ui/components/TaskView/GroupTasks.js" />
       </list>
     </option>
   </component>
@@ -300,14 +307,7 @@
               <item name="imports" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Accounts" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="GroupMeet-App" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Claire\Documents\CPSC 436I\GroupMeet\GroupMeet-App" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="imports" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="containers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="TaskView" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="GroupMeet-App" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -385,6 +385,7 @@
       <workItem from="1563655968098" duration="1710000" />
       <workItem from="1563911201786" duration="240000" />
       <workItem from="1564074840714" duration="6305000" />
+      <workItem from="1564092361302" duration="281000" />
     </task>
     <task id="LOCAL-00002" summary="Fixed a typo/bug in task reducer.">
       <created>1563054360159</created>
@@ -397,7 +398,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86801000" />
+    <option name="totallyTimeSpent" value="87082000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -410,8 +411,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28219396" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28219396" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -422,8 +424,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.27886322" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.24156305" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.740675" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.24156305" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -839,33 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/reducers/TaskReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="135" column="2" lean-forward="true" selection-start-line="90" selection-end-line="135" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/reducers/OverviewReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/actions/OverviewAction.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/Accounts/Accounts.ui.config.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -907,8 +882,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/GroupTasks.js">
+    <entry file="file://$PROJECT_DIR$/imports/ui/reducers/TaskReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="135" column="2" selection-start-line="90" selection-end-line="135" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/reducers/OverviewReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/actions/OverviewAction.js">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/GroupTasks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
