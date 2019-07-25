@@ -5,12 +5,9 @@ import {toggleStatus, editTask} from "../../actions/TaskAction";
 import TaskDeleteButton from "./TaskDeleteButton";
 import ContentEditable from 'react-contenteditable';
 
-//TODO: currently when you use arrow keys, it triggers react slider.
-//TODO: make arrow keys move within editable content when cursor there instead
 class Task extends React.Component {
     constructor(props) {
         super(props);
-        //this.contentEditable = React.createRef();
         this.handleClick = this.handleClick.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
         this.state = {html: this.props.text};

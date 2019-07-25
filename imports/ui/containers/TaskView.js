@@ -47,7 +47,7 @@ export const TaskTracker = withTracker(({ groupMembers }) => {
                 tasks: user.tasks
             }
         }));
-        console.log(userObj);
+        //console.log(userObj);
         return {userTasks: userObj};
     }
 })(TaskView);
