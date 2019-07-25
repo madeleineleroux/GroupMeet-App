@@ -112,6 +112,16 @@ const TaskReducer = (state = {}, action) => {
 
         case 'FETCH_TASKS':
             return action.payload;
+        case 'DELETE_TASK':
+            return {...state,
+                [action.member]:
+                    {...state[action.member],
+                        tasks: state[action.member].tasks.filter(task=> task.id !== action.id)}};
+        case 'CLEAR_TASKS':
+            return {...state,
+                [action.payload]:
+                    {...state[action.payload],
+                        tasks: []}};
         default:
             return state;
     }

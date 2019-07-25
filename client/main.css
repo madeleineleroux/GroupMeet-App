@@ -116,6 +116,7 @@ html
 
 html body {
     background-color: #5FAD56;
+    font-family: Roboto, sans-serif;
 }
 
 .container.container {
@@ -219,7 +220,7 @@ html .progress-bar {
 }
 
 #scrollable {
-    height: 500px;
+    height: 700px;
 }
 
 #scrollableBody {
@@ -292,7 +293,7 @@ html .table td {
     border-left: 25px solid #F99820;
     border-bottom: 12px solid transparent;
 }
-x
+
 .triangle-left:hover {
     cursor: pointer;
     border-top: 12px solid transparent;
@@ -345,4 +346,28 @@ html .table thead th {
     position: fixed;
     width: 4rem;
     height: 4rem;
+}
+
+.slick-slide {
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+#clearTasksButton {
+    margin-bottom: 2%;
+}
+
+#cardTitleName {
+    font-family: 'Fugaz One', cursive;
+    font-size: 2.5rem;
+    margin-top: 2%;
+}
+
+#taskCheckbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
 }

@@ -21,6 +21,18 @@ Meteor.methods({
         Users.update({tasks: {$elemMatch: {taskId: id }}}, { $inc: { "tasks.$.status": 1 } });
         return;
     },
+
+    deleteTask(id, member) {
+        console.log(id, member);
+        return;
+    },
+
+    clearTasks(member) {
+        console.log(member);
+        Users.update({_id: member}, {$set: {tasks: []}});
+        return;
+    },
+
     fetchAllTasks(){
         const allUsers = Users.find({});
         let userObj = {};

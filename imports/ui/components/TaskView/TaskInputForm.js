@@ -45,6 +45,11 @@ class TaskInputForm extends React.Component {
                     ref={this.taskInput}
                     value={this.state.body}
                     onChange={this.handleInputChange}
+                    onKeyPress={event => {
+                        if (event.key === "Enter") {
+                            this.submitTask();
+                        }
+                    }}
                 />
                 <InputGroup.Append>
                     <Button variant="outline-secondary" onClick={this.submitTask}>Add</Button>
