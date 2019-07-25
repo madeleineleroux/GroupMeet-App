@@ -222,6 +222,7 @@ html .progress-bar {
 #scrollable {
     height: 700px;
 }
+/*TODO: currently height of scrollable is bigger than page size on not madie's computer, might need resize avatars?*/
 
 #scrollableBody {
     height: 75%;
@@ -370,4 +371,15 @@ html .table thead th {
     height: 10px;
     border: solid white;
     border-width: 0 3px 3px 0;
+}
+
+#taskBody {
+    display: flex;
+    flex-direction: row;
+}
+
+#taskListGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

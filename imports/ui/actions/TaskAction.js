@@ -9,7 +9,7 @@ export const addTaskSuccess = ( text, member, id ) => {
 
 export const addTask = (text, member, id) => {
     return (dispatch) => {
-        console.log(id);
+        //console.log(id);
         return Meteor.call('addTask', member, {taskId: id, description: text, status: 0}, (err, result) => {
             if (!err) {
                 dispatch(addTaskSuccess(text, member, id));
@@ -105,4 +105,26 @@ export const clearTasksSuccess = (member) => {
         payload: member,
         member
     }
+};
+
+export const editTaskSuccess = (id, member, text) => {
+    return {
+        type: 'EDIT_TASK',
+        id,
+        member,
+        text
+    }
+};
+
+export const editTask = (id, member, text) => {
+    return (dispatch) => {
+        return Meteor.call('editTaskText', id, member, text, (err, result) => {
+            if (!err) {
+                dispatch(editTaskSuccess(id, member, text));
+            } else {
+                console.log(err);
+                console.log('Did not edit task text');
+            }
+        });
+    };
 };

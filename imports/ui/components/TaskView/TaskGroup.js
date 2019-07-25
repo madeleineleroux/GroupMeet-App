@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { connect } from 'react-redux';
 import TaskMember from "./TaskMember";
@@ -31,6 +30,7 @@ const TaskGroup = ({ groupMembers }) => {
         swipeToSlide: true,
         slide: 'TaskMember',
         centerPadding: "60px",
+        accessibility: false
         // prevArrow: <LeftArrow/>,
         // nextArrow: <RightArrow/>
     };
