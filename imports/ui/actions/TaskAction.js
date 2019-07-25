@@ -10,6 +10,7 @@ export const addTaskSuccess = ( text, member, id ) => {
 
 export const addTask = (text, member, id) => {
     return (dispatch) => {
+        console.log(id);
         return Meteor.call('addTask', member, {taskId: id, description: text, status: 0}, (err, result) => {
             if (!err) {
                 dispatch(addTaskSuccess(text, member, id));
@@ -64,6 +65,50 @@ export const toggleStatus = (id, member) => {
         });
     };
 };
+
+export const deleteTask = (id, member) => {
+    return (dispatch) => {
+        return Meteor.call('deleteTask', member, id, (err, result) => {
+            if (!err) {
+                dispatch(deleteTaskSuccess(id, member));
+            } else {
+                console.log(err);
+                console.log('Did not delete task');
+            }
+        });
+    };
+};
+
+export const clearTasks = (member) => {
+    return (dispatch) => {
+        return Meteor.call('clearTasks', member, (err, result) => {
+            if (!err) {
+                dispatch(clearTasksSuccess(member));
+            } else {
+                console.log(err);
+                console.log('Did not clear tasks for', member);
+            }
+        });
+    };
+};
+
+export const deleteTaskSuccess = (id, member) => {
+    return {
+        type: 'DELETE_TASK',
+        payload: id,
+        member: member,
+        id
+    }
+};
+
+export const clearTasksSuccess = (member) => {
+    return {
+        type: 'CLEAR_TASKS',
+        payload: member,
+        member
+    }
+};
+
 
 //TODO Edit task
 

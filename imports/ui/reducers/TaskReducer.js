@@ -1,4 +1,6 @@
 //initial state loaded with sample data SINGLE GROUP
+import {daysById, hoursAllIds} from "./WeekReducer";
+
 const initialState =  {
     Members : {
         "Claire": {
@@ -93,7 +95,7 @@ const TaskReducer = (state = {}, action) => {
                 [action.member]:
                     {...state[action.member],
                         tasks: state[action.member].tasks.concat({
-                            id: action.id,
+                            taskId: action.id,
                             description: action.payload,
                             status: 0
                         })}};
@@ -110,6 +112,16 @@ const TaskReducer = (state = {}, action) => {
 
         case 'FETCH_TASKS':
             return action.payload;
+        case 'DELETE_TASK':
+            return {...state,
+                [action.member]:
+                    {...state[action.member],
+                        tasks: state[action.member].tasks.filter(task=> task.id !== action.id)}};
+        case 'CLEAR_TASKS':
+            return {...state,
+                [action.payload]:
+                    {...state[action.payload],
+                        tasks: []}};
         default:
             return state;
     }

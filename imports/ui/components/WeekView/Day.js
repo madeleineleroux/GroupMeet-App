@@ -12,10 +12,10 @@ const Day = ({ hours, hourByIds }) => {
             ))}
         </ButtonGroup>
     )
-}
+};
 
 const mapStateToProps = state => ({
     hourByIds: state.WeekReducer.hours.byId
-})
+});
 
 export default connect(mapStateToProps)(Day);

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:3000/tasks -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style type="text/css">svg:not(:root).svg-inline--fa {
+  overflow: visible;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.225em;
+}
+.svg-inline--fa.fa-w-1 {
+  width: 0.0625em;
+}
+.svg-inline--fa.fa-w-2 {
+  width: 0.125em;
+}
+.svg-inline--fa.fa-w-3 {
+  width: 0.1875em;
+}
+.svg-inline--fa.fa-w-4 {
+  width: 0.25em;
+}
+.svg-inline--fa.fa-w-5 {
+  width: 0.3125em;
+}
+.svg-inline--fa.fa-w-6 {
+  width: 0.375em;
+}
+.svg-inline--fa.fa-w-7 {
+  width: 0.4375em;
+}
+.svg-inline--fa.fa-w-8 {
+  width: 0.5em;
+}
+.svg-inline--fa.fa-w-9 {
+  width: 0.5625em;
+}
+.svg-inline--fa.fa-w-10 {
+  width: 0.625em;
+}
+.svg-inline--fa.fa-w-11 {
+  width: 0.6875em;
+}
+.svg-inline--fa.fa-w-12 {
+  width: 0.75em;
+}
+.svg-inline--fa.fa-w-13 {
+  width: 0.8125em;
+}
+.svg-inline--fa.fa-w-14 {
+  width: 0.875em;
+}
+.svg-inline--fa.fa-w-15 {
+  width: 0.9375em;
+}
+.svg-inline--fa.fa-w-16 {
+  width: 1em;
+}
+.svg-inline--fa.fa-w-17 {
+  width: 1.0625em;
+}
+.svg-inline--fa.fa-w-18 {
+  width: 1.125em;
+}
+.svg-inline--fa.fa-w-19 {
+  width: 1.1875em;
+}
+.svg-inline--fa.fa-w-20 {
+  width: 1.25em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: 0.3em;
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: 0.3em;
+  width: auto;
+}
+.svg-inline--fa.fa-border {
+  height: 1.5em;
+}
+.svg-inline--fa.fa-li {
+  width: 2em;
+}
+.svg-inline--fa.fa-fw {
+  width: 1.25em;
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: #ff253a;
+  border-radius: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  height: 1.5em;
+  line-height: 1;
+  max-width: 5em;
+  min-width: 1.5em;
+  overflow: hidden;
+  padding: 0.25em;
+  right: 0;
+  text-overflow: ellipsis;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: 0;
+  right: 0;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: 0;
+  left: 0;
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: 0;
+  right: auto;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-lg {
+  font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.fa-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.fa-pull-left {
+  float: left;
+}
+
+.fa-pull-right {
+  float: right;
+}
+
+.fa.fa-pull-left,
+.fas.fa-pull-left,
+.far.fa-pull-left,
+.fal.fa-pull-left,
+.fab.fa-pull-left {
+  margin-right: 0.3em;
+}
+.fa.fa-pull-right,
+.fas.fa-pull-right,
+.far.fa-pull-right,
+.fal.fa-pull-right,
+.fab.fa-pull-right {
+  margin-left: 0.3em;
+}
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
+}
+
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both, .fa-flip-horizontal.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical,
+:root .fa-flip-both {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}</style><link rel="stylesheet" type="text/css" class="__meteor-css__" href="./GroupMeet_files/merged-stylesheets.css">
+<link rel="stylesheet" href="./GroupMeet_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./GroupMeet_files/main.css">
+  <title>GroupMeet</title>
+  <script src="./GroupMeet_files/react.production.js" crossorigin="">
+
+  <script
+    src="https://unpkg.com/react-dom/umd/react-dom.production.js"
+    crossorigin
+  />
+
+  <script
+    src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+    crossorigin
+  />
+
+  <script>var Alert = ReactBootstrap.Alert;</script>
+
+  <link rel="stylesheet" href="./GroupMeet_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style type="text/css">/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+</style><style type="text/css">@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -25px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '←';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+.slick-next
+{
+    right: -25px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-next:before
+{
+    content: '→';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -25px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+}
+</style></head>
+<body><div id="react-target"><div><div><div class="container"><nav id="navbar" class="navbar navbar-expand-sm navbar-dark fixed-top"><a href="http://localhost:3000/tasks#home" class="navbar-brand">GroupMeet</a><button aria-controls="responsive-navbar-nav" type="button" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="navbar-collapse collapse" id="responsive-navbar-nav"><div class="mr-auto navbar-nav"><a href="http://localhost:3000/" data-rb-event-key="/" class="nav-link">Overview</a><a href="http://localhost:3000/" data-rb-event-key="/" class="nav-link">About Us</a><div class="dropdown nav-item"><a aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/tasks#" class="dropdown-toggle nav-link" role="button">Tools</a><div class="dropdown-menu" aria-labelledby=""><a href="http://localhost:3000/calendar" class="dropdown-item">Calendar</a><a href="http://localhost:3000/tasks" class="dropdown-item">Tasks</a><a href="http://localhost:3000/group" class="dropdown-item">Group Schedule</a><div class="dropdown-divider" role="separator"></div></div></div></div><span align="right"><div id="login-buttons" class="login-buttons-dropdown-align-">
+    
+       
+    
+       
+        <div class="login-link-and-dropdown-list login-form-sign-in">
+    
+      
+        <a class="login-link-text" id="login-sign-in-link">Sign in ▾</a>
+      
+    
+  </div>
+      
+    
+  
+    
+  </div></span></div></nav></div></div><div><div><div id="cardContainer" class="container"><div class="slick-slider TaskGroup slick-initialized" dir="ltr"><button type="button" data-role="none" class="slick-arrow slick-prev" style="display: block;"> Previous</button><div class="slick-list"><div class="slick-track" style="opacity: 1; transform: translate3d(-1296px, 0px, 0px); width: 5616px;"><div data-index="-3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Giraffe.png"><div class="text-center card-title h5">Madie</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div></div></div></div></div></div><div data-index="-2" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Pig.png"><div class="text-center card-title h5">Hannah</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div></div></div></div></div></div><div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Lizard.png"><div class="text-center card-title h5">Katrin</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div></div></div></div></div></div><div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Fox.png"><div class="text-center card-title h5">Claire</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"><div class="list-group-item" style="text-decoration: none; background: rgb(255, 255, 255);"><div style="display: flex; flex-direction: row; justify-content: space-between;"><div><div class="form-check form-check-inline"><input type="checkbox" id="taskCheckbox" class="form-check-input position-static"></div>sdfsdf</div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14 TaskDeleteButtonIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg></div></div></div></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div></div></div></div></div></div><div data-index="1" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline: none; width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Penguin.png"><div class="text-center card-title h5">Ben</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"><div class="list-group-item" style="text-decoration: line-through; background: rgb(28, 202, 216);"><div style="display: flex; flex-direction: row; justify-content: space-between;"><div><div class="form-check form-check-inline"><input type="checkbox" id="taskCheckbox" class="form-check-input position-static" checked=""></div>jsdncsdcf</div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14 TaskDeleteButtonIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg></div></div></div><div class="list-group-item" style="text-decoration: line-through; background: rgb(28, 202, 216);"><div style="display: flex; flex-direction: row; justify-content: space-between;"><div><div class="form-check form-check-inline"><input type="checkbox" id="taskCheckbox" class="form-check-input position-static" checked=""></div></div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14 TaskDeleteButtonIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg></div></div></div><div class="list-group-item" style="text-decoration: line-through; background: rgb(28, 202, 216);"><div style="display: flex; flex-direction: row; justify-content: space-between;"><div><div class="form-check form-check-inline"><input type="checkbox" id="taskCheckbox" class="form-check-input position-static" checked=""></div>fgdjgfdjgfdjgfdgfjdghfdgfdhgfdghfdfgdghfdgfdgfdgfdhgd</div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14 TaskDeleteButtonIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg></div></div></div><div class="list-group-item" style="text-decoration: none; background: rgb(255, 255, 255);"><div style="display: flex; flex-direction: row; justify-content: space-between;"><div><div class="form-check form-check-inline"><input type="checkbox" id="taskCheckbox" class="form-check-input position-static"></div>ß≤∂lknvs</div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14 TaskDeleteButtonIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg></div></div></div></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">75%</div></div></div></div></div></div><div data-index="2" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline: none; width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Giraffe.png"><div class="text-center card-title h5">Madie</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div></div></div></div></div></div><div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Pig.png"><div class="text-center card-title h5">Hannah</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div></div></div></div></div></div><div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Lizard.png"><div class="text-center card-title h5">Katrin</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div></div></div></div></div></div><div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Fox.png"><div class="text-center card-title h5">Claire</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"><div class="list-group-item" style="text-decoration: none; background: rgb(255, 255, 255);"><div style="display: flex; flex-direction: row; justify-content: space-between;"><div><div class="form-check form-check-inline"><input type="checkbox" id="taskCheckbox" class="form-check-input position-static"></div>sdfsdf</div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14 TaskDeleteButtonIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg></div></div></div></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div></div></div></div></div></div><div data-index="6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Penguin.png"><div class="text-center card-title h5">Ben</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"><div class="list-group-item" style="text-decoration: line-through; background: rgb(28, 202, 216);"><div style="display: flex; flex-direction: row; justify-content: space-between;"><div><div class="form-check form-check-inline"><input type="checkbox" id="taskCheckbox" class="form-check-input position-static" checked=""></div>jsdncsdcf</div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14 TaskDeleteButtonIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg></div></div></div><div class="list-group-item" style="text-decoration: line-through; background: rgb(28, 202, 216);"><div style="display: flex; flex-direction: row; justify-content: space-between;"><div><div class="form-check form-check-inline"><input type="checkbox" id="taskCheckbox" class="form-check-input position-static" checked=""></div></div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14 TaskDeleteButtonIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg></div></div></div><div class="list-group-item" style="text-decoration: line-through; background: rgb(28, 202, 216);"><div style="display: flex; flex-direction: row; justify-content: space-between;"><div><div class="form-check form-check-inline"><input type="checkbox" id="taskCheckbox" class="form-check-input position-static" checked=""></div>fgdjgfdjgfdjgfdgfjdghfdgfdhgfdghfdfgdghfdgfdgfdgfdhgd</div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14 TaskDeleteButtonIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg></div></div></div><div class="list-group-item" style="text-decoration: none; background: rgb(255, 255, 255);"><div style="display: flex; flex-direction: row; justify-content: space-between;"><div><div class="form-check form-check-inline"><input type="checkbox" id="taskCheckbox" class="form-check-input position-static"></div>ß≤∂lknvs</div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14 TaskDeleteButtonIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg></div></div></div></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">75%</div></div></div></div></div></div><div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Giraffe.png"><div class="text-center card-title h5">Madie</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div></div></div></div></div></div><div data-index="8" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Pig.png"><div class="text-center card-title h5">Hannah</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div></div></div></div></div></div><div data-index="9" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 432px;"><div><div id="scrollable" class="card"><img class="avatar" src="./GroupMeet_files/Lizard.png"><div class="text-center card-title h5">Katrin</div><div class="card-body"><div class="TaskInputForm input-group"><input placeholder="Add a new task" aria-label="Add a new task" class="form-control" value=""><div class="input-group-append"><button type="button" class="btn btn-outline-secondary">Add</button></div></div></div><div id="scrollableBody" class="list-group-flush list-group"></div><div class="card-body"><button id="clearTasksButton" type="button" class="btn btn-primary btn-block">Clear All</button><div class="progress"><div role="progressbar" class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div></div></div></div></div></div></div></div><button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;"> Next</button><ul class="slick-dots" style="display: block;"><li class="slick-active"><button>1</button></li><li class=""><button>2</button></li><li class=""><button>3</button></li><li class=""><button>4</button></li><li class=""><button>5</button></li></ul></div></div></div></div></div></div>
+  <script type="text/javascript">__meteor_runtime_config__ = JSON.parse(decodeURIComponent("%7B%22meteorRelease%22%3A%22METEOR%401.8.1%22%2C%22gitCommitHash%22%3A%22a142477ccb46e659a053a13c6670fc7f62e8aedc%22%2C%22meteorEnv%22%3A%7B%22NODE_ENV%22%3A%22development%22%2C%22TEST_METADATA%22%3A%22%7B%7D%22%7D%2C%22PUBLIC_SETTINGS%22%3A%7B%7D%2C%22ROOT_URL%22%3A%22http%3A%2F%2Flocalhost%3A3000%2F%22%2C%22ROOT_URL_PATH_PREFIX%22%3A%22%22%2C%22autoupdate%22%3A%7B%22versions%22%3A%7B%22web.browser%22%3A%7B%22version%22%3A%22b12a437221364f5bf5af63e055e779af29fc804c%22%2C%22versionRefreshable%22%3A%2266fda0419e5b08cc1ef7ddb74fbc27c003a5b52f%22%2C%22versionNonRefreshable%22%3A%223c4a0fa8413de7058ff7ac5681d9d99840385aac%22%7D%2C%22web.browser.legacy%22%3A%7B%22version%22%3A%22bd5bfd677b00e3065d4b46963b59739b715e2a62%22%2C%22versionRefreshable%22%3A%2266fda0419e5b08cc1ef7ddb74fbc27c003a5b52f%22%2C%22versionNonRefreshable%22%3A%228c989601d38aba255833e7909dc3b3e9e403b6f7%22%7D%7D%2C%22autoupdateVersion%22%3Anull%2C%22autoupdateVersionRefreshable%22%3Anull%2C%22autoupdateVersionCordova%22%3Anull%2C%22appId%22%3A%22hcmz0j7mi7k.nq2qhvwze92e%22%7D%2C%22appId%22%3A%22hcmz0j7mi7k.nq2qhvwze92e%22%2C%22isModern%22%3Atrue%7D"))</script>
+
+  <script type="text/javascript" src="./GroupMeet_files/meteor.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/meteor-base.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/mobile-experience.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/modules-runtime.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/modules.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/modern-browsers.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/babel-compiler.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/ecmascript.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/ecmascript-runtime.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/babel-runtime.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/promise.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/fetch.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/dynamic-import.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/es5-shim.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/ecmascript-runtime-client.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/base64.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/ejson.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/diff-sequence.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/geojson-utils.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/id-map.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/random.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/mongo-id.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/ordered-dict.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/tracker.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/minimongo.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/check.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/retry.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/callback-hook.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/ddp-common.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/reload.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/socket-stream-client.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/ddp-client.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/ddp.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/ddp-server.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/allow-deny.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/mongo-dev-server.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/mongo.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/reactive-var.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/standard-minifier-css.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/standard-minifier-js.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/shell-server.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/static-html.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/tmeasday_check-npm-versions.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/react-meteor-data.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/url.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/http.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/ddp-rate-limiter.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/localstorage.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/jquery.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/underscore.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/observe-sequence.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/deps.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/htmljs.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/blaze.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/accounts-base.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/service-configuration.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/spacebars.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/templating-compiler.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/templating-runtime.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/templating.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/reactive-dict.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/session.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/sha.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/srp.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/accounts-password.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/less.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/accounts-ui-unstyled.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/accounts-ui.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/webapp.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/livedata.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/hot-code-push.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/launch-screen.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/autoupdate.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/global-imports.js"></script>
+  <script type="text/javascript" src="./GroupMeet_files/app.js"></script>
+
+
+
+
+  
+  
+  
+  
+  
+
+  
+  </body></html>
