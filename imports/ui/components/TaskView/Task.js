@@ -13,9 +13,6 @@ class Task extends React.Component {
         //this.contentEditable = React.createRef();
         this.handleClick = this.handleClick.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
-        // this.state = {
-        //     textBody: this.props.text
-        // }
     }
 
     handleClick() {
@@ -23,19 +20,16 @@ class Task extends React.Component {
     };
 
     handleEdit = evt => {
-        console.log("please work i'm desperate");
-        //let newText = evt.target.value;
-        this.props.dispatch(editTask(this.props.id, this.props.member, evt.target.value));
-        // this.setState( {
-        //     textBody: evt.target.value
-        // })
+        let newText = evt.target.value;
+        console.log(newText);
+        this.props.dispatch(editTask(this.props.id, this.props.member, newText));
     };
 
     render() {
         return (
             <ListGroupItem style={{textDecoration: this.props.status % 2 === 1 ? 'line-through' : 'none',
                 background: this.props.status % 2 === 1 ? '#1CCAD8' : '#FFFFFF'}}>
-                <div style={style}>
+                <div id="taskListGroup">
                     <div id="taskBody">
                         <FormCheck inline id="taskCheckbox" checked={this.props.status % 2 === 1}
                                    onChange={this.handleClick} />
@@ -47,11 +41,5 @@ class Task extends React.Component {
         )
     }
 }
-
-const style = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-};
 
 export default connect()(Task)
