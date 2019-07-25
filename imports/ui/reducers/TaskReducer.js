@@ -109,7 +109,15 @@ const TaskReducer = (state = {}, action) => {
                     ? {...task, status: task.status + 1}
                     : task)
                 }};
-
+        case 'EDIT_TASK':
+            return {...state,
+                [action.member]:
+                    {...state[action.member],
+                        tasks: state[action.member].tasks.map(task =>
+                            (task.taskId === action.id)
+                                ? {...task, description: action.text}
+                                : task)
+                    }};
         case 'FETCH_TASKS':
             return action.payload;
         case 'DELETE_TASK':

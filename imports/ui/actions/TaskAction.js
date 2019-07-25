@@ -106,3 +106,25 @@ export const clearTasksSuccess = (member) => {
         member
     }
 };
+
+export const editTaskSuccess = (id, member, text) => {
+    return {
+        type: 'EDIT_TASK',
+        id,
+        member,
+        text
+    }
+};
+
+export const editTask = (id, member, text) => {
+    return (dispatch) => {
+        return Meteor.call('editTaskText', id, member, text, (err, result) => {
+            if (!err) {
+                dispatch(editTaskSuccess(id, member, text));
+            } else {
+                console.log(err);
+                console.log('Did not edit task text');
+            }
+        });
+    };
+};
