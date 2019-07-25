@@ -2,55 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d353829-4084-4531-ad3b-4c4086f72552" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GroupMeet-App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GroupMeet-App.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.meteor/.finished-upgraders" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/.finished-upgraders" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.meteor/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.meteor/.id" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/.id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.meteor/packages" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.meteor/platforms" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/platforms" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.meteor/release" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/release" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.meteor/versions" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/versions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/typings/meteor.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/typings/meteor.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/actions/DayAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/actions/DayAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/actions/TaskAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/actions/TaskAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/NavbarA.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/NavbarA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/Task.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/Task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskProgressBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskProgressBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/WeekView/Cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/Cell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/WeekView/Day.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/Day.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/WeekView/ResetCalButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/ResetCalButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/WeekView/SubmitButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/SubmitButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/WeekView/Week.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/Week.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekSidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekSidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/containers/TaskView.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/containers/TaskView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/containers/WeekView.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/containers/WeekView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/reducers/TaskReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/reducers/TaskReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/reducers/WeekReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/reducers/WeekReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/availability.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
@@ -178,11 +130,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-101" />
-    <option name="y" value="79" />
-    <option name="width" value="1039" />
-    <option name="height" value="707" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="711" />
+    <option name="y" value="-12" />
+    <option name="width" value="1218" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
@@ -430,7 +382,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73081000" />
+    <option name="totallyTimeSpent" value="73692000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -443,20 +395,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26550078" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32682925" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24333926" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24333926" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.27886322" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.34096387" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.339254" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -497,6 +450,14 @@
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
               </option>
             </State>
           </value>

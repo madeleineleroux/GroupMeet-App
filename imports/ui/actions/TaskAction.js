@@ -1,4 +1,3 @@
-//TODO: refactor for DB/async
 export const addTaskSuccess = ( text, member, id ) => {
     return {
         type: 'ADD_TASK',
@@ -44,7 +43,6 @@ export const fetchTasksSuccess = (payload) => {
 
 
 //Toggles task status - complete/incomplete
-//TODO: may be reversed t/f
 export const toggleStatusSuccess = (id, member) => {
     return {
         type: 'TOGGLE_STATUS',
@@ -108,10 +106,3 @@ export const clearTasksSuccess = (member) => {
         member
     }
 };
-
-
-//TODO Edit task
-
-//?? Add group member
-
-//TODO Delete task
