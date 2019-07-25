@@ -13,6 +13,7 @@ class Task extends React.Component {
         //this.contentEditable = React.createRef();
         this.handleClick = this.handleClick.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
+        this.state = {html: this.props.text};
     }
 
     handleClick() {
@@ -20,9 +21,8 @@ class Task extends React.Component {
     };
 
     handleEdit = evt => {
-        let newText = evt.target.value;
-        console.log(newText);
-        this.props.dispatch(editTask(this.props.id, this.props.member, newText));
+        this.setState({html: evt.target.value});
+        this.props.dispatch(editTask(this.props.id, this.props.member, evt.target.value));
     };
 
     render() {
@@ -33,7 +33,7 @@ class Task extends React.Component {
                     <div id="taskBody">
                         <FormCheck inline id="taskCheckbox" checked={this.props.status % 2 === 1}
                                    onChange={this.handleClick} />
-                        <ContentEditable html={this.props.text} onChange={this.props.handleEdit}/>
+                        <ContentEditable html={this.state.html} onChange={this.handleEdit}/>
                     </div>
                     <TaskDeleteButton id={this.props.id} task={this.props.id} member={this.props.member}/>
                 </div>
