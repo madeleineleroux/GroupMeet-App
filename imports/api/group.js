@@ -15,7 +15,7 @@ Meteor.methods({
             const allHours = booleanHours();
             const gsInitState = Object.assign({}, allHours, {_id: start});
             GroupSchedule.insert(gsInitState);
-        }
+        }m
 
         return GroupSchedule.find({_id: start}).fetch()[0];
         },

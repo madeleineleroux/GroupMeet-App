@@ -191,7 +191,7 @@ html body {
 }
 
 .avatar {
-    width: 50%;
+    width: 33%;
     text-align: center;
     margin: auto;
     border-radius: 50%;
@@ -220,7 +220,7 @@ html .progress-bar {
 }
 
 #scrollable {
-    height: 700px;
+    height: 600px;
 }
 
 #scrollableBody {
@@ -359,7 +359,7 @@ html .table thead th {
 
 #cardTitleName {
     font-family: 'Fugaz One', cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 2%;
 }
 
