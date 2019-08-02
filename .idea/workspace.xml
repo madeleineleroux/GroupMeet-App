@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5796488-aabd-496e-9fe7-576d4382a733" name="Default Changelist" comment="Fixed a typo/bug in task reducer.">
-      <change afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/ClearTaskButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskDeleteButton.js" afterDir="false" />
+    <list default="true" id="c5796488-aabd-496e-9fe7-576d4382a733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/api/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/actions/TaskAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/actions/TaskAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/Task.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/Task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/reducers/TaskReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/reducers/TaskReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/components/GroupView/GroupTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/GroupView/GroupTable.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
@@ -30,30 +19,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/Task.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="34" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/containers/TaskView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="5595">
@@ -65,7 +30,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="105">
               <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -74,10 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/Avatar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-42">
+            <state relative-caret-position="15">
               <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
@@ -87,9 +52,59 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/GroupView/GroupTable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/GroupView/GroupWeek.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="569">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/actions/GroupAction.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="47">
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/api/group.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-70">
+              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../loadMovieDetailsDataset.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
+            <state relative-caret-position="675">
               <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -179,9 +194,7 @@
         <option value="$PROJECT_DIR$/imports/ui/components/GroupView/Table.js" />
         <option value="$PROJECT_DIR$/imports/ui/actions/GroupAction.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/GroupView/Hour.js" />
-        <option value="$PROJECT_DIR$/imports/ui/components/GroupView/GroupTable.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/GroupView/HourCell.js" />
-        <option value="$PROJECT_DIR$/imports/ui/components/GroupView/GroupWeek.js" />
         <option value="$PROJECT_DIR$/imports/ui/actions/TaskAction.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/TaskView/ClearTaskButton.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/TaskView/Task.js" />
@@ -193,6 +206,8 @@
         <option value="$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js" />
         <option value="$PROJECT_DIR$/client/main.css" />
+        <option value="$PROJECT_DIR$/imports/ui/components/GroupView/GroupWeek.js" />
+        <option value="$PROJECT_DIR$/imports/ui/components/GroupView/GroupTable.js" />
       </list>
     </option>
   </component>
@@ -234,12 +249,6 @@
               <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
               <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
               <item name="imports" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
-              <item name="imports" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -262,37 +271,7 @@
               <item name="imports" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Accounts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
-              <item name="imports" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="GroupView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
-              <item name="imports" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="TaskView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
-              <item name="imports" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupMeet-App" type="462c0819:PsiDirectoryNode" />
-              <item name="imports" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GroupMeet-App" type="b2602c69:ProjectViewProjectNode" />
@@ -434,6 +413,8 @@
       <workItem from="1563318384414" duration="123000" />
       <workItem from="1563655968098" duration="1710000" />
       <workItem from="1563911201786" duration="240000" />
+      <workItem from="1564028276815" duration="507000" />
+      <workItem from="1564529089485" duration="948000" />
     </task>
     <task id="LOCAL-00002" summary="Fixed a typo/bug in task reducer.">
       <created>1563054360159</created>
@@ -442,11 +423,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563054360159</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed a typo/bug in task reducer.">
+      <created>1564028466800</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1564028466800</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73064000" />
+    <option name="totallyTimeSpent" value="74519000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -741,23 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/api/group.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/actions/GroupAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -794,26 +765,6 @@
           <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/GroupView/GroupTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/GroupView/GroupWeek.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -885,7 +836,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/Task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="285">
           <caret line="23" column="34" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="34" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -910,6 +861,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/Accounts/AccountsUIWrapper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -920,35 +891,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskInputForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/Avatar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
+        <state relative-caret-position="15">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/GroupView/GroupTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/GroupView/GroupWeek.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/actions/GroupAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/api/group.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../loadMovieDetailsDataset.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
