@@ -383,3 +383,11 @@ html .table thead th {
     flex-direction: row;
     justify-content: space-between;
 }
+
+#groupProgress {
+    text-align: center;
+}
+
+#groupProgressBar {
+    height: 50px;
+}
