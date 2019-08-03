@@ -12,6 +12,7 @@ class Register extends React.Component {
         const password = ele.find("#password").val();
         const confirmPassword = ele.find("#confirmPassword").val();
         const name = ele.find('#name').val();
+        console.log(name);
         if(name.length > 16) {
             alert("Your name must be 16 characters or less.")
         }
@@ -27,6 +28,13 @@ class Register extends React.Component {
                     alert(er.reason)
                 }
                 else {
+                    Meteor.users.update(Meteor.userId(), {
+                        $set:{
+                            profile: {
+                                name: name,
+                                Tasks: []
+                        }
+                    }});
                     window.location.reload();
                 }
             });
