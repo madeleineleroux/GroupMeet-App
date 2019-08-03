@@ -3,8 +3,15 @@ import React, { Component } from 'react'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
+import { Button } from 'react-bootstrap';
+import {withRouter} from 'react-router-dom'
 
-export default class NavbarA extends Component {
+class NavbarB extends Component {
+
+    handleLogout() {
+        Meteor.logout();
+        this.props.history.push('/')
+    }
 
     render() {
         return (
@@ -27,14 +34,12 @@ export default class NavbarA extends Component {
                             </NavDropdown>
                             </Nav>
                             <Nav>
-                                <Nav.Link href="/login">Login</Nav.Link>
-                                <Nav.Link href="/register">Register</Nav.Link>
+                            <Button variant="outline-success" onClick={this.handleLogout}>Logout</Button>
                             </Nav>
                             {/* Tab at the very right */}
 
 
                             {/* Modal button */}
-                            {/* <Button variant="outline-success" onClick={this.handleShow}>Login or Signup</Button> */}
 
                         </Navbar.Collapse>
                     </Navbar>
@@ -44,3 +49,5 @@ export default class NavbarA extends Component {
         )
     }
 }
+
+export default withRouter(NavbarB);
