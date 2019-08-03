@@ -391,3 +391,15 @@ html .table thead th {
 #groupProgressBar {
     height: 50px;
 }
+
+#MemberScheduleTasks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+
+#OverviewCard {
+    width: 49%;
+}
