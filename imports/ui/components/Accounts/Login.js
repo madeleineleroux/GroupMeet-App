@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { Meteor } from 'meteor/meteor';
 import { withRouter } from 'react-router-dom'
 
@@ -15,7 +15,7 @@ class Login extends React.Component {
                 alert(er.reason);
             }
             else {
-                this.props.history.push("/")
+                this.props.history.push("/");
             }
         });
     }

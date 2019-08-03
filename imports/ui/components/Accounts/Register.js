@@ -14,7 +14,8 @@ class Register extends React.Component {
         if (password === confirmPassword && password !== "" && confirmPassword !== "") {
             let accountInfo = {
                 email: email,
-                password: password
+                password: password,
+                Tasks: []
             };
             Accounts.createUser(accountInfo, function (er, result) {
                 if (er) {
