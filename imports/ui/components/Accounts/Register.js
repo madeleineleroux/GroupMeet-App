@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Meteor } from 'meteor/meteor';
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link, Redirect } from 'react-router-dom'
 
 class Register extends React.Component {
 
@@ -11,10 +11,15 @@ class Register extends React.Component {
         const email = ele.find("#email").val();
         const password = ele.find("#password").val();
         const confirmPassword = ele.find("#confirmPassword").val();
-        if (password === confirmPassword && password !== "" && confirmPassword !== "") {
+        const name = ele.find('#name').val();
+        if(name.length > 16) {
+            alert("Your name must be 16 characters or less.")
+        }
+        else if (password === confirmPassword && password !== "" && confirmPassword !== "") {
             let accountInfo = {
                 email: email,
                 password: password,
+                name: name,
                 Tasks: []
             };
             Accounts.createUser(accountInfo, function (er, result) {
@@ -22,19 +27,25 @@ class Register extends React.Component {
                     alert(er.reason)
                 }
                 else {
-                    this.props.history.push("/")
+                    window.location.reload();
                 }
             });
-        } else {
+        }
+        else {
             alert("Your passwords must match")
         }
     }
 
     render() {
+
         return (
             <div> 
                 <h1>Register</h1>
                 <Form onSubmit={this.onSubmit}>
+                    <FormGroup>
+                        <Label for="exampleName">Name</Label>
+                        <Input type="text" name="text" id="name" placeholder="Enter your name" />
+                    </FormGroup >
                     <FormGroup>
                         <Label for="exampleEmail">Email</Label>
                         <Input type="email" name="email" id="email" placeholder="Enter your email address" />
@@ -49,6 +60,9 @@ class Register extends React.Component {
                     </FormGroup>
                     <Button>Submit</Button>
                 </Form>
+                <span>
+                    Have an account? <Link to="/login">Login now!</Link>
+                </span>
           </div>
     );
   }

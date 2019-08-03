@@ -7,14 +7,16 @@ import {Route, withRouter} from 'react-router-dom'
 import GroupView from "./containers/GroupView";
 import Register from './components/Accounts/Register';
 import Login from './components/Accounts/Login';
+import PrivateRoute from './components/Accounts/PrivateRoute';
+import LoggedRoute from './components/Accounts/LoggedRoute';
 const Routes = () => (
         <div>
-            <Route exact path = '/' component = {WeekView}/>
-            <Route path='/calendar' component={WeekView}/>
-            <Route path='/tasks' component={TaskView}/>
-            <Route path='/group' component={GroupView}/>
-            <Route path='/register' component = {Register}/>
-            <Route path='/login' component = {Login}/>
+            <PrivateRoute exact path = '/' component = {WeekView}/>
+            <PrivateRoute path='/calendar' component={WeekView}/>
+            <PrivateRoute path='/tasks' component={TaskView}/>
+            <PrivateRoute path='/group' component={GroupView}/>
+            <LoggedRoute path='/register' component = {Register}/>
+            <LoggedRoute path='/login' component = {Login}/>
         </div>
   );
 

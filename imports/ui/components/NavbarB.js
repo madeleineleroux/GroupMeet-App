@@ -10,7 +10,7 @@ class NavbarB extends Component {
 
     handleLogout() {
         Meteor.logout();
-        this.props.history.push('/')
+        window.location.reload();
     }
 
     render() {

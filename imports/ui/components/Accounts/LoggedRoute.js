@@ -7,7 +7,7 @@ import React from 'react'
 import { Redirect, Route } from 'react-router-dom'
 
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
+const LoggedRoute = ({ component: Component, ...rest }) => {
 
   // Add your own authentication on the below line.
   const isLoggedIn = Meteor.userId();
@@ -17,13 +17,13 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
       {...rest}
       render={props =>
         isLoggedIn ? (
-          <Component {...props} />
+          <Redirect to={{ pathname: '/'}} />
         ) : (
-          <Redirect to={{ pathname: '/login'}} />
+          <Component {...props} />
         )
       }
     />
   )
 }
 
-export default PrivateRoute
+export default LoggedRoute

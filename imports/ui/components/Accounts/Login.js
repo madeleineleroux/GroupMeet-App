@@ -1,9 +1,17 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { Meteor } from 'meteor/meteor';
-import { withRouter } from 'react-router-dom'
-
+import { withRouter, Link, Redirect, browserHistory} from 'react-router-dom'
 class Login extends React.Component {
+
+    state = {
+        redirect: false
+    }
+
+    constructor(props) {
+        super(props);
+        this.onSubmit = this.onSubmit.bind(this);
+      } 
 
     onSubmit(e) {
         e.preventDefault();
@@ -11,16 +19,20 @@ class Login extends React.Component {
         const email = ele.find("#email").val();
         const password = ele.find("#password").val();
         Meteor.loginWithPassword(email, password, (er)=> {
+            console.log(this.state);
             if (er) {
                 alert(er.reason);
             }
-            else {
-                this.props.history.push("/");
-            }
+            window.location.reload();
         });
     }
 
     render() {
+
+        if (this.state.redirect === true) {
+            return (<Redirect to='/'/>)
+        }
+
         return (
             <div>
                 <h1>Login</h1>
@@ -35,6 +47,9 @@ class Login extends React.Component {
                     </FormGroup>
                     <Button>Submit</Button>
                 </Form>
+                <span>
+                    Don't have an account? <Link to="/register">Register now!</Link>
+                </span>
             </div>
         )
     }
