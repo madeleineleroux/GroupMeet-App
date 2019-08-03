@@ -29,7 +29,7 @@ class App extends Component {
             navigate = <NavbarA />;
         return (
             <div>
-                {navigate}>
+                {navigate}
                 <Routes />
             </div>
         )

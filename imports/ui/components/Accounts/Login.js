@@ -4,15 +4,6 @@ import { Meteor } from 'meteor/meteor';
 import { withRouter, Link, Redirect, browserHistory} from 'react-router-dom'
 class Login extends React.Component {
 
-    state = {
-        redirect: false
-    }
-
-    constructor(props) {
-        super(props);
-        this.onSubmit = this.onSubmit.bind(this);
-      } 
-
     onSubmit(e) {
         e.preventDefault();
         const ele = $(e.target);
@@ -28,15 +19,10 @@ class Login extends React.Component {
     }
 
     render() {
-
-        if (this.state.redirect === true) {
-            return (<Redirect to='/'/>)
-        }
-
         return (
             <div>
-                <h1>Login</h1>
-                <Form onSubmit={this.onSubmit}>
+                <h2 className = 'loginRedirect'>Login</h2>
+                <Form onSubmit={this.onSubmit} className = 'loginForm'>
                     <FormGroup>
                         <Label for="exampleEmail">Email</Label>
                         <Input type="email" name="email" id="email" placeholder="Enter your email address" />
@@ -45,11 +31,11 @@ class Login extends React.Component {
                         <Label for="examplePassword">Password</Label>
                         <Input type="password" name="password" id="password" placeholder="Enter a password" />
                     </FormGroup>
-                    <Button>Submit</Button>
+                    <Button className = 'loginRedirect'>Submit</Button>
                 </Form>
-                <span>
+                <p className = 'loginRedirect'>
                     Don't have an account? <Link to="/register">Register now!</Link>
-                </span>
+                </p>
             </div>
         )
     }

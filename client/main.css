@@ -158,9 +158,6 @@ html body {
     height: 6%;
 }
 
-
-
-
 #footer-button {
     border-radius: 5px;
     background-color: #124E78;
@@ -370,4 +367,14 @@ html .table thead th {
     height: 10px;
     border: solid white;
     border-width: 0 3px 3px 0;
+}
+
+.loginForm {
+    width: 25%;
+    display: block;
+    margin: auto;
+}
+
+.loginRedirect {
+    text-align: center;
 }

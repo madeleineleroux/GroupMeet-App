@@ -48,8 +48,8 @@ class Register extends React.Component {
 
         return (
             <div> 
-                <h1>Register</h1>
-                <Form onSubmit={this.onSubmit}>
+                <h2 className = 'loginRedirect'>Register</h2>
+                <Form onSubmit={this.onSubmit} className = 'loginForm'>
                     <FormGroup>
                         <Label for="exampleName">Name</Label>
                         <Input type="text" name="text" id="name" placeholder="Enter your name" />
@@ -66,11 +66,11 @@ class Register extends React.Component {
                         <Label for="examplePassword">Confirm Password</Label>
                         <Input type="password" name="password" id="confirmPassword" placeholder="Confirm your password" />
                     </FormGroup>
-                    <Button>Submit</Button>
+                    <Button className = 'loginRedirect'>Submit</Button>
                 </Form>
-                <span>
+                <p className = 'loginRedirect'>
                     Have an account? <Link to="/login">Login now!</Link>
-                </span>
+                </p>
           </div>
     );
   }
