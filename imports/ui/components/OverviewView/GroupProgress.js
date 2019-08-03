@@ -9,17 +9,15 @@ class GroupProgress extends React.Component {
     }
 
     getProgress() {
-        //TODO: implement: currently set to dummy % progress
-
-        // let numTotalTasks = this.props.tasks.length; // need to refactor for group tasks
-        let numTotalTasks = 100;
-
+        let tasks = [];
+        Object.values(this.props.groupMembers).forEach(element => {
+            tasks = tasks.concat(element.tasks);
+        });
+        let numTotalTasks = tasks.length;
         if (numTotalTasks == 0) {
             return 0;
         }
-
-        //let completedGroupTasks = this.props.tasks.filter(task => task.status % 2 == 1).length; //refactor for group
-        let completedGroupTasks = 25;
+        let completedGroupTasks = tasks.filter(task => task.status % 2 == 1).length;
         return (completedGroupTasks/numTotalTasks) * 100;
     };
 
@@ -41,11 +39,5 @@ class GroupProgress extends React.Component {
         )
     }
 }
-
-//TODO: get group tasks -> pass in as prop?
-
-// const mapStateToProps = state => ({
-//     tasksByIds: state.TaskReducer
-// });
 
 export default GroupProgress
