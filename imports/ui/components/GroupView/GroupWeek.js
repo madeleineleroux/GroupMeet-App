@@ -63,8 +63,8 @@ export const TableTracker = withTracker (({ groupSchedule }) => {
         console.log("NO");
         return {groupSchedule: groupSchedule};
     } else {
-        console.log("CHANGE");
-        return {groupSchedule: GroupSchedule.find({_id: groupSchedule._id})}
+        console.log("Yes");
+        return {groupSchedule: GroupSchedule.find({_id: groupSchedule._id}).fetch()[0]}
     }
 })(GroupWeek);
 

@@ -9,6 +9,14 @@
     padding-bottom: 2%;
 }
 
+#calendarMonth {
+    color: #E2E2E2;
+    font-family: 'Fugaz One', cursive;
+    font-size: 3.5rem;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
 .btn.btn-outline-primary {
     border-color: #E2E2E2;
     background-color: #E2E2E2;
@@ -72,7 +80,7 @@ span {
 @media (max-width: 768px) {
     .btn.btn-outline-primary {
         padding:0;
-        height: 20px;
+        height: 39px;
         font-size:100%;
     }
 
@@ -150,7 +158,7 @@ html body {
 }
 
 #calendarBody {
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 #navbar {
@@ -162,7 +170,6 @@ html body {
 
 
 #footer-button {
-    border-radius: 5px;
     background-color: #124E78;
     border-color: #124E78;
     padding: 1rem;
@@ -191,7 +198,7 @@ html body {
 }
 
 .avatar {
-    width: 50%;
+    width: 33%;
     text-align: center;
     margin: auto;
     border-radius: 50%;
@@ -220,7 +227,7 @@ html .progress-bar {
 }
 
 #scrollable {
-    height: 700px;
+    height: 600px;
 }
 /*TODO: currently height of scrollable is bigger than page size on not madie's computer, might need resize avatars?*/
 
@@ -360,7 +367,7 @@ html .table thead th {
 
 #cardTitleName {
     font-family: 'Fugaz One', cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 2%;
 }
 

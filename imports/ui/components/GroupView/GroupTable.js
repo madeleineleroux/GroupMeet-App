@@ -31,7 +31,7 @@ class GroupTable extends Component {
                     <tr>
                     <th></th>
                     {DAYS.map( day => (
-                        <th>{day + d}</th>
+                        <th>{this.props.moment.add(1, 'd').date()}</th>
                     ))}
                     </tr>
                     </thead>

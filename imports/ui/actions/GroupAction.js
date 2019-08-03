@@ -45,13 +45,21 @@ export const getPrevWeekSuccess = (payload) => {
     }
 };
 
+export const noLastWeek = currWeek => {
+    return {
+        type: 'NO_LAST_WEEK',
+        currWeek
+    }
+};
+
 export const prevWeekGroup = (currWeek) => {
     return (dispatch) => {
         return Meteor.call('getPrevWeek', currWeek, (err, result) => {
             if (!err) {
                 dispatch(getPrevWeekSuccess(result));
             } else {
-                console.log("Couldn't fetch group schedule");
+                dispatch(noLastWeek(currWeek));
+                //console.log("Couldn't fetch group schedule");
             }
         })
     }

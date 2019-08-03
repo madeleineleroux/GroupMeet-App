@@ -10,11 +10,18 @@ moment.defaultFormat = "YYYYMMDD";
 Meteor.methods({
     fetchGroupSchedule() {
         let start = (moment().startOf('week').format());
+        let secondWeek = (moment().add(1, 'weeks').startOf('week').format())
 
         if (GroupSchedule.find({_id: start}).count() === 0) {
             const allHours = booleanHours();
             const gsInitState = Object.assign({}, allHours, {_id: start});
             GroupSchedule.insert(gsInitState);
+        }
+
+        if (GroupSchedule.find({_id: secondWeek}).count() === 0) {
+            const allHours = booleanHours();
+            const gsSecondState = Object.assign({}, allHours, {_id: secondWeek});
+            GroupSchedule.insert(gsSecondState);
         }
 
         return GroupSchedule.find({_id: start}).fetch()[0];
@@ -25,8 +32,10 @@ Meteor.methods({
         let prevWeek = currMoment.subtract(7, 'days').startOf('week').format();
 
         if (GroupSchedule.find({_id: prevWeek}).count() === 0) {
-            console.log("This is the most earliest week");
-            return GroupSchedule.find({_id: currWeek}).fetch()[0];
+            const allHours = booleanHours();
+            const newWeek = Object.assign({}, allHours, {_id: prevWeek});
+            GroupSchedule.insert(newWeek);
+            return GroupSchedule.find({_id: prevWeek}).fetch()[0];
         } else {
             return GroupSchedule.find({_id: prevWeek}).fetch()[0];
         }

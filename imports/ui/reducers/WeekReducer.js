@@ -66,6 +66,7 @@ export function daysById() {
 }
 
 export const initState = {
+    user: this.userId,
     days : {
       byId: daysById(),
       allIds : weekdays
@@ -79,6 +80,7 @@ export const initState = {
 const WeekReducer = (state = initState, action) => {
     switch(action.type) {
         case 'TOGGLE_AVAIL':
+            console.log(Meteor.userId());
             return {
                 ...state,
                 hours : {
