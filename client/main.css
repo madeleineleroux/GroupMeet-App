@@ -222,7 +222,6 @@ html .progress-bar {
 #scrollable {
     height: 700px;
 }
-/*TODO: currently height of scrollable is bigger than page size on not madie's computer, might need resize avatars?*/
 
 #scrollableBody {
     height: 75%;
@@ -406,4 +405,17 @@ html .table thead th {
 
 #CardHeader {
     text-align: center;
+}
+
+#active {
+    background-color: #1CCAD8;
+}
+
+.calCell {
+    cursor: pointer;
+    border-right: 1px solid #1CCAD8;
+}
+
+#album:hover {
+    background-color: #1CCAD8;
 }

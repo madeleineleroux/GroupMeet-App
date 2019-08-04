@@ -1,10 +1,13 @@
 import React from "react";
-import {Card, ListGroup, ListGroupItem} from "react-bootstrap";
-import Day from "../WeekView/Day";
+import {Card, ListGroup} from "react-bootstrap";
 import Task from "../TaskView/Task";
+import moment from "moment";
+import { connect } from 'react-redux';
+import TodayAvailability from "./TodayAvailability";
 
 class MemberScheduleTasks extends React.Component {
     render() {
+        let weekday = moment().format("dddd").toLowerCase();
         return (
             <div id='MemberScheduleTasks'>
 
@@ -12,12 +15,8 @@ class MemberScheduleTasks extends React.Component {
                     <Card.Header id='CardHeader'>
                         <Card.Title>Today's Availability</Card.Title>
                     </Card.Header>
-                    <Card.Body>
-                        <ListGroup>
-                            <ListGroupItem>One</ListGroupItem>
-                            <ListGroupItem>Two</ListGroupItem>
-                            <ListGroupItem>Three</ListGroupItem>
-                        </ListGroup>
+                    <Card.Body id="scrollableBody">
+                        <TodayAvailability day={weekday}/>
                     </Card.Body>
                 </Card>
 
@@ -36,31 +35,11 @@ class MemberScheduleTasks extends React.Component {
                 </Card>
             </div>
         )
-        // return (
-        //     <div id='MemberScheduleTasks'>
-        //         <Card id='OverviewCard'>
-        //             <Card.Body>
-        //                 <Card.Text>SOME STUFF</Card.Text>
-        //                 <ListGroup>
-        //                     <ListGroupItem>asfdsafsdf</ListGroupItem>
-        //                     <ListGroupItem>asfdsafsdf</ListGroupItem>
-        //                     <ListGroupItem>asfdsafsdf</ListGroupItem>
-        //                 </ListGroup>
-        //             </Card.Body>
-        //         </Card>
-        //         <Card id='OverviewCard'>
-        //             <Card.Body>
-        //                 <Card.Text>SOME STUFF</Card.Text>
-        //                 <ListGroup>
-        //                     <ListGroupItem>asfdsafsdf</ListGroupItem>
-        //                     <ListGroupItem>asfdsafsdf</ListGroupItem>
-        //                     <ListGroupItem>asfdsafsdf</ListGroupItem>
-        //                 </ListGroup>
-        //             </Card.Body>
-        //         </Card>
-        //     </div>
-        // )
     }
 }
 
-export default MemberScheduleTasks
+const mapStateToProps = state => ({
+    days: state.WeekReducer.days.byId
+});
+
+export default connect(mapStateToProps)(MemberScheduleTasks)

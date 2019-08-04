@@ -1,7 +1,6 @@
 import React from 'react'
 import { toggleAvail } from "../../actions/DayAction";
 import { connect } from 'react-redux';
-import Button from 'react-bootstrap/Button';
 
 class Cell extends React.Component {
     constructor(props) {
@@ -11,18 +10,17 @@ class Cell extends React.Component {
 
     handleClick() {
         this.props.toggleAvail(this.props.id);
-        console.log(this.props.id,this.props.availability);
     };
 
     render() {
         return (
-            <Button
-                className={this.props.availability ? 'active' : 'album'}
-                variant='outline-primary'
-                onDrag={this.handleClick}
+            <td
+                id={this.props.availability ? 'active' : 'album'}
+                className="calCell"
                 onMouseDown={this.handleClick}
             >
-            </Button>
+                {this.props.availability}
+            </td>
         )
     }
 }
