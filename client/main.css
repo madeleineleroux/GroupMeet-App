@@ -403,3 +403,7 @@ html .table thead th {
 #OverviewCard {
     width: 49%;
 }
+
+#CardHeader {
+    text-align: center;
+}

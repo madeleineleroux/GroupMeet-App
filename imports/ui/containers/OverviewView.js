@@ -13,13 +13,19 @@ class OverviewView extends Tracker.Component {
         super(props);
         this.subscribe('users_tasks');
     }
+    //TODO: test_id hardcoded id for testing purposes, will replace with Meteor.userId()
     render() {
+        console.log(this.props.userTasks);
+        let test_id = "ye8xNvdxhtgLPNBj2";
+        let memberTasks = Object.entries(this.props.userTasks).filter( element =>
+            element[0] == test_id);
         return (
             <div id="overview">
                 <Container>
                     <GroupProgress groupMembers={this.props.userTasks}/>
                     <MemberScheduleTasks
-                        // member={this.props.userTasks[Meteor.userId()]}
+                        groupMember={test_id}
+                        tasks={memberTasks[0] && memberTasks[0][1] && memberTasks[0][1].tasks}
                     />
                 </Container>
             </div>
