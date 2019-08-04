@@ -6,8 +6,9 @@ export default Groups;
 
 Meteor.methods({
     updateGroups(name) {
-        Groups.insert({_id: name}, { upsert: true });
-        return group;
+        console.log('inside meteor action');
+        Groups.update({_id: name}, { upsert: true });
+        return name;
     },
 
     fetchGroups() {

@@ -9,9 +9,7 @@ class Group extends Component {
         e.preventDefault();
         const ele = $(e.target);
         const name = ele.find("#createGroup").val();
-        console.log(name);
-        let groups = this.fetchGroup();
-        console.log(groups);
+        updateGroup(name);
     }
 
     render() {
