@@ -10,7 +10,7 @@ moment.defaultFormat = "YYYYMMDD";
 Meteor.methods({
     fetchGroupSchedule() {
         let start = (moment().startOf('week').format());
-        let secondWeek = (moment().add(1, 'weeks').startOf('week').format())
+        let secondWeek = (moment().add(1, 'weeks').startOf('week').format());
 
         if (GroupSchedule.find({_id: start}).count() === 0) {
             const allHours = booleanHours();
@@ -28,7 +28,7 @@ Meteor.methods({
         },
 
     getPrevWeek(currWeek) {
-        let currMoment = moment(currWeek, "YYYYMDD");
+        let currMoment = moment(currWeek.date, "YYYYMDD");
         let prevWeek = currMoment.subtract(7, 'days').startOf('week').format();
 
         if (GroupSchedule.find({_id: prevWeek}).count() === 0) {

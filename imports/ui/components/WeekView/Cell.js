@@ -15,14 +15,15 @@ class Cell extends React.Component {
     };
 
     render() {
+        console.log(this.props.availability);
         return (
-            <Button
-                className={this.props.availability ? 'active' : 'album'}
-                variant='outline-primary'
-                onDrag={this.handleClick}
+            <td
+                id={this.props.availability ? 'active' : 'album'}
+                class="calCell"
                 onMouseDown={this.handleClick}
             >
-            </Button>
+                {this.props.availability}
+            </td>
         )
     }
 }

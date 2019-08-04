@@ -50,3 +50,41 @@ export const fetchScheduleSuccess = (schedule) => ({
     type: 'FETCH_SCHEDULE',
     schedule
 });
+
+export const nextWeekIndSuccess = (currWeek) => ({
+    type: 'NEXT_WEEK',
+    currWeek
+});
+
+export const nextWeekInd = (currWeek) => {
+    return (dispatch) => {
+        return Meteor.call('nextWeekAvailability', currWeek, (err, result) => {
+            if (!err) {
+                dispatch(nextWeekIndSuccess(result));
+            } else {
+                console.log(err);
+                console.log('Availabilities did not update!');
+            }
+        });
+    };
+};
+
+
+export const prevWeekIndSuccess = (currWeek) => ({
+    type: 'PREV_WEEK',
+    currWeek
+});
+
+
+export const prevWeekInd = (currWeek) => {
+    return (dispatch) => {
+        return Meteor.call('lastWeekAvailability', currWeek, (err, result) => {
+            if (!err) {
+                dispatch(prevWeekIndSuccess(result));
+            } else {
+                console.log(err);
+                console.log('Availabilities did not update!');
+            }
+        });
+    };
+};

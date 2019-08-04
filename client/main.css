@@ -6,7 +6,7 @@
     color: #E2E2E2;
     font-family: 'Fugaz One', cursive;
     font-size: 3.5rem;
-    padding-bottom: 2%;
+    padding-bottom: 0;
 }
 
 #calendarMonth {
@@ -54,68 +54,6 @@ span {
 }
 
 
-#firstId{
-
-}
-
-.btn-group-vertical {
-    width: 14.2%;
-}
-
-.btn.btn-primary {
-    background-color: #1CCAD8;
-    border-color: #1CCAD8;
-    border-radius: 0;
-    font-size:1em;
-    padding: 0.7rem 0rem;
-    height: 40px;
-    border-right-color: #E2E2E2;
-}
-
-.btn.btn-primary:hover {
-    background-color: #1CCAD8;
-    border-color: #1CCAD8;
-}
-
-@media (max-width: 768px) {
-    .btn.btn-outline-primary {
-        padding:0;
-        height: 39px;
-        font-size:100%;
-    }
-
-    .btn.btn-primary {
-        height: 20px;
-        padding:0;
-        font-size:100%;
-    }
-
-}
-html
-.btn-outline-primary:not(:disabled):not(.disabled).active,
-.btn-outline-primary:not(:disabled):not(.disabled):active,
-.show>.btn-outline-primary.dropdown-toggle {
-    background-color: #1CCAD8;
-    border-color: #1CCAD8;
-}
-
-@media (min-width: 769px) and (max-width: 992px) {
-    .btn.btn-outline-primary {
-        padding:0;
-        height: 30px;
-        font-size:80%;
-    }
-
-    .btn.btn-primary {
-        padding:0;
-        font-size:80%;
-        height: 30px;
-    }
-
-
-
-}
-
 .btn.btn-outline-primary:hover {
     background-color: #1CCAD8;
     border-color: transparent;
@@ -128,9 +66,8 @@ html body {
 }
 
 .container.container {
-    margin-top: 5%;
+    margin-top: 2%;
     padding: 0;
-    max-width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -142,12 +79,11 @@ html body {
     margin-top: 1%;
     margin-left: auto;
     margin-right: auto;
-
+    margin-bottom: 0;
     font-family: Roboto, sans-serif;
 }
 
 #sidebar {
-    width:9%;
     background-color: #1CCAD8;
     display: inline-flex;
     flex-direction: column;
@@ -167,23 +103,20 @@ html body {
 }
 
 
-
-
 #footer-button {
-    background-color: #124E78;
-    border-color: #124E78;
+    background-color: #1CCAD8;
+    border-color: #1CCAD8;
     padding: 1rem;
     text-align: center;
-    font-size: 90%;
-    height: 7%;
+    font-size: 98%;
+    height: 3%;
     width:10%;
     margin: 1%;
-    border-width: 3px;
 }
 
 #footer-button:hover {
-    background-color: #1CCAD8;
-    border-color: #F99820;
+    background-color: #124E78;
+    border-color: #124E78;
 }
 
 #footer-div {
@@ -229,7 +162,6 @@ html .progress-bar {
 #scrollable {
     height: 600px;
 }
-/*TODO: currently height of scrollable is bigger than page size on not madie's computer, might need resize avatars?*/
 
 #scrollableBody {
     height: 75%;
@@ -261,6 +193,7 @@ html thead {
 
 #groupSide {
     background-color: #1CCAD8;
+    width: 6%;
     color: white;
     padding: 0;
     text-align: center;
@@ -270,7 +203,8 @@ html thead {
 
 html .table td {
     border-top: 0px solid transparent;
-    height:39px;
+    height:32px;
+    width: 10%;
 }
 
 .triangle-left {
@@ -389,4 +323,26 @@ html .table thead th {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#entireWeek {
+    padding: 0;
+    display: inline-block;
+}
+
+#calendarTriangle {
+    margin-top: 0;
+}
+
+#active {
+    background-color: #1CCAD8;
+}
+
+.calCell {
+    cursor: pointer;
+    border-right: 1px solid #1CCAD8;
+}
+
+#album:hover {
+    background-color: #1CCAD8;
 }
