@@ -21,6 +21,7 @@ class Register extends React.Component {
                 email: email,
                 password: password,
                 name: name,
+                group: null,
                 Tasks: []
             };
             Accounts.createUser(accountInfo, function (er, result) {
@@ -45,7 +46,6 @@ class Register extends React.Component {
     }
 
     render() {
-
         return (
             <div> 
                 <h2 className = 'loginRedirect'>Register</h2>
@@ -66,7 +66,7 @@ class Register extends React.Component {
                         <Label for="examplePassword">Confirm Password</Label>
                         <Input type="password" name="password" id="confirmPassword" placeholder="Confirm your password" />
                     </FormGroup>
-                    <Button className = 'loginRedirect'>Submit</Button>
+                    <Button>Submit</Button>
                 </Form>
                 <p className = 'loginRedirect'>
                     Have an account? <Link to="/login">Login now!</Link>

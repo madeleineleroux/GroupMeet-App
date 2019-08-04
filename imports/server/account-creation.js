@@ -3,7 +3,8 @@ Accounts.onCreateUser(function(options, user) {
     user.profile = options.profile || {};
     // Assigns first and last names to the newly created user object
     user.profile.name = options.name;
-    user.profile.Tasks = [];
+    user.profile.group = null;
+    user.profile.tasks = [];
     // Returns the user object
     return user;
  });

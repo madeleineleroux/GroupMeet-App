@@ -9,6 +9,8 @@ import Register from './components/Accounts/Register';
 import Login from './components/Accounts/Login';
 import PrivateRoute from './components/Accounts/PrivateRoute';
 import LoggedRoute from './components/Accounts/LoggedRoute';
+import Group from './components/Groups/Group'
+
 const Routes = () => (
         <div>
             <PrivateRoute exact path = '/' component = {WeekView}/>
@@ -17,6 +19,7 @@ const Routes = () => (
             <PrivateRoute path='/group' component={GroupView}/>
             <LoggedRoute path='/register' component = {Register}/>
             <LoggedRoute path='/login' component = {Login}/>
+            <Route path='/groups' component = {Group}/>
         </div>
   );
 

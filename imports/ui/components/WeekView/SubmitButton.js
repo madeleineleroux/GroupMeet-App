@@ -36,7 +36,6 @@ class SubmitButton extends Component {
         this.handleShow();
         this.props.onSubmitSchedule(this.props.schedule);
         console.log(this.state.show);
-
     }
 
 

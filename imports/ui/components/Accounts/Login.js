@@ -10,7 +10,6 @@ class Login extends React.Component {
         const email = ele.find("#email").val();
         const password = ele.find("#password").val();
         Meteor.loginWithPassword(email, password, (er)=> {
-            console.log(this.state);
             if (er) {
                 alert(er.reason);
             }
@@ -31,7 +30,7 @@ class Login extends React.Component {
                         <Label for="examplePassword">Password</Label>
                         <Input type="password" name="password" id="password" placeholder="Enter a password" />
                     </FormGroup>
-                    <Button className = 'loginRedirect'>Submit</Button>
+                    <Button>Submit</Button>
                 </Form>
                 <p className = 'loginRedirect'>
                     Don't have an account? <Link to="/register">Register now!</Link>

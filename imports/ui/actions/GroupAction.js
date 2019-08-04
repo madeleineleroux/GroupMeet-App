@@ -1,5 +1,3 @@
-
-
 export const fetchGroupScheduleSuccess = (payload) => {
     return {
         type: 'FETCH_GROUP',
