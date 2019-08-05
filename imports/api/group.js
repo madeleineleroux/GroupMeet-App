@@ -11,7 +11,7 @@ moment.defaultFormat = "YYYYMMDD";
 Meteor.methods({
     fetchGroupSchedule() {
         let group = Meteor.users.findOne({_id: Meteor.userId()});
-        group = group.group;
+        group = group.profile.group;
         let start = (moment().startOf('week').format());
         let secondWeek = (moment().add(1, 'weeks').startOf('week').format());
 

@@ -39,12 +39,17 @@ class SubmitButton extends Component {
 
             <Modal show={this.state.show} onHide={this.handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Schedule submitted!</Modal.Title>
+                    <h4 id="modalHeader">Schedule submitted!</h4>
                 </Modal.Header>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={this.handleClose}>
-                        Close
+                    <Button id="modalButton" onClick={this.handleClose}>
+                        Return to Calendar
                     </Button>
+                    <a href="/group">
+                    <Button id="modalButton">
+                        See Group Schedule
+                    </Button>
+                        </a>
                 </Modal.Footer>
             </Modal>
         </div>)
