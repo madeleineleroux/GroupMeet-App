@@ -6,18 +6,15 @@
 import React from 'react'
 import { Redirect, Route } from 'react-router-dom'
 
-
 const GroupRoute = ({ component: Component, ...rest }) => {
-
-  // Check if the user has a group
-  const isLoggedIn = Meteor.userId();
+  
 
   return (
     <Route
       {...rest}
       render={props =>
-        isLoggedIn ? (
-          <Redirect to={{ pathname: '/'}} />
+        userGroup ? (
+          <Redirect to={{ pathname: '/groups'}} />
         ) : (
           <Component {...props} />
         )

@@ -5,14 +5,17 @@ import { withRouter, Link, Redirect } from 'react-router-dom'
 
 class Register extends React.Component {
 
+
     onSubmit(e) {
         e.preventDefault();
+        let avatarArr = ['GIRAFFE', 'PIG', 'FOX', 'PENGUIN', 'LIZARD'];
+        let index = Math.floor(Math.random() * 5);
+        let avatar = avatarArr[index];
         const ele = $(e.target);
         const email = ele.find("#email").val();
         const password = ele.find("#password").val();
         const confirmPassword = ele.find("#confirmPassword").val();
         const name = ele.find('#name').val();
-        console.log(name);
         if(name.length > 16) {
             alert("Your name must be 16 characters or less.")
         }
@@ -20,9 +23,6 @@ class Register extends React.Component {
             let accountInfo = {
                 email: email,
                 password: password,
-                name: name,
-                group: null,
-                Tasks: []
             };
             Accounts.createUser(accountInfo, function (er, result) {
                 if (er) {
@@ -33,7 +33,9 @@ class Register extends React.Component {
                         $set:{
                             profile: {
                                 name: name,
-                                Tasks: []
+                                tasks: [],
+                                group: null,
+                                avatar: avatar
                         }
                     }});
                     window.location.reload();

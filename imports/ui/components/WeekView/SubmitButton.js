@@ -30,7 +30,6 @@ class SubmitButton extends Component {
     }
 
 
-
     handleSubmitSchedule = e => {
         e.preventDefault();
         this.handleShow();

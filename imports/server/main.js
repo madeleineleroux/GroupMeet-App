@@ -15,6 +15,10 @@ Meteor.startup(() => {
         Availability.insert(initState);
     }
 
+    // if (Groups.find().count() === 0 ) {
+    //     Groups.insert(initState);
+    // }
+
     if (GroupSchedule.find().count() === 0) {
         let moment = require('moment');
         moment.defaultFormat = "YYYYMMDD";

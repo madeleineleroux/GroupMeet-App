@@ -34,6 +34,7 @@ class NavbarB extends Component {
                             </NavDropdown>
                             </Nav>
                             <Nav>
+                            <Nav.Link href="/groups">Group Management</Nav.Link>
                             <Button variant="outline-success" onClick={this.handleLogout}>Logout</Button>
                             </Nav>
                             {/* Tab at the very right */}

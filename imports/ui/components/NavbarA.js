@@ -27,6 +27,7 @@ export default class NavbarA extends Component {
                             </NavDropdown>
                             </Nav>
                             <Nav>
+                                <Nav.Link href="/groups">Group Management</Nav.Link>
                                 <Nav.Link href="/login">Login</Nav.Link>
                                 <Nav.Link href="/register">Register</Nav.Link>
                             </Nav>

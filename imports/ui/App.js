@@ -10,6 +10,7 @@ import Login from './components/Accounts/Login';
 import PrivateRoute from './components/Accounts/PrivateRoute';
 import LoggedRoute from './components/Accounts/LoggedRoute';
 import Group from './components/Groups/Group'
+import GroupRoute from './components/Groups/GroupRoute'
 
 const Routes = () => (
         <div>
@@ -19,6 +20,7 @@ const Routes = () => (
             <PrivateRoute path='/group' component={GroupView}/>
             <LoggedRoute path='/register' component = {Register}/>
             <LoggedRoute path='/login' component = {Login}/>
+            {/* <GroupRoute path = '/groups' component = {Group}/> */}
             <Route path='/groups' component = {Group}/>
         </div>
   );
