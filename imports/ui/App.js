@@ -5,6 +5,7 @@ import TaskView from './containers/TaskView';
 import {Route} from 'react-router-dom'
 import GroupView from "./containers/GroupView";
 import AboutView from "./containers/AboutView";
+import HelpView from "./containers/HelpView";
 
 const Routes = () => (
         <div>
@@ -13,6 +14,7 @@ const Routes = () => (
             <Route path='/tasks' component={TaskView}/>
             <Route path='/group' component={GroupView}/>
             <Route path='/about' component={AboutView}/>
+            <Route path='/help' component={HelpView}/>
         </div>
   );
 
