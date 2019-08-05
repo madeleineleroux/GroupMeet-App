@@ -23,7 +23,8 @@ export function booleanHours() {
     for (let i = 0; i < weekdays.length; i++) {
         for (let j = 0; j < hourIds.length; j++) {
             hourState[weekdays[i].concat("_",hourIds[j])] = {
-                availability: true
+                availability: true,
+                busyUsers: []
             }
         }
     }
@@ -57,6 +58,7 @@ export function daysById() {
 }
 
 export const initState = {
+    user: this.userId,
     days : {
       byId: daysById(),
       allIds : weekdays
@@ -70,6 +72,7 @@ export const initState = {
 const WeekReducer = (state = initState, action) => {
     switch(action.type) {
         case 'TOGGLE_AVAIL':
+            console.log(Meteor.userId());
             return {
                 ...state,
                 hours : {
@@ -100,6 +103,11 @@ const WeekReducer = (state = initState, action) => {
 
         case 'FETCH_SCHEDULE':
             return action.schedule;
+        case 'NEXT_WEEK':
+            return action.currWeek;
+        case 'PREV_WEEK':
+            return action.currWeek;
+
     
         default:
             return state
