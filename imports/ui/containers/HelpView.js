@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Accordion, Card, Button, Container} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 class HelpView extends Component {
     render() {
@@ -17,7 +18,7 @@ class HelpView extends Component {
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
                                     <Card.Text>
-                                        Create a new group after registering by selecting 'Create Group'(pic/gif/etc) and then choose a group name.
+                                        Create a new group after registering by selecting 'Create Group' and then choose a group name.
                                         Your group members can now join your group when they register.
                                     </Card.Text>
                                 </Card.Body>
@@ -34,7 +35,7 @@ class HelpView extends Component {
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
                                     <Card.Text>
-                                        Join a pre-existing group after registering by selecting 'Join Group'(pic/gif/etc) and then selecting your group from the drop down(or type in...).
+                                        Join a pre-existing group after registering by selecting 'Join Group' and then enter your group's name.
                                     </Card.Text>
                                 </Card.Body>
                             </Accordion.Collapse>
@@ -49,9 +50,9 @@ class HelpView extends Component {
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
-                                    <Card.Text>Update your availability in your <Card.Link href="/calendar">Calendar</Card.Link> by clicking the times you are busy. Once you are ready, hit submit(animated gif example?).
+                                    <Card.Text>Update your availability in your <Link to="/calendar">Calendar</Link> by clicking the times you are busy. Once you are ready, hit 'Submit'.
                                     <br/>
-                                    Once all your group members have added their availability, the <Card.Link href="/group">Group Schedule</Card.Link> will show you the availability for your whole group. Now scheduling meetings is a breeze!
+                                    Once all your group members have added their availability, the <Link to="/group">Group Schedule</Link> will show you the availability for your whole group. Now scheduling meetings is a breeze!
                                     </Card.Text>
                                 </Card.Body>
                             </Accordion.Collapse>
@@ -67,8 +68,8 @@ class HelpView extends Component {
                             <Accordion.Collapse eventKey="1">
                                 <Card.Body>
                                     <Card.Text>
-                                        On the <Card.Link href="/tasks">Tasks</Card.Link> page, add your tasks, delete tasks, check them off as done, and watch your individual progress update along the way!
-                                        Your task progress, along with your group mates, will determine the overall group project progress, seen in the <Card.Link href="/overview">Overview</Card.Link> page.
+                                        On the <Link to="/tasks">Tasks</Link> page, add your tasks, delete tasks, check them off as done, and watch your individual progress update along the way!
+                                        The task progress of the whole group will determine the overall group project progress, seen in the <Link to="/overview">Overview</Link> page.
                                     </Card.Text>
                                 </Card.Body>
                             </Accordion.Collapse>
@@ -84,8 +85,8 @@ class HelpView extends Component {
                             <Accordion.Collapse eventKey="1">
                                 <Card.Body>
                                     <Card.Text>
-                                        Check your own progress on the <Card.Link href="/tasks">Tasks</Card.Link> page,
-                                        and keep up to date on the group's progress as a whole on the <Card.Link href="/overview">Overview</Card.Link> page.
+                                        Check your own progress on the <Link to="/tasks">Tasks</Link> page,
+                                        and keep up to date on the group's progress as a whole on the <Link to="/overview">Overview</Link> page.
                                     </Card.Text>
                                 </Card.Body>
                             </Accordion.Collapse>
