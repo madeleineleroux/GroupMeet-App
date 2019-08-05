@@ -11,8 +11,13 @@ if (Meteor.isServer) {
     })
 }
 Meteor.methods({
+    editTaskText(id, member, text) {
+        //console.log(text);
+        Users.update({ _id: member, "tasks.taskId": id }, { $set: {"tasks.$.description" : text}});
+        return;
+    },
     addTask(memberId, task) {
-        console.log(task);
+        //console.log(task);
         Users.update({_id: memberId}, { $addToSet: { tasks: task }}, { upsert: false } );
         return;
     },
@@ -22,13 +27,14 @@ Meteor.methods({
         return;
     },
 
-    deleteTask(id, member) {
-        console.log(id, member);
+    deleteTask(member, id) {
+        //console.log(member, id);
+        Users.update({_id: member}, { $pull: { tasks: {taskId: id}}});
         return;
     },
 
     clearTasks(member) {
-        console.log(member);
+        //console.log(member);
         Users.update({_id: member}, {$set: {tasks: []}});
         return;
     },

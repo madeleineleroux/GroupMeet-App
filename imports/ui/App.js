@@ -11,6 +11,10 @@ import PrivateRoute from './components/Accounts/PrivateRoute';
 import LoggedRoute from './components/Accounts/LoggedRoute';
 import Group from './components/Groups/Group'
 import GroupRoute from './components/Groups/GroupRoute'
+import Welcome from "./components/WelcomePage/Welcome"
+import OverviewView from "./containers/OverviewView";
+import AboutView from "./containers/AboutView";
+import HelpView from "./containers/HelpView";
 
 const Routes = () => (
         <div>
@@ -22,8 +26,10 @@ const Routes = () => (
             <LoggedRoute path='/login' component = {Login}/>
             {/* <GroupRoute path = '/groups' component = {Group}/> */}
             <Route path='/groups' component = {Group}/>
-        </div>
-  );
+            <Route path='/welcome' component={Welcome} />
+            <Route path='/overview' component={OverviewView}/>
+            <Route path='/about' component={AboutView}/>
+            <Route path='/help' component={HelpView}/>
 
 class App extends Component {
     render() {

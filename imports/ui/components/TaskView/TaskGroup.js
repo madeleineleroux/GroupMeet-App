@@ -1,12 +1,9 @@
-
 import React from 'react';
-import { connect } from 'react-redux';
 import TaskMember from "./TaskMember";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-//this is a design decision to use card deck. Alternates: CardColumns, CardGroup
 // function LeftArrow(props) {
 //     const { onClick } = props;
 //     return (
@@ -31,6 +28,7 @@ const TaskGroup = ({ groupMembers }) => {
         swipeToSlide: true,
         slide: 'TaskMember',
         centerPadding: "60px",
+        accessibility: false
         // prevArrow: <LeftArrow/>,
         // nextArrow: <RightArrow/>
     };
@@ -44,9 +42,3 @@ const TaskGroup = ({ groupMembers }) => {
 };
 
 export default TaskGroup
-
-// const mapStateToProps = state => ({
-//     groupMembers: state.TaskReducer
-// });
-//
-// export default connect(mapStateToProps)(TaskGroup);

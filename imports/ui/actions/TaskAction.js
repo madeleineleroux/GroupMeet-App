@@ -1,4 +1,3 @@
-//TODO: refactor for DB/async
 export const addTaskSuccess = ( text, member, id ) => {
     return {
         type: 'ADD_TASK',
@@ -10,7 +9,7 @@ export const addTaskSuccess = ( text, member, id ) => {
 
 export const addTask = (text, member, id) => {
     return (dispatch) => {
-        console.log(id);
+        //console.log(id);
         return Meteor.call('addTask', member, {taskId: id, description: text, status: 0}, (err, result) => {
             if (!err) {
                 dispatch(addTaskSuccess(text, member, id));
@@ -44,7 +43,6 @@ export const fetchTasksSuccess = (payload) => {
 
 
 //Toggles task status - complete/incomplete
-//TODO: may be reversed t/f
 export const toggleStatusSuccess = (id, member) => {
     return {
         type: 'TOGGLE_STATUS',
@@ -109,9 +107,24 @@ export const clearTasksSuccess = (member) => {
     }
 };
 
+export const editTaskSuccess = (id, member, text) => {
+    return {
+        type: 'EDIT_TASK',
+        id,
+        member,
+        text
+    }
+};
 
-//TODO Edit task
-
-//?? Add group member
-
-//TODO Delete task
+export const editTask = (id, member, text) => {
+    return (dispatch) => {
+        return Meteor.call('editTaskText', id, member, text, (err, result) => {
+            if (!err) {
+                dispatch(editTaskSuccess(id, member, text));
+            } else {
+                console.log(err);
+                console.log('Did not edit task text');
+            }
+        });
+    };
+};

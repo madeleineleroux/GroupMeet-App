@@ -11,8 +11,6 @@ class GroupTable extends Component {
     render() {
         const HOURS = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
         const DAYS = [0, 1, 2, 3, 4, 5, 6];
-        let d = this.props.moment.startOf('week').date();
-        console.log(this.props.group._id);
             return (
                 <Table hover className="groupTable">
                     <thead>
@@ -31,7 +29,7 @@ class GroupTable extends Component {
                     <tr>
                     <th></th>
                     {DAYS.map( day => (
-                        <th>{day + d}</th>
+                        <th>{this.props.moment.add(1, 'd').date()}</th>
                     ))}
                     </tr>
                     </thead>
