@@ -384,6 +384,17 @@ html .table thead th {
     justify-content: space-between;
 }
 
+#aboutBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2%;
+}
+
+#aboutCard {
+  
+}
+
 #helpPage {
     display: flex;
     flex-direction: column;
