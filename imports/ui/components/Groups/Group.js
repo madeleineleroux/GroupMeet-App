@@ -9,7 +9,11 @@ class Group extends Component {
 
     onSubmitCreate(e) {
         e.preventDefault();
-        if (Meteor.users.findOne({ _id: Meteor.userId()}).profile.group.length > 0){
+        let group = Meteor.users.find({ _id: Meteor.userId()}).fetch()[0];
+        console.log(group);
+        group = group.profile.group;
+        console.log(group);
+        if (group === null){
             const ele = $(e.target);
             const name = ele.find("#createGroup").val();
             updateGroup(name);

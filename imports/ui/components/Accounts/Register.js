@@ -5,6 +5,18 @@ import { withRouter, Link, Redirect } from 'react-router-dom'
 
 class Register extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            redirectToWelcome: false
+        };
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    toggleWelcome = () => {
+        this.setState({redirectToWelcome: true});
+    }
+
 
     onSubmit(e) {
         e.preventDefault();
@@ -16,6 +28,7 @@ class Register extends React.Component {
         const password = ele.find("#password").val();
         const confirmPassword = ele.find("#confirmPassword").val();
         const name = ele.find('#name').val();
+        console.log(this.state.redirectToWelcome);
         if(name.length > 16) {
             alert("Your name must be 16 characters or less.")
         }
@@ -38,9 +51,11 @@ class Register extends React.Component {
                                 avatar: avatar
                         }
                     }});
-                    window.location.reload();
                 }
-            });
+            })
+            // this.toggleWelcome();
+            this.setState({redirectToWelcome: false});
+            console.log(this.state.redirectToWelcome);
         }
         else {
             alert("Your passwords must match")
@@ -48,6 +63,11 @@ class Register extends React.Component {
     }
 
     render() {
+
+        if (this.state.redirectToWelcome === true) {
+            return <Redirect to="/welcome" />
+        }
+
         return (
             <div> 
                 <h2 className = 'loginRedirect'>Register</h2>

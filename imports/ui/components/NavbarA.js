@@ -19,6 +19,7 @@ export default class NavbarA extends Component {
                             <Nav.Link href="/about">About Us</Nav.Link>
                             <Nav.Link href="/help">Help</Nav.Link>
 
+
                             {/*Dropdown*/}
                             <NavDropdown title="Tools" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="/calendar">Calendar</NavDropdown.Item>

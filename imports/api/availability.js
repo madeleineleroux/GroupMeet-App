@@ -14,7 +14,7 @@ Meteor.methods({
         Availability.update({user: Meteor.userId(), date: sched.date}, sched, { upsert: true });
 
         let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
-        group = group.group;
+        group = group.profile.group;
         const groupSched = GroupSchedule.find({group : group, date: sched.date}).fetch()[0];
         Object.keys(sched.hours.byId).map(function(key, index) {
             if (sched.hours.byId[key].availability && !groupSched[key].busyUsers.includes(Meteor.userId())) {
