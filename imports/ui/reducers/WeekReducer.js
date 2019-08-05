@@ -1,22 +1,17 @@
-
-
 /* generates array of strings for hours, can change range, currently 8 - 17 inclusive */
 const hourIds = Array.from({length: 10}, (v, i) => (i+8).toString());
 
 export const weekdays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
-/* creates object with all hour objects in the week */
+/* creates object with all hour objects in the week, hour ids are formatted as "weekday_hourNumber" */
 export function hoursById() {
     const hourState = {};
-    //right now hour ids are formatted as "weekday_hourNumber"
-    // We should probably consider using JS date object in future to generate unique ids
     for (let i = 0; i < weekdays.length; i++) {
         for (let j = 0; j < hourIds.length; j++) {
             hourState[weekdays[i].concat("_",hourIds[j])] = {
                 id: weekdays[i].concat("_",hourIds[j]),
                 weekday: weekdays[i],
                 availability: false,
-                //tasks: [] add functionality later
             }
         }
     }
@@ -25,19 +20,15 @@ export function hoursById() {
 
 export function booleanHours() {
     const hourState = {};
-    //right now hour ids are formatted as "weekday_hourNumber"
-    // We should probably consider using JS date object in future to generate unique ids
     for (let i = 0; i < weekdays.length; i++) {
         for (let j = 0; j < hourIds.length; j++) {
             hourState[weekdays[i].concat("_",hourIds[j])] = {
                 availability: true
-                //tasks: [] add functionality later
             }
         }
     }
     return hourState;
 }
-
 
 /* generates ids for all hours in the week */
 export function hoursAllIds() {

@@ -222,7 +222,6 @@ html .progress-bar {
 #scrollable {
     height: 700px;
 }
-/*TODO: currently height of scrollable is bigger than page size on not madie's computer, might need resize avatars?*/
 
 #scrollableBody {
     height: 75%;
@@ -383,6 +382,42 @@ html .table thead th {
     flex-direction: row;
     justify-content: space-between;
 }
+
+#groupProgress {
+    text-align: center;
+}
+
+#groupProgressBar {
+    height: 50px;
+}
+
+#MemberScheduleTasks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+
+#OverviewCard {
+    width: 49%;
+}
+
+#CardHeader {
+    text-align: center;
+}
+
+#active {
+    background-color: #1CCAD8;
+}
+
+.calCell {
+    cursor: pointer;
+    border-right: 1px solid #1CCAD8;
+}
+
+#album:hover {
+    background-color: #1CCAD8;
 
 #aboutBottom {
     display: flex;
