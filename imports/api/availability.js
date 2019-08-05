@@ -14,7 +14,7 @@ Meteor.methods({
         Availability.update({user: Meteor.userId(), date: sched.date}, sched, { upsert: true });
 
         let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
-        group = group.profile.group;
+        group = group.group;
 
         const groupSched = GroupSchedule.find({group : group, date: sched.date}).fetch()[0];
         Object.keys(sched.hours.byId).map(function(key, index) {
