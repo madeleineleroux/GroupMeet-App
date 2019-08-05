@@ -1,6 +1,7 @@
 import { Mongo } from 'meteor/mongo';
 import { Meteor } from 'meteor/meteor';
 import {booleanHours} from "../ui/reducers/WeekReducer";
+
 const GroupSchedule = new Mongo.Collection('group');
 
 
@@ -9,46 +10,48 @@ moment.defaultFormat = "YYYYMMDD";
 
 Meteor.methods({
     fetchGroupSchedule() {
+        let group = Meteor.users.findOne({_id: Meteor.userId()});
+        group = group.group;
         let start = (moment().startOf('week').format());
         let secondWeek = (moment().add(1, 'weeks').startOf('week').format());
 
-        if (GroupSchedule.find({_id: start}).count() === 0) {
+        if (GroupSchedule.find({date: start, group: group}).count() === 0) {
             const allHours = booleanHours();
-            const gsInitState = Object.assign({}, allHours, {_id: start});
+            const gsInitState = Object.assign({}, allHours, {date: start, group: group});
             GroupSchedule.insert(gsInitState);
         }
 
-        if (GroupSchedule.find({_id: secondWeek}).count() === 0) {
+        if (GroupSchedule.find({date: secondWeek, group: group}).count() === 0) {
             const allHours = booleanHours();
-            const gsSecondState = Object.assign({}, allHours, {_id: secondWeek});
+            const gsSecondState = Object.assign({}, allHours, {date: secondWeek, group: group});
             GroupSchedule.insert(gsSecondState);
         }
 
-        return GroupSchedule.find({_id: start}).fetch()[0];
+        return GroupSchedule.find({date: start, group: group}).fetch()[0];
         },
 
-    getPrevWeek(currWeek) {
-        let currMoment = moment(currWeek.date, "YYYYMDD");
+    getPrevWeek(group, currWeek) {
+        let currMoment = moment(currWeek, "YYYYMDD");
         let prevWeek = currMoment.subtract(7, 'days').startOf('week').format();
 
-        if (GroupSchedule.find({_id: prevWeek}).count() === 0) {
+        if (GroupSchedule.find({date: prevWeek, group : group}).count() === 0) {
             const allHours = booleanHours();
-            const newWeek = Object.assign({}, allHours, {_id: prevWeek});
+            const newWeek = Object.assign({}, allHours, {date: prevWeek, group: group});
             GroupSchedule.insert(newWeek);
-            return GroupSchedule.find({_id: prevWeek}).fetch()[0];
+            return GroupSchedule.find({group: group, date: prevWeek}).fetch()[0];
         } else {
-            return GroupSchedule.find({_id: prevWeek}).fetch()[0];
+            return GroupSchedule.find({group: group, date: prevWeek}).fetch()[0];
         }
     },
-    getNextWeek(currWeek) {
+    getNextWeek(group, currWeek) {
         let currMoment = moment(currWeek, "YYYYMDD");
         let nextWeek = currMoment.add(7, 'days').startOf('week').format();
 
-        if (GroupSchedule.find({_id: nextWeek}).count() === 0) {
+        if (GroupSchedule.find({group: group, date: nextWeek}).count() === 0) {
             console.log("This is the most recent week");
-            return GroupSchedule.find({_id: currWeek}).fetch()[0];
+            return GroupSchedule.find({group: group, date: currWeek}).fetch()[0];
         } else {
-            return GroupSchedule.find({_id: nextWeek}).fetch()[0];
+            return GroupSchedule.find({group: group, date: nextWeek}).fetch()[0];
         }
     }
     }

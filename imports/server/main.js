@@ -18,11 +18,11 @@ Meteor.startup(() => {
 
     if (GroupSchedule.find().count() === 0) {
         const allHours = booleanHours();
-        const gsInitState = Object.assign({}, allHours, {_id: start});
+        const gsInitState = Object.assign({}, allHours, {date: start});
 
         GroupSchedule.insert(gsInitState);
         let nextStart = (moment().add(1,'weeks').startOf('week').format());
-        const gsSecondWeek = Object.assign({}, allHours, {_id: nextStart});
+        const gsSecondWeek = Object.assign({}, allHours, {date: nextStart});
         GroupSchedule.insert(gsSecondWeek);
 
 

@@ -30,7 +30,8 @@ export function booleanHours() {
     for (let i = 0; i < weekdays.length; i++) {
         for (let j = 0; j < hourIds.length; j++) {
             hourState[weekdays[i].concat("_",hourIds[j])] = {
-                availability: true
+                availability: true,
+                busyUsers: []
                 //tasks: [] add functionality later
             }
         }

@@ -19,18 +19,18 @@ class GroupWeek extends Tracker.Component {
 
     handleNextWeek = e => {
         e.preventDefault();
-        this.props.nextWeek(this.props.group._id);
+        this.props.nextWeek({group: this.props.groupSchedule.group, date: this.props.groupSchedule.date});
     };
 
     handleLastWeek = e => {
         e.preventDefault();
-        this.props.lastWeek(this.props.group._id);
+        this.props.lastWeek({group: this.props.groupSchedule.group, date: this.props.groupSchedule.date});
     };
 
         render() {
         let moment = require('moment/moment');
         moment.defaultFormat = "YYYYMMDD";
-        let currMoment = moment(this.props.group._id, "YYYYMDD");
+        let currMoment = moment(this.props.group.date, "YYYYMDD");
         let month = currMoment.startOf('week').format("MMMM");
 
         if (!currMoment.isValid()) {
@@ -60,10 +60,8 @@ export const TableTracker = withTracker (({ groupSchedule }) => {
     const isReady = handle.ready();
 
     if (!isReady) {
-        console.log("NO");
         return {groupSchedule: groupSchedule};
     } else {
-        console.log("Yes");
         return {groupSchedule: GroupSchedule.find({_id: groupSchedule._id}).fetch()[0]}
     }
 })(GroupWeek);

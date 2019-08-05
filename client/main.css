@@ -7,6 +7,7 @@
     font-family: 'Fugaz One', cursive;
     font-size: 3.5rem;
     padding-bottom: 0;
+    margin-top: 2%;
 }
 
 #calendarMonth {
@@ -97,7 +98,7 @@ html body {
     margin-top: 7%;
 }
 
-#navbar {
+#bar {
     background-color: #454545;
     height: 6%;
 }
@@ -252,6 +253,11 @@ html .table td {
     margin-top: 2%;
 }
 
+h4 {
+    font-family: 'Roboto', sans-serif;
+    color: #E2E2E2;
+}
+
 .groupDiv {
     text-align: center;
 }
@@ -346,3 +352,60 @@ html .table thead th {
 #album:hover {
     background-color: #1CCAD8;
 }
+
+.welcome {
+    color: #454545;
+    font-family: Roboto, sans-serif;
+}
+
+h1.welcome {
+    font-family: 'Fugaz One', cursive;
+    font-size: 6rem;
+    text-align: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: -2%;
+}
+
+h2.welcome {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.table td.welcomeCol {
+    text-align: center;
+    background-color: #ededed;
+    border-color: #E2E2E2;
+    border-right: 10px solid #E2E2E2;
+    padding: 2%;
+    cursor: pointer;
+}
+
+#navbar {
+    background-color: rgba(69, 69, 69, 0.42);
+    height: 6%;
+}
+
+.table td.welcomeCol:hover {
+    background-color: #a5d4d8;
+    text-decoration: none;
+}
+
+#welcomeTable {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.colMsg {
+    margin-top: 12%;
+}
+
+.table a{
+    color: #454545;
+}
+.table a:hover {
+    text-decoration: none;
+}
+
+

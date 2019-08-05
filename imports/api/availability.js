@@ -1,6 +1,7 @@
 import { Mongo } from 'meteor/mongo';
 import { Meteor } from 'meteor/meteor';
 import {booleanHours, hoursById, initState} from '../ui/reducers/WeekReducer';
+import GroupSchedule from '/imports/api/group'
 
 const Availability = new Mongo.Collection('availability');
 let moment = require('moment/moment');
@@ -11,6 +12,24 @@ export default Availability;
 Meteor.methods({
     updateAvailability(sched) {
         Availability.update({user: Meteor.userId(), date: sched.date}, sched, { upsert: true });
+
+        let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
+        group = group.group;
+        const groupSched = GroupSchedule.find({group : group, date: sched.date}).fetch()[0];
+        Object.keys(sched.hours.byId).map(function(key, index) {
+            if (sched.hours.byId[key].availability && !groupSched[key].busyUsers.includes(Meteor.userId())) {
+                groupSched[key].availability = false;
+                groupSched[key].busyUsers.push(Meteor.userId());
+            } else if (!sched.hours.byId[key].availability && groupSched[key].busyUsers.includes(Meteor.userId())) {
+                let index = groupSched[key].busyUsers.indexOf(Meteor.userId());
+                groupSched[key].busyUsers.splice(index, 1);
+
+                if (groupSched[key].busyUsers.length === 0) {
+                    groupSched[key].availability = true;
+                }
+            }
+        });
+        GroupSchedule.update({date: sched.date, group : group, _id: groupSched._id}, groupSched, { upsert: true });
         return sched;
     },
     fetchAvailability() {

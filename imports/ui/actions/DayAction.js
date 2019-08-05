@@ -1,7 +1,4 @@
-import { HTTP } from 'meteor/http'
 import { Meteor } from 'meteor/meteor';
-
-const apiUrl = 'http://localhost:5000/posts';
 
 export const toggleAvail = id => {
     return {
