@@ -418,4 +418,33 @@ html .table thead th {
 
 #album:hover {
     background-color: #1CCAD8;
+
+#aboutBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2%;
+}
+
+#aboutCard {
+  
+}
+
+#helpPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#helpAccordion {
+    width: 100%;
+    padding-bottom: 1%;
+}
+
+#helpHeader {
+    text-align: center;
+    color: #E2E2E2;
+    font-family: 'Fugaz One', cursive;
+    font-size: 3.5rem;
+    padding-bottom: 2%;
 }
