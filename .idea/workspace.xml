@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5796488-aabd-496e-9fe7-576d4382a733" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/imports/ui/components/WelcomePage/Welcome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/api/availability.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/api/availability.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/api/group.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/api/group.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imports/server/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/server/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/actions/DayAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/actions/DayAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/actions/GroupAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/actions/GroupAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/GroupView/GroupTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/GroupView/GroupTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/GroupView/GroupWeek.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/GroupView/GroupWeek.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/reducers/WeekReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/reducers/WeekReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
@@ -32,11 +18,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="381" lean-forward="true" selection-start-line="381" selection-end-line="381" />
+            <state relative-caret-position="399">
+              <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/imports/server/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="7" selection-end-line="28" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,18 +88,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/ClearTaskButton.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/GroupTasks.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -146,7 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>font-s</find>
       <find>days</find>
       <find>toggleStatus</find>
       <find>padd</find>
@@ -176,6 +161,7 @@
       <find>nav</find>
       <find>na</find>
       <find>footer</find>
+      <find>navb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -230,7 +216,6 @@
         <option value="$PROJECT_DIR$/imports/ui/actions/DayAction.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/WeekView/WeekTable.js" />
         <option value="$PROJECT_DIR$/imports/ui/reducers/WeekReducer.js" />
-        <option value="$PROJECT_DIR$/imports/server/main.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/GroupView/GroupTable.js" />
         <option value="$PROJECT_DIR$/imports/ui/containers/GroupView.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/GroupView/GroupWeek.js" />
@@ -240,6 +225,7 @@
         <option value="$PROJECT_DIR$/imports/ui/App.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/WelcomePage/Welcome.js" />
         <option value="$PROJECT_DIR$/client/main.css" />
+        <option value="$PROJECT_DIR$/imports/server/main.js" />
       </list>
     </option>
   </component>
@@ -484,7 +470,7 @@
       <workItem from="1564028276815" duration="507000" />
       <workItem from="1564529089485" duration="948000" />
       <workItem from="1564764687998" duration="7157000" />
-      <workItem from="1564861417277" duration="33932000" />
+      <workItem from="1564861417277" duration="34353000" />
     </task>
     <task id="LOCAL-00002" summary="Fixed a typo/bug in task reducer.">
       <created>1563054360159</created>
@@ -525,7 +511,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115608000" />
+    <option name="totallyTimeSpent" value="116029000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -874,16 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/server/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/actions/DayAction.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1043,8 +1019,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="381" lean-forward="true" selection-start-line="381" selection-end-line="381" />
+        <state relative-caret-position="399">
+          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/server/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="7" selection-end-line="28" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
