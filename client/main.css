@@ -82,7 +82,6 @@ html body {
     height: 6%;
 }
 
-
 #footer-button {
     background-color: #1CCAD8;
     border-radius: 0;
@@ -300,6 +299,15 @@ html .table thead th {
     border-width: 0 3px 3px 0;
 }
 
+.loginForm {
+    width: 25%;
+    display: block;
+    margin: auto;
+}
+
+.loginRedirect {
+    text-align: center;
+}
 #taskBody {
     display: flex;
     flex-direction: row;
