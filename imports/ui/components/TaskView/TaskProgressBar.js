@@ -10,15 +10,13 @@ class TaskProgressBar extends React.Component {
     }
 
     getProgress() {
-        let numTotalTasks = this.props.tasks.length; //right
+        let numTotalTasks = this.props.tasks.length;
 
         if (numTotalTasks == 0) {
             return 0;
         }
 
         let completedMemberTasks = this.props.tasks.filter(task => task.status % 2 == 1).length;
-        //console.log(completedMemberTasks);
-        //return (completedMemberTasks.length / numTotalTasks)*100;
         return (completedMemberTasks/numTotalTasks) * 100;
     };
 

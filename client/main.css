@@ -408,4 +408,68 @@ h2.welcome {
     text-decoration: none;
 }
 
+#groupProgress {
+    text-align: center;
+}
 
+#groupProgressBar {
+    height: 50px;
+}
+
+#MemberScheduleTasks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+
+#OverviewCard {
+    width: 49%;
+}
+
+#CardHeader {
+    text-align: center;
+}
+
+#active {
+    background-color: #1CCAD8;
+}
+
+.calCell {
+    cursor: pointer;
+    border-right: 1px solid #1CCAD8;
+}
+
+#album:hover {
+    background-color: #1CCAD8;
+
+#aboutBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2%;
+}
+
+#aboutCard {
+  
+}
+
+#helpPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#helpAccordion {
+    width: 100%;
+    padding-bottom: 1%;
+}
+
+#helpHeader {
+    text-align: center;
+    color: #E2E2E2;
+    font-family: 'Fugaz One', cursive;
+    font-size: 3.5rem;
+    padding-bottom: 2%;
+}

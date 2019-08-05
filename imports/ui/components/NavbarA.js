@@ -37,8 +37,11 @@ export default class NavbarA extends Component {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mr-auto">
+                            <Nav.Link href="/overview">Overview</Nav.Link>
                             <Nav.Link href="/">Overview</Nav.Link>
+                            <Nav.Link href="/about">About Us</Nav.Link>
                             <Nav.Link href="/">About Us</Nav.Link>
+                            <Nav.Link href="/help">Help</Nav.Link>
 
                             {/*Dropdown*/}
                             <NavDropdown title="Tools" id="collasible-nav-dropdown">

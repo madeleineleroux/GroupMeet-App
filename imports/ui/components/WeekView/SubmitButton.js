@@ -8,16 +8,12 @@ import { Modal} from "react-bootstrap";
 class SubmitButton extends Component {
     constructor(props) {
         super(props);
-        //this.handleShow = this.handleShow.bind(this);
-        //this.handleClose = this.handleShow.bind(this);
-
         this.state = {
             show: false
         };
-
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
-}
+    }
 
     handleClose() {
         console.log("Closing");
@@ -29,8 +25,6 @@ class SubmitButton extends Component {
         this.setState({ show: true });
     }
 
-
-
     handleSubmitSchedule = e => {
         e.preventDefault();
         this.handleShow();
@@ -38,7 +32,6 @@ class SubmitButton extends Component {
         console.log(this.state.show);
 
     }
-
 
     render() {
         return (<div className="resetDiv">
