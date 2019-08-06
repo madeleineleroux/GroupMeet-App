@@ -82,7 +82,10 @@ html body {
     height: 6%;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e7a3c4707f6fcaf070d7b2a9ef971da4683e64fb
 #footer-button {
     background-color: #1CCAD8;
     border-radius: 0;
@@ -300,6 +303,7 @@ html .table thead th {
     border-width: 0 3px 3px 0;
 }
 
+<<<<<<< HEAD
 #taskBody {
     display: flex;
     flex-direction: row;
@@ -441,3 +445,14 @@ h2.welcome {
     font-size: 3.5rem;
     padding-bottom: 2%;
 }
+=======
+.loginForm {
+    width: 25%;
+    display: block;
+    margin: auto;
+}
+
+.loginRedirect {
+    text-align: center;
+}
+>>>>>>> e7a3c4707f6fcaf070d7b2a9ef971da4683e64fb
