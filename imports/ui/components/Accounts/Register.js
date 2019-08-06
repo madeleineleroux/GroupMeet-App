@@ -59,8 +59,8 @@ class Register extends React.Component {
                                 avatar: avatar
                         }
                     }});
+                    self.handleShow();
                 }
-                self.handleShow();
             })
         }
         else {
@@ -94,18 +94,13 @@ class Register extends React.Component {
                     Have an account? <Link to="/login">Login now!</Link>
                 </p>
 
-                <Modal show={this.state.show} onHide={this.handleClose} centered>
+                <Modal show={this.state.show} onHide={this.handleClose} >
                     <Modal.Header closeButton>
-                        <Modal.Title> Visit the welcome page?</Modal.Title>
+                        <Modal.Title> Let's put you in a group </Modal.Title>
                     </Modal.Header>
-                    <a href = "/welcome">
+                    <a href = "/groups">
                         <Button id="modalButton">
-                            Yes
-                        </Button>
-                    </a>
-                    <a href = "/overview">
-                        <Button id="modalButton">
-                            No
+                            Let's Go
                         </Button>
                     </a>
 

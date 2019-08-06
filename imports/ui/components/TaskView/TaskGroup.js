@@ -3,6 +3,7 @@ import TaskMember from "./TaskMember";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Container from "react-bootstrap/Container";
 
 // function LeftArrow(props) {
 //     const { onClick } = props;
@@ -29,17 +30,19 @@ const TaskGroup = ({ groupMembers }) => {
         swipeToSlide: true,
         slide: 'TaskMember',
         centerPadding: "60px",
-        accessibility: false
-        // prevArrow: <LeftArrow/>,
+        accessibility: false,
+        // prevArrow: <div id="calendarTriangle" className="triangle-left triangle" />
         // nextArrow: <RightArrow/>
     };
 
     return (
+        <Container>
         <Slider {...settings}>
             {Object.keys(groupMembers).map(id => (
                 <TaskMember key={id} name={groupMembers[id].name} tasks={groupMembers[id].tasks} idKey={id} {...id}/>
             ))}
         </Slider>
+</Container>
     )
 };
 

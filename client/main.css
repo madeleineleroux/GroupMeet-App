@@ -640,3 +640,7 @@ html .modal-footer {
 #modalButton:hover {
     background-color: #124E78;
 }
+
+.form-check-inline .form-check-input {
+    transform: scale(1.5);
+}

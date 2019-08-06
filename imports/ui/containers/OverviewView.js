@@ -7,6 +7,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import { Meteor } from 'meteor/meteor';
 import Tracker from 'tracker-component';
 import { connect } from 'react-redux';
+import Spinner from "react-bootstrap/Spinner";
 
 class OverviewView extends Component {
     constructor(props) {
@@ -14,11 +15,16 @@ class OverviewView extends Component {
     }
     //TODO: user_id hardcoded id for testing purposes, will replace with Meteor.userId()
     render() {
-        console.log(this.props.userTasks);
-        let user_id = Meteor.userId(); //TODO: replace with Meteor.userId() when possible
-        let memberTasks = Object.entries(this.props.userTasks).filter( element =>
+        let user_id = "jQ79NAy265tvdnpKR";//Meteor.userId(); //TODO: replace with Meteor.userId() when possible
+        if (typeof user_id === 'undefined') {
+            return <Spinner id="spinning" animation="border" role="status"/>
+        }
+
+        console.log(this.props.groupMembers);
+        let memberTasks = Object.entries(this.props.groupMembers).filter( element =>
 
             element[0] == user_id);
+        console.log(memberTasks);
         return (
             <div id="overview">
                 <Container>
