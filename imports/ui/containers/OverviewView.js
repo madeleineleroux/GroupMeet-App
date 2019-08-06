@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Container from "react-bootstrap/Container";
 import GroupProgress from "../components/OverviewView/GroupProgress";
 import MemberScheduleTasks from "../components/OverviewView/MemberScheduleTasks";
@@ -8,21 +8,19 @@ import { Meteor } from 'meteor/meteor';
 import Tracker from 'tracker-component';
 import { connect } from 'react-redux';
 
-class OverviewView extends Tracker.Component {
+class OverviewView extends Component {
     constructor(props) {
         super(props);
-        this.subscribe('users_tasks');
     }
     //TODO: user_id hardcoded id for testing purposes, will replace with Meteor.userId()
     render() {
-        console.log(this.props.userTasks);
         let user_id = "ye8xNvdxhtgLPNBj2"; //TODO: replace with Meteor.userId() when possible
-        let memberTasks = Object.entries(this.props.userTasks).filter( element =>
+        let memberTasks = Object.entries(this.props.groupMembers).filter( element =>
             element[0] == user_id);
         return (
             <div id="overview">
                 <Container>
-                    <GroupProgress groupMembers={this.props.userTasks}/>
+                    <GroupProgress groupMembers={this.props.groupMembers}/>
                     <MemberScheduleTasks
                         groupMember={user_id}
                         tasks={memberTasks[0] && memberTasks[0][1] && memberTasks[0][1].tasks}
@@ -33,30 +31,30 @@ class OverviewView extends Tracker.Component {
     }
 }
 
-export const OverviewTaskTracker = withTracker(({ groupMembers }) => {
-    Meteor.subscribe('users_tasks');
-    const handle = Meteor.subscribe('users_tasks');
-    const isReady = handle.ready();
-
-    if (!isReady) {
-        return {
-            userTasks: groupMembers
-        };
-    } else {
-        const allUsers = Users.find({});
-        let userObj = {};
-
-        allUsers.forEach((user => {
-            userObj[user._id] = {
-                tasks: user.tasks
-            }
-        }));
-        return {userTasks: userObj};
-    }
-})(OverviewView);
+// export const OverviewTaskTracker = withTracker(({ groupMembers }) => {
+//     Meteor.subscribe('users_tasks');
+//     const handle = Meteor.subscribe('users_tasks');
+//     const isReady = handle.ready();
+//
+//     if (!isReady) {
+//         return {
+//             userTasks: groupMembers
+//         };
+//     } else {
+//         const allUsers = Users.find({});
+//         let userObj = {};
+//
+//         allUsers.forEach((user => {
+//             userObj[user._id] = {
+//                 tasks: user.tasks
+//             }
+//         }));
+//         return {userTasks: userObj};
+//     }
+// })(OverviewView);
 
 const mapStateToProps = state => ({
     groupMembers: state.TaskReducer
 });
 
-export default connect(mapStateToProps)(OverviewTaskTracker);
+export default connect(mapStateToProps)(OverviewView);

@@ -19,6 +19,8 @@ Meteor.methods({
     addTask(memberId, task) {
         console.log(memberId);
         Meteor.users.update({_id: memberId}, { $addToSet: { "profile.tasks": task }}, { upsert: false } );
+        let newTask = Object.assign({}, task, {user: memberId});
+        Users.insert(task);
         return;
     },
 
@@ -32,8 +34,9 @@ Meteor.methods({
         return;
     },
 
+    // fix this
     clearTasks(member) {
-        Meteor.Users.update({_id: member}, {$set: {"profile.tasks": []}});
+        Meteor.users.update({_id: member}, {$set: {"profile.tasks": []}});
         return;
     },
 
