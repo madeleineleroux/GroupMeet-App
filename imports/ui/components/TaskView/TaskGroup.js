@@ -18,10 +18,11 @@ import Slider from "react-slick";
 //     );
 // }
 const TaskGroup = ({ groupMembers }) => {
+    console.log(groupMembers);
     let settings = {
         className:"TaskGroup",
         dots: true,
-        infinite: true,
+        infinite: Object.keys(groupMembers).length > 3,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -32,6 +33,7 @@ const TaskGroup = ({ groupMembers }) => {
         // prevArrow: <LeftArrow/>,
         // nextArrow: <RightArrow/>
     };
+
     return (
         <Slider {...settings}>
             {Object.keys(groupMembers).map(id => (
