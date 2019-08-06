@@ -2,24 +2,31 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Meteor } from 'meteor/meteor';
 import { withRouter, Link, Redirect } from 'react-router-dom'
-
+import { Modal} from "react-bootstrap";
 class Register extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            redirectToWelcome: false
+            show: false
         };
-        this.onSubmit = this.onSubmit.bind(this);
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
     }
 
-    toggleWelcome = () => {
-        this.setState({redirectToWelcome: true});
+    handleClose() {
+        console.log("Closing");
+        this.setState({ show: false });
+        console.log("Closing");
     }
 
+    handleShow() {
+        this.setState({ show: true });
+    }
 
-    onSubmit(e) {
+    onSubmit = (e) => {
         e.preventDefault();
+        var self = this;
         let avatarArr = ['GIRAFFE', 'PIG', 'FOX', 'PENGUIN', 'LIZARD'];
         let index = Math.floor(Math.random() * 5);
         let avatar = avatarArr[index];
@@ -28,7 +35,6 @@ class Register extends React.Component {
         const password = ele.find("#password").val();
         const confirmPassword = ele.find("#confirmPassword").val();
         const name = ele.find('#name').val();
-        console.log(this.state.redirectToWelcome);
         if(name.length > 16) {
             alert("Your name must be 16 characters or less.")
         }
@@ -52,10 +58,8 @@ class Register extends React.Component {
                         }
                     }});
                 }
+                self.handleShow();
             })
-            // this.toggleWelcome();
-            this.setState({redirectToWelcome: false});
-            console.log(this.state.redirectToWelcome);
         }
         else {
             alert("Your passwords must match")
@@ -63,10 +67,6 @@ class Register extends React.Component {
     }
 
     render() {
-
-        if (this.state.redirectToWelcome === true) {
-            return <Redirect to="/welcome" />
-        }
 
         return (
             <div> 
@@ -93,6 +93,19 @@ class Register extends React.Component {
                 <p className = 'loginRedirect'>
                     Have an account? <Link to="/login">Login now!</Link>
                 </p>
+
+                <Modal show={this.state.show} onHide={this.handleClose} centered>
+                    <Modal.Header closeButton>
+                        <Modal.Title> Visit the welcome page?</Modal.Title>
+                    </Modal.Header>
+                    <Link to="/welcome">Yes!</Link>
+                    <Link to="/">No, I know what I'm doing.</Link>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={this.handleClose}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
           </div>
     );
   }

@@ -25,8 +25,8 @@ const Routes = () => (
             <LoggedRoute path='/register' component = {Register}/>
             <LoggedRoute path='/login' component = {Login}/>
             {/* <GroupRoute path = '/groups' component = {Group}/> */}
-            <PrivateRoute path='/groups' component = {Group}/>
-            <PrivateRoute path='/welcome' component={Welcome} />
+            <LoggedRoute path='/groups' component = {Group}/>
+            <Route path='/welcome' component={Welcome} />
             <PrivateRoute path='/overview' component={OverviewView}/>
             <Route path='/about' component={AboutView}/>
             <Route path='/help' component={HelpView}/>
