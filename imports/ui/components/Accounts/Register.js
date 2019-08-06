@@ -98,13 +98,17 @@ class Register extends React.Component {
                     <Modal.Header closeButton>
                         <Modal.Title> Visit the welcome page?</Modal.Title>
                     </Modal.Header>
-                    <Link to="/welcome">Yes!</Link>
-                    <Link to="/">No, I know what I'm doing.</Link>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={this.handleClose}>
-                            Close
+                    <a href = "/welcome">
+                        <Button id="modalButton">
+                            Yes
                         </Button>
-                    </Modal.Footer>
+                    </a>
+                    <a href = "/overview">
+                        <Button id="modalButton">
+                            No
+                        </Button>
+                    </a>
+
                 </Modal>
           </div>
     );
