@@ -4,6 +4,7 @@ import {fetchGroup, getGroup, updateGroup} from '../../actions/GroupsAction'
 import {connect} from "react-redux";
 import { Meteor } from 'meteor/meteor';
 import Popup from 'react-popup';
+import Helmet from "react-helmet";
 
 class Group extends Component {
 
@@ -54,23 +55,29 @@ class Group extends Component {
     render() {
         return (
             <div>
-                <h2 className = 'loginRedirect'>Create or Join a Group</h2>
-
+                <h2 id="groupHeader" className = 'loginRedirect'>Create or Join a Group</h2>
+                <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
+                <div id="allGroup">
+                <div className="createGroup" id="firstGroup">
                 <Form onSubmit={this.onSubmitCreate} className = 'loginForm'>
                     <FormGroup>
                         <Label for="exampleCreate">Create a group</Label>
                         <Input type="text" name="text" id="createGroup" placeholder="Create a group name" />
                     </FormGroup>
-                    <Button>Submit</Button>
+                    <Button id="regButton">Submit</Button>
                 </Form>
+                </div>
 
+                <div className="createGroup">
                 <Form onSubmit={this.onSubmitJoin} className = 'loginForm'>
                     <FormGroup>
                         <Label for="exampleJoin">Join a group</Label>
                         <Input type="text" name="text" id="joinGroup" placeholder="Enter the group to join" />
                     </FormGroup>
-                    <Button>Submit</Button>
+                    <Button id="regButton">Submit</Button>
                 </Form>
+                </div>
+                </div>
 
             </div>
         )

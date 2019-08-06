@@ -3,6 +3,8 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Meteor } from 'meteor/meteor';
 import { withRouter, Link, Redirect } from 'react-router-dom'
 import { Modal} from "react-bootstrap";
+import Helmet from "react-helmet";
+
 class Register extends React.Component {
 
     constructor(props) {
@@ -69,26 +71,24 @@ class Register extends React.Component {
     render() {
 
         return (
-            <div> 
-                <h2 className = 'loginRedirect'>Register</h2>
-                <Form onSubmit={this.onSubmit} className = 'loginForm'>
-                    <FormGroup>
-                        <Label for="exampleName">Name</Label>
+            <div>
+                <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
+                <h2 id="register" className = 'loginRedirect'>Register</h2>
+                <Form onSubmit={this.onSubmit} className = 'loginForm' id="registerForm">
+                    <FormGroup id="regFG">
+                        <Label id="refLabFirst" for="exampleName">Name</Label>
                         <Input type="text" name="text" id="name" placeholder="Enter your name" />
-                    </FormGroup >
-                    <FormGroup>
-                        <Label for="exampleEmail">Email</Label>
+                        <Label id="refLab"  for="exampleEmail">Email</Label>
                         <Input type="email" name="email" id="email" placeholder="Enter your email address" />
-                    </FormGroup >
-                    <FormGroup>
-                        <Label for="examplePassword">Password</Label>
+                        <Label id="refLab"  for="examplePassword">Password</Label>
                         <Input type="password" name="password" id="password" placeholder="Enter a password" />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="examplePassword">Confirm Password</Label>
+                        <Label id="refLab"  for="examplePassword">Confirm Password</Label>
                         <Input type="password" name="password" id="confirmPassword" placeholder="Confirm your password" />
+                        <Button id="regButton">Submit</Button>
+                        <p className = 'loginRedirect'>
+                            Have an account? <Link to="/login">Login now!</Link>
+                        </p>
                     </FormGroup>
-                    <Button>Submit</Button>
                 </Form>
                 <p className = 'loginRedirect'>
                     Have an account? <Link to="/login">Login now!</Link>
@@ -110,6 +110,7 @@ class Register extends React.Component {
                     </a>
 
                 </Modal>
+
           </div>
     );
   }

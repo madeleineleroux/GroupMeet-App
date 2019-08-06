@@ -61,7 +61,6 @@ Meteor.methods({
         let start = (moment().startOf('week').format());
         let lastWeek = moment(currWeek.date, "YYYYMDD").subtract(1, 'week').startOf('week');
         if (lastWeek.isBefore(start)) {
-            console.log(currWeek);
             return currWeek;
         } else {
             return (Availability.find({user: Meteor.userId(), date: lastWeek.format()}).fetch()[0]);

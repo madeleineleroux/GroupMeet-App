@@ -31,7 +31,8 @@ const Routes = () => (
             <Route path='/about' component={AboutView}/>
             <Route path='/help' component={HelpView}/>
         </div>
-)
+
+);
 
 class App extends Component {
     render() {
