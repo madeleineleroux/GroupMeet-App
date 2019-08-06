@@ -2,13 +2,33 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Meteor } from 'meteor/meteor';
 import { withRouter, Link, Redirect } from 'react-router-dom'
+import { Modal} from "react-bootstrap";
 import Helmet from "react-helmet";
 
 class Register extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            show: false
+        };
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+    }
 
-    onSubmit(e) {
+    handleClose() {
+        console.log("Closing");
+        this.setState({ show: false });
+        console.log("Closing");
+    }
+
+    handleShow() {
+        this.setState({ show: true });
+    }
+
+    onSubmit = (e) => {
         e.preventDefault();
+        var self = this;
         let avatarArr = ['GIRAFFE', 'PIG', 'FOX', 'PENGUIN', 'LIZARD'];
         let index = Math.floor(Math.random() * 5);
         let avatar = avatarArr[index];
@@ -39,9 +59,9 @@ class Register extends React.Component {
                                 avatar: avatar
                         }
                     }});
-                    window.location.reload();
                 }
-            });
+                self.handleShow();
+            })
         }
         else {
             alert("Your passwords must match")
@@ -49,6 +69,7 @@ class Register extends React.Component {
     }
 
     render() {
+
         return (
             <div>
                 <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
@@ -69,6 +90,27 @@ class Register extends React.Component {
                         </p>
                     </FormGroup>
                 </Form>
+                <p className = 'loginRedirect'>
+                    Have an account? <Link to="/login">Login now!</Link>
+                </p>
+
+                <Modal show={this.state.show} onHide={this.handleClose} centered>
+                    <Modal.Header closeButton>
+                        <Modal.Title> Visit the welcome page?</Modal.Title>
+                    </Modal.Header>
+                    <a href = "/welcome">
+                        <Button id="modalButton">
+                            Yes
+                        </Button>
+                    </a>
+                    <a href = "/overview">
+                        <Button id="modalButton">
+                            No
+                        </Button>
+                    </a>
+
+                </Modal>
+
           </div>
     );
   }

@@ -25,12 +25,13 @@ const Routes = () => (
             <LoggedRoute path='/register' component = {Register}/>
             <LoggedRoute path='/login' component = {Login}/>
             {/* <GroupRoute path = '/groups' component = {Group}/> */}
-            <Route path='/groups' component = {Group}/>
+            <LoggedRoute path='/groups' component = {Group}/>
             <Route path='/welcome' component={Welcome} />
-            <Route path='/overview' component={OverviewView}/>
+            <PrivateRoute path='/overview' component={OverviewView}/>
             <Route path='/about' component={AboutView}/>
             <Route path='/help' component={HelpView}/>
         </div>
+
 );
 
 class App extends Component {

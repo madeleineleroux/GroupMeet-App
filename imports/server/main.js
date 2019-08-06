@@ -13,10 +13,22 @@ Meteor.startup(() => {
     // If the Links collection is empty, add some data.
     // if (Availability.find().count() === 0) {
     //     Availability.insert(initState);
+
     // }
 
     // if (Groups.find().count() === 0 ) {
     //     Groups.insert(initState);
+    // }
+
+    // if (GroupSchedule.find().count() === 0) {
+    //     let moment = require('moment');
+    //     moment.defaultFormat = "YYYYMMDD";
+    //     let start = (moment().startOf('week').format());
+    //     const allHours = booleanHours();
+    //     const gsInitState = Object.assign({}, allHours, {_id: start});
+    //
+    //     GroupSchedule.insert(gsInitState);
+    //
     // }
 
     // if (GroupSchedule.find().count() === 0) {

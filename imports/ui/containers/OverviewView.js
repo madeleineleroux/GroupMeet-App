@@ -14,8 +14,10 @@ class OverviewView extends Component {
     }
     //TODO: user_id hardcoded id for testing purposes, will replace with Meteor.userId()
     render() {
-        let user_id = "ye8xNvdxhtgLPNBj2"; //TODO: replace with Meteor.userId() when possible
-        let memberTasks = Object.entries(this.props.groupMembers).filter( element =>
+        console.log(this.props.userTasks);
+        let user_id = Meteor.userId(); //TODO: replace with Meteor.userId() when possible
+        let memberTasks = Object.entries(this.props.userTasks).filter( element =>
+
             element[0] == user_id);
         return (
             <div id="overview">
