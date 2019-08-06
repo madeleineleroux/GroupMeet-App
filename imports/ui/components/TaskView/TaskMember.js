@@ -9,7 +9,6 @@ import Avatar from "../Avatar";
 import ClearTaskButton from "./ClearTaskButton";
 
 const TaskMember = ({tasksByIds, tasks, name, idKey}) => {
-    console.log(idKey);
         return (
             <Card id="scrollable">
                 <Avatar id={idKey} tasks={tasksByIds} />

@@ -19,7 +19,7 @@ const WeekHeader = () => {
         <span id="lastId">S</span>
         </div>
             <div id="week">
-                <span id="firstId">{start.date()}</span>
+                <span id="firstId">{4}</span>
                 {DAYS.map( day => (
                     <span>{start.add(1, 'd').date()}</span>
                 ))}

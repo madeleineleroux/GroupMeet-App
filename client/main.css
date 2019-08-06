@@ -140,7 +140,8 @@ html .progress-bar {
 }
 
 #scrollable {
-    height: 600px;
+    height: 500px;
+    margin-top: 25%;
 }
 
 #scrollableBody {
@@ -155,7 +156,7 @@ html .card-deck {
 }
 
 #cardContainer {
-    max-width: 90%;
+    width: 80%;
 }
 
 html .groupTable {
@@ -448,4 +449,194 @@ h2.welcome {
     font-family: 'Fugaz One', cursive;
     font-size: 3.5rem;
     padding-bottom: 2%;
+}
+
+html label {
+    font-family: Roboto, sans-serif;
+    text-align: left;
+    margin-top: 12%;
+    margin-bottom: 0;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: #454545;
+}
+
+.loginRedirect {
+    font-family: Robot, sans-serif;
+}
+
+#loginHeader {
+    top: 16%;
+    position: absolute;
+    font-family: "Fugaz One", cursive;
+    font-weight: 200;
+    font-size: 5.4rem;
+    text-align: left;
+    margin-left: 34%;
+    z-index: 1;
+    color: #124E78;
+}
+
+#login {
+    background-color:#ededed;
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    z-index: -1;
+}
+
+html .form-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.loginForm.loginForm {
+    width: 80%;
+}
+
+html .form-control {
+    border-color: transparent;
+}
+
+#loginButton {
+    background-color: #454545;
+    margin-top: 5%;
+    font-family: Roboto, sans-serif;
+    padding: 3%;
+    border-radius: 2px;
+    width: 100%;
+}
+
+#loginButton:hover {
+    background-color: #124E78;
+}
+
+#passwordLabel {
+    margin-top: 8%;
+}
+
+#registerForm {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ededed;
+    width: 40%;
+
+}
+
+#regFG {
+    margin-top: 0;
+    width: 73%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#register {
+    text-align: center;
+    position: relative;
+    margin-left: 0;
+    margin-top: 7%;
+    font-family: "Fugaz One", cursive;
+    font-weight: 200;
+    font-size: 5.4rem;
+    color: #124E78;
+    z-index: 5;
+}
+
+#refLab {
+    margin-top: 6%;
+}
+
+#refLabFirst {
+    margin-top: 10%;
+}
+
+#regButton {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #454545;
+    margin-top: 3%;
+}
+
+#regButton:hover {
+    background-color: #124E78;
+    border: transparent;
+}
+
+html .createGroup {
+    background-color: #ededed;
+    width: 40%;
+    display: inline-block;
+    padding-bottom: 3%;
+
+}
+
+#groupHeader {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 16%;
+    font-family: "Fugaz One", cursive;
+    font-weight: 200;
+    color: #124E78;
+    z-index: 5;
+}
+
+#allGroup {
+    position: absolute;
+    margin: 0;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+}
+
+#firstGroup {
+    margin-right: 2%;
+}
+
+html .modal-content {
+    text-align: center;
+    border-radius: 2%;
+
+}
+
+html .modal.show .modal-dialog {
+    text-align: center;
+    border-radius: 0px;
+    top: 30%;
+    position: relative;
+
+}
+
+html .modal-header {
+    text-align: center;
+}
+
+#modalHeader {
+    text-align: center;
+    padding-left: 24%;
+    color: black;
+}
+
+html .modal-footer {
+    text-align: center;
+    display: inline-block;
+}
+
+#modalButton {
+    background-color: #1CCAD8;
+    border: transparent;
+}
+
+#modalButton:hover {
+    background-color: #124E78;
 }

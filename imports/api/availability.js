@@ -14,7 +14,7 @@ Meteor.methods({
         Availability.update({user: Meteor.userId(), date: sched.date}, sched, { upsert: true });
 
         let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
-        group = group.group;
+        group = group.profile.group;
         const groupSched = GroupSchedule.find({group : group, date: sched.date}).fetch()[0];
         Object.keys(sched.hours.byId).map(function(key, index) {
             if (sched.hours.byId[key].availability && !groupSched[key].busyUsers.includes(Meteor.userId())) {
@@ -61,7 +61,6 @@ Meteor.methods({
         let start = (moment().startOf('week').format());
         let lastWeek = moment(currWeek.date, "YYYYMDD").subtract(1, 'week').startOf('week');
         if (lastWeek.isBefore(start)) {
-            console.log(currWeek);
             return currWeek;
         } else {
             return (Availability.find({user: Meteor.userId(), date: lastWeek.format()}).fetch()[0]);

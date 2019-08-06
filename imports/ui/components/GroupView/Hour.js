@@ -7,7 +7,7 @@ const Hour = ({ id, allHours }) => {
     if (typeof allHours !== 'undefined') {
         return (
             <tr>
-                <td id="groupSide">{id}</td>
+                <td id="groupSide">{id < 12 ? id + " AM" : (id == 12) ? "12 PM"  : (id - 12) + " PM"}</td>
                 {WEEKDAYS.map(day => (
                     <HourCell hours={allHours[day.concat("_", id)]} id={day.concat("_", id)} key={day.concat("_", id)}/>
                 ))}
