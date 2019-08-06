@@ -602,3 +602,41 @@ html .createGroup {
 #firstGroup {
     margin-right: 2%;
 }
+
+html .modal-content {
+    text-align: center;
+    border-radius: 2%;
+
+}
+
+html .modal.show .modal-dialog {
+    text-align: center;
+    border-radius: 0px;
+    top: 30%;
+    position: relative;
+
+}
+
+html .modal-header {
+    text-align: center;
+}
+
+#modalHeader {
+    text-align: center;
+    padding-left: 24%;
+    color: black;
+}
+
+html .modal-footer {
+    text-align: center;
+    display: inline-block;
+}
+
+#modalButton {
+    background-color: #1CCAD8;
+    border: transparent;
+}
+
+#modalButton:hover {
+    background-color: #124E78;
+}

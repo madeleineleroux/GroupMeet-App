@@ -28,13 +28,11 @@ Meteor.methods({
     },
 
     deleteTask(member, id) {
-        //console.log(member, id);
         Meteor.users.update({_id: member}, { $pull: { "profile.tasks": {taskId: id}}});
         return;
     },
 
     clearTasks(member) {
-        //console.log(member);
         Meteor.Users.update({_id: member}, {$set: {"profile.tasks": []}});
         return;
     },
