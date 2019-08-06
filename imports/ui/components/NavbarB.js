@@ -22,10 +22,12 @@ class NavbarB extends Component {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mr-auto">
-                            <Nav.Link href="/">Overview</Nav.Link>
-                            <Nav.Link href="/">About Us</Nav.Link>
+                            <Nav.Link href="/overview">Overview</Nav.Link>
+                            <Nav.Link href="/about">About Us</Nav.Link>
+                            <Nav.Link href="/help">Help</Nav.Link>
 
-                            {/*Dropdown*/}
+
+                                {/*Dropdown*/}
                             <NavDropdown title="Tools" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="/calendar">Calendar</NavDropdown.Item>
                                 <NavDropdown.Item href="/tasks">Tasks</NavDropdown.Item>
@@ -34,6 +36,7 @@ class NavbarB extends Component {
                             </NavDropdown>
                             </Nav>
                             <Nav>
+                            <Nav.Link href="/groups">Group Management</Nav.Link>
                             <Button variant="outline-success" onClick={this.handleLogout}>Logout</Button>
                             </Nav>
                             {/* Tab at the very right */}

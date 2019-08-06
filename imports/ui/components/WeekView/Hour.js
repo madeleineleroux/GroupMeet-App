@@ -1,15 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import HourCell from "./HourCell";
+import Cell from "./Cell";
 
-const Hour = ({ id, allHours }) => {
+const Hour = ({ id, key, allHours }) => {
     const WEEKDAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
-    if (typeof allHours !== 'undefined') {
+    if (typeof allHours !== 'undefined' && id !== 'undefined') {
         return (
             <tr>
                 <td id="groupSide">{id < 12 ? id + " AM" : (id == 12) ? "12 PM"  : (id - 12) + " PM"}</td>
                 {WEEKDAYS.map(day => (
-                    <HourCell hours={allHours[day.concat("_", id)]} id={day.concat("_", id)} key={day.concat("_", id)}/>
+                    <Cell hours={allHours[day.concat("_", id)]}
+                          id={day.concat("_", id)}
+                          key={day.concat("_", id)}
+                          availability={allHours.hours.byId[day.concat("_", id)].availability}
+                    />
                 ))}
             </tr>
         )

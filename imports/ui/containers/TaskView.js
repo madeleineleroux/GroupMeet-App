@@ -6,54 +6,44 @@ import Users from "../../api/users";
 import { withTracker } from 'meteor/react-meteor-data';
 import { Meteor } from 'meteor/meteor';
 import Tracker from 'tracker-component';
+import {fetchTasks} from "../actions/TaskAction";
 
 //https://codebrahma.com/reactive-subscriptions-in-meteor/
 
 
-class TaskView extends Tracker.Component {
+class TaskView extends Component {
     constructor(props) {
         super(props);
-        this.subscribe('users_tasks');
     }
 
     render() {
     return (
             <div>
-                <Container id="cardContainer">
-                    <TaskGroup groupMembers={this.props.userTasks}/>
-                </Container>
+                <div>
+                    <TaskGroup />
+                </div>
             </div>
         );
     }
 }
 
-export const TaskTracker = withTracker(({ groupMembers }) => {
-    Meteor.subscribe('users_tasks');
-    const handle = Meteor.subscribe('users_tasks');
-    const isReady = handle.ready();
-
-    if (!isReady) {
-        return {
-            userTasks: groupMembers
-        };
-    } else {
-        const allUsers = Users.find({});
-        let userObj = {};
-
-        allUsers.forEach((user => {
-            userObj[user._id] = {
-                name: user.name,
-                avatar:user.avatar,
-                tasks: user.tasks
-            }
-        }));
-        console.log(userObj);
-        return {userTasks: userObj};
-    }
-})(TaskView);
+// export const TaskTracker = withTracker(({ groupMembers }) => {
+//     Meteor.subscribe('users_tasks');
+//     const handle1 = Meteor.subscribe('users_tasks');
+//     const handle2 = Meteor.subscribe('users');
+//     const isReady1 = handle1.ready();
+//     const isReady2 = handle2.ready();
+//
+//     if (isReady1 && isReady2) {
+//         this.props.fetchTasks();
+//     }
+//
+//     return {userTasks: groupMembers}
+// })(TaskView);
 
 const mapStateToProps = state => ({
     groupMembers: state.TaskReducer
 });
 
-export default connect(mapStateToProps)(TaskTracker);
+
+export default connect(mapStateToProps, null)(TaskGroup);

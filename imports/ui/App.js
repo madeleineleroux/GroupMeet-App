@@ -9,6 +9,13 @@ import Register from './components/Accounts/Register';
 import Login from './components/Accounts/Login';
 import PrivateRoute from './components/Accounts/PrivateRoute';
 import LoggedRoute from './components/Accounts/LoggedRoute';
+import Group from './components/Groups/Group'
+import GroupRoute from './components/Groups/GroupRoute'
+import Welcome from "./components/WelcomePage/Welcome"
+import OverviewView from "./containers/OverviewView";
+import AboutView from "./containers/AboutView";
+import HelpView from "./containers/HelpView";
+
 const Routes = () => (
         <div>
             <PrivateRoute exact path = '/' component = {WeekView}/>
@@ -17,8 +24,15 @@ const Routes = () => (
             <PrivateRoute path='/group' component={GroupView}/>
             <LoggedRoute path='/register' component = {Register}/>
             <LoggedRoute path='/login' component = {Login}/>
+            {/* <GroupRoute path = '/groups' component = {Group}/> */}
+            <PrivateRoute path='/groups' component = {Group}/>
+            <Route path='/welcome' component={Welcome} />
+            <PrivateRoute path='/overview' component={OverviewView}/>
+            <Route path='/about' component={AboutView}/>
+            <Route path='/help' component={HelpView}/>
         </div>
-  );
+
+);
 
 class App extends Component {
     render() {

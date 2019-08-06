@@ -1,5 +1,3 @@
-
-
 export const fetchGroupScheduleSuccess = (payload) => {
     return {
         type: 'FETCH_GROUP',
@@ -26,9 +24,9 @@ export const getNextWeekSuccess = (payload) => {
     }
 };
 
-export const nextWeekGroup = (currWeek) => {
+export const nextWeekGroup = (obj) => {
     return (dispatch) => {
-        return Meteor.call('getNextWeek', currWeek, (err, result) => {
+        return Meteor.call('getNextWeek', obj.group, obj.date, (err, result) => {
             if (!err) {
                 dispatch(getNextWeekSuccess(result));
             } else {
@@ -45,9 +43,16 @@ export const getPrevWeekSuccess = (payload) => {
     }
 };
 
-export const prevWeekGroup = (currWeek) => {
+export const noLastWeek = currWeek => {
+    return {
+        type: 'NO_LAST_WEEK',
+        currWeek
+    }
+};
+
+export const prevWeekGroup = (obj) => {
     return (dispatch) => {
-        return Meteor.call('getPrevWeek', currWeek, (err, result) => {
+        return Meteor.call('getPrevWeek', obj.group, obj.date, (err, result) => {
             if (!err) {
                 dispatch(getPrevWeekSuccess(result));
             } else {

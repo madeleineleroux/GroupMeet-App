@@ -2,17 +2,41 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Meteor } from 'meteor/meteor';
 import { withRouter, Link, Redirect } from 'react-router-dom'
+import { Modal} from "react-bootstrap";
+import Helmet from "react-helmet";
 
 class Register extends React.Component {
 
-    onSubmit(e) {
+    constructor(props) {
+        super(props);
+        this.state = {
+            show: false
+        };
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+    }
+
+    handleClose() {
+        console.log("Closing");
+        this.setState({ show: false });
+        console.log("Closing");
+    }
+
+    handleShow() {
+        this.setState({ show: true });
+    }
+
+    onSubmit = (e) => {
         e.preventDefault();
+        var self = this;
+        let avatarArr = ['GIRAFFE', 'PIG', 'FOX', 'PENGUIN', 'LIZARD'];
+        let index = Math.floor(Math.random() * 5);
+        let avatar = avatarArr[index];
         const ele = $(e.target);
         const email = ele.find("#email").val();
         const password = ele.find("#password").val();
         const confirmPassword = ele.find("#confirmPassword").val();
         const name = ele.find('#name').val();
-        console.log(name);
         if(name.length > 16) {
             alert("Your name must be 16 characters or less.")
         }
@@ -20,8 +44,6 @@ class Register extends React.Component {
             let accountInfo = {
                 email: email,
                 password: password,
-                name: name,
-                Tasks: []
             };
             Accounts.createUser(accountInfo, function (er, result) {
                 if (er) {
@@ -32,12 +54,14 @@ class Register extends React.Component {
                         $set:{
                             profile: {
                                 name: name,
-                                Tasks: []
+                                tasks: [],
+                                group: null,
+                                avatar: avatar
                         }
                     }});
-                    window.location.reload();
+                    self.handleShow();
                 }
-            });
+            })
         }
         else {
             alert("Your passwords must match")
@@ -47,30 +71,41 @@ class Register extends React.Component {
     render() {
 
         return (
-            <div> 
-                <h2 className = 'loginRedirect'>Register</h2>
-                <Form onSubmit={this.onSubmit} className = 'loginForm'>
-                    <FormGroup>
-                        <Label for="exampleName">Name</Label>
+            <div>
+                <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
+                <h2 id="register" className = 'loginRedirect'>Register</h2>
+                <Form onSubmit={this.onSubmit} className = 'loginForm' id="registerForm">
+                    <FormGroup id="regFG">
+                        <Label id="refLabFirst" for="exampleName">Name</Label>
                         <Input type="text" name="text" id="name" placeholder="Enter your name" />
-                    </FormGroup >
-                    <FormGroup>
-                        <Label for="exampleEmail">Email</Label>
+                        <Label id="refLab"  for="exampleEmail">Email</Label>
                         <Input type="email" name="email" id="email" placeholder="Enter your email address" />
-                    </FormGroup >
-                    <FormGroup>
-                        <Label for="examplePassword">Password</Label>
+                        <Label id="refLab"  for="examplePassword">Password</Label>
                         <Input type="password" name="password" id="password" placeholder="Enter a password" />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="examplePassword">Confirm Password</Label>
+                        <Label id="refLab"  for="examplePassword">Confirm Password</Label>
                         <Input type="password" name="password" id="confirmPassword" placeholder="Confirm your password" />
+                        <Button id="regButton">Submit</Button>
+                        <p className = 'loginRedirect'>
+                            Have an account? <Link to="/login">Login now!</Link>
+                        </p>
                     </FormGroup>
-                    <Button className = 'loginRedirect'>Submit</Button>
                 </Form>
                 <p className = 'loginRedirect'>
                     Have an account? <Link to="/login">Login now!</Link>
                 </p>
+
+                <Modal show={this.state.show} onHide={this.handleClose} >
+                    <Modal.Header closeButton>
+                        <Modal.Title> Let's put you in a group </Modal.Title>
+                    </Modal.Header>
+                    <a href = "/groups">
+                        <Button id="modalButton">
+                            Let's Go
+                        </Button>
+                    </a>
+
+                </Modal>
+
           </div>
     );
   }

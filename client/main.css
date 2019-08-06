@@ -6,20 +6,16 @@
     color: #E2E2E2;
     font-family: 'Fugaz One', cursive;
     font-size: 3.5rem;
-    padding-bottom: 2%;
+    padding-bottom: 0;
+    margin-top: 4%;
 }
 
-.btn.btn-outline-primary {
-    border-color: #E2E2E2;
-    background-color: #E2E2E2;
-    padding: 0.7rem 3.3rem;
-    height: 40px;
-    border-radius: 0;
-    border-width: 1px;
-    border-left-color: #1CCAD8;
-    border-bottom-color: #1CCAD8;
-    color: transparent;
-    font-size:1em;
+#calendarMonth {
+    color: #E2E2E2;
+    font-family: 'Fugaz One', cursive;
+    font-size: 3.5rem;
+    padding-bottom: 2%;
+    text-align: center;
 }
 
 #week {
@@ -38,80 +34,10 @@ span {
 }
 
 
-
 .weekdays {
     width: 91%;
     margin-left: 0;
     display: inline-block;
-}
-
-
-#firstId{
-
-}
-
-.btn-group-vertical {
-    width: 14.2%;
-}
-
-.btn.btn-primary {
-    background-color: #1CCAD8;
-    border-color: #1CCAD8;
-    border-radius: 0;
-    font-size:1em;
-    padding: 0.7rem 0rem;
-    height: 40px;
-    border-right-color: #E2E2E2;
-}
-
-.btn.btn-primary:hover {
-    background-color: #1CCAD8;
-    border-color: #1CCAD8;
-}
-
-@media (max-width: 768px) {
-    .btn.btn-outline-primary {
-        padding:0;
-        height: 20px;
-        font-size:100%;
-    }
-
-    .btn.btn-primary {
-        height: 20px;
-        padding:0;
-        font-size:100%;
-    }
-
-}
-html
-.btn-outline-primary:not(:disabled):not(.disabled).active,
-.btn-outline-primary:not(:disabled):not(.disabled):active,
-.show>.btn-outline-primary.dropdown-toggle {
-    background-color: #1CCAD8;
-    border-color: #1CCAD8;
-}
-
-@media (min-width: 769px) and (max-width: 992px) {
-    .btn.btn-outline-primary {
-        padding:0;
-        height: 30px;
-        font-size:80%;
-    }
-
-    .btn.btn-primary {
-        padding:0;
-        font-size:80%;
-        height: 30px;
-    }
-
-
-
-}
-
-.btn.btn-outline-primary:hover {
-    background-color: #1CCAD8;
-    border-color: transparent;
-    color: transparent;
 }
 
 html body {
@@ -120,9 +46,8 @@ html body {
 }
 
 .container.container {
-    margin-top: 5%;
+    margin-top: 2%;
     padding: 0;
-    max-width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -134,12 +59,11 @@ html body {
     margin-top: 1%;
     margin-left: auto;
     margin-right: auto;
-
+    margin-bottom: 0;
     font-family: Roboto, sans-serif;
 }
 
 #sidebar {
-    width:9%;
     background-color: #1CCAD8;
     display: inline-flex;
     flex-direction: column;
@@ -150,30 +74,29 @@ html body {
 }
 
 #calendarBody {
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
-#navbar {
+#bar {
     background-color: #454545;
     height: 6%;
 }
 
 #footer-button {
-    border-radius: 5px;
-    background-color: #124E78;
-    border-color: #124E78;
+    background-color: #1CCAD8;
+    border-radius: 0;
+    border-color: #1CCAD8;
     padding: 1rem;
     text-align: center;
-    font-size: 90%;
-    height: 7%;
+    font-size: 98%;
+    height: 3%;
     width:10%;
     margin: 1%;
-    border-width: 3px;
 }
 
 #footer-button:hover {
-    background-color: #1CCAD8;
-    border-color: #F99820;
+    background-color: #124E78;
+    border-color: #124E78;
 }
 
 #footer-div {
@@ -188,7 +111,7 @@ html body {
 }
 
 .avatar {
-    width: 50%;
+    width: 33%;
     text-align: center;
     margin: auto;
     border-radius: 50%;
@@ -217,7 +140,8 @@ html .progress-bar {
 }
 
 #scrollable {
-    height: 700px;
+    height: 500px;
+    margin-top: 25%;
 }
 
 #scrollableBody {
@@ -232,7 +156,7 @@ html .card-deck {
 }
 
 #cardContainer {
-    max-width: 90%;
+    width: 80%;
 }
 
 html .groupTable {
@@ -250,6 +174,7 @@ html thead {
 
 #groupSide {
     background-color: #1CCAD8;
+    width: 6%;
     color: white;
     padding: 0;
     text-align: center;
@@ -259,7 +184,8 @@ html thead {
 
 html .table td {
     border-top: 0px solid transparent;
-    height:39px;
+    height:32px;
+    width: 10%;
 }
 
 .triangle-left {
@@ -305,6 +231,11 @@ html .table td {
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 2%;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    color: #E2E2E2;
 }
 
 .groupDiv {
@@ -356,7 +287,7 @@ html .table thead th {
 
 #cardTitleName {
     font-family: 'Fugaz One', cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 2%;
 }
 
@@ -377,4 +308,339 @@ html .table thead th {
 
 .loginRedirect {
     text-align: center;
+}
+#taskBody {
+    display: flex;
+    flex-direction: row;
+}
+
+#taskListGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#entireWeek {
+    padding: 0;
+    display: inline-block;
+}
+
+#calendarTriangle {
+    margin-top: 0;
+}
+
+#active {
+    background-color: #1CCAD8;
+}
+
+.calCell {
+    cursor: pointer;
+    border-right: 1px solid #1CCAD8;
+}
+
+#album:hover {
+    background-color: #1CCAD8;
+}
+
+.welcome {
+    color: #454545;
+    font-family: Roboto, sans-serif;
+}
+
+h1.welcome {
+    font-family: 'Fugaz One', cursive;
+    font-size: 6rem;
+    text-align: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: -2%;
+}
+
+h2.welcome {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.table td.welcomeCol {
+    text-align: center;
+    background-color: #ededed;
+    border-color: #E2E2E2;
+    border-right: 10px solid #E2E2E2;
+    padding: 2%;
+    cursor: pointer;
+}
+
+#navbar {
+    background-color: #454545;
+    height: 6%;
+}
+
+.table td.welcomeCol:hover {
+    background-color: #a5d4d8;
+    text-decoration: none;
+}
+
+#welcomeTable {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.colMsg {
+    margin-top: 12%;
+}
+
+.table a{
+    color: #454545;
+}
+.table a:hover {
+    text-decoration: none;
+}
+
+#groupProgress {
+    text-align: center;
+}
+
+#groupProgressBar {
+    height: 50px;
+}
+
+#MemberScheduleTasks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+
+#OverviewCard {
+    width: 49%;
+}
+
+#CardHeader {
+    text-align: center;
+}
+
+#aboutBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2%;
+}
+
+#aboutCard {
+  
+}
+
+#helpPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#helpAccordion {
+    width: 100%;
+    padding-bottom: 1%;
+}
+
+#helpHeader {
+    text-align: center;
+    color: #E2E2E2;
+    font-family: 'Fugaz One', cursive;
+    font-size: 3.5rem;
+    padding-bottom: 2%;
+}
+
+html label {
+    font-family: Roboto, sans-serif;
+    text-align: left;
+    margin-top: 12%;
+    margin-bottom: 0;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: #454545;
+}
+
+.loginRedirect {
+    font-family: Robot, sans-serif;
+}
+
+#loginHeader {
+    top: 16%;
+    position: absolute;
+    font-family: "Fugaz One", cursive;
+    font-weight: 200;
+    font-size: 5.4rem;
+    text-align: left;
+    margin-left: 34%;
+    z-index: 1;
+    color: #124E78;
+}
+
+#login {
+    background-color:#ededed;
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    z-index: -1;
+}
+
+html .form-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.loginForm.loginForm {
+    width: 80%;
+}
+
+html .form-control {
+    border-color: transparent;
+}
+
+#loginButton {
+    background-color: #454545;
+    margin-top: 5%;
+    font-family: Roboto, sans-serif;
+    padding: 3%;
+    border-radius: 2px;
+    width: 100%;
+}
+
+#loginButton:hover {
+    background-color: #124E78;
+}
+
+#passwordLabel {
+    margin-top: 8%;
+}
+
+#registerForm {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ededed;
+    width: 40%;
+
+}
+
+#regFG {
+    margin-top: 0;
+    width: 73%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#register {
+    text-align: center;
+    position: relative;
+    margin-left: 0;
+    margin-top: 7%;
+    font-family: "Fugaz One", cursive;
+    font-weight: 200;
+    font-size: 5.4rem;
+    color: #124E78;
+    z-index: 5;
+}
+
+#refLab {
+    margin-top: 6%;
+}
+
+#refLabFirst {
+    margin-top: 10%;
+}
+
+#regButton {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #454545;
+    margin-top: 3%;
+}
+
+#regButton:hover {
+    background-color: #124E78;
+    border: transparent;
+}
+
+html .createGroup {
+    background-color: #ededed;
+    width: 40%;
+    display: inline-block;
+    padding-bottom: 3%;
+
+}
+
+#groupHeader {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 16%;
+    font-family: "Fugaz One", cursive;
+    font-weight: 200;
+    color: #124E78;
+    z-index: 5;
+}
+
+#allGroup {
+    position: absolute;
+    margin: 0;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+}
+
+#firstGroup {
+    margin-right: 2%;
+}
+
+html .modal-content {
+    text-align: center;
+    border-radius: 2%;
+
+}
+
+html .modal.show .modal-dialog {
+    text-align: center;
+    border-radius: 0px;
+    top: 30%;
+    position: relative;
+
+}
+
+html .modal-header {
+    text-align: center;
+}
+
+#modalHeader {
+    text-align: center;
+    padding-left: 24%;
+    color: black;
+}
+
+html .modal-footer {
+    text-align: center;
+    display: inline-block;
+}
+
+#modalButton {
+    background-color: #1CCAD8;
+    border: transparent;
+}
+
+#modalButton:hover {
+    background-color: #124E78;
+}
+
+.form-check-inline .form-check-input {
+    transform: scale(1.5);
 }

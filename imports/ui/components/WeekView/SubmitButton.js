@@ -8,16 +8,12 @@ import { Modal} from "react-bootstrap";
 class SubmitButton extends Component {
     constructor(props) {
         super(props);
-        //this.handleShow = this.handleShow.bind(this);
-        //this.handleClose = this.handleShow.bind(this);
-
         this.state = {
             show: false
         };
-
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
-}
+    }
 
     handleClose() {
         console.log("Closing");
@@ -29,8 +25,6 @@ class SubmitButton extends Component {
         this.setState({ show: true });
     }
 
-
-
     handleSubmitSchedule = e => {
         e.preventDefault();
         this.handleShow();
@@ -39,19 +33,23 @@ class SubmitButton extends Component {
 
     }
 
-
     render() {
         return (<div className="resetDiv">
             <Button  id="footer-button"  onClick={this.handleSubmitSchedule}> Submit </Button>
 
             <Modal show={this.state.show} onHide={this.handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Schedule submitted!</Modal.Title>
+                    <h4 id="modalHeader">Schedule submitted!</h4>
                 </Modal.Header>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={this.handleClose}>
-                        Close
+                    <Button id="modalButton" onClick={this.handleClose}>
+                        Return to Calendar
                     </Button>
+                    <a href="/group">
+                        <Button id="modalButton">
+                            See Group Schedule
+                        </Button>
+                    </a>
                 </Modal.Footer>
             </Modal>
         </div>)

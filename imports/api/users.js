@@ -11,39 +11,62 @@ if (Meteor.isServer) {
     })
 }
 Meteor.methods({
+    editTaskText(id, member, text) {
+        //console.log(text);
+        Meteor.users.update({ _id: member, "tasks.taskId": id }, { $set: {"profile.tasks.$.description" : text}});
+        return;
+    },
     addTask(memberId, task) {
-        console.log(task);
-        Users.update({_id: memberId}, { $addToSet: { tasks: task }}, { upsert: false } );
+        console.log(memberId);
+        Meteor.users.update({_id: memberId}, { $addToSet: { "profile.tasks": task }}, { upsert: false } );
+        let newTask = Object.assign({}, task, {user: memberId});
+        Users.insert(task);
         return;
     },
 
     updateTaskStatus(id) {
-        Users.update({tasks: {$elemMatch: {taskId: id }}}, { $inc: { "tasks.$.status": 1 } });
+        Meteor.users.update({"profile.tasks": {$elemMatch: {taskId: id }}}, { $inc: { "profile.tasks.$.status": 1 } });
         return;
     },
 
-    deleteTask(id, member) {
-        console.log(id, member);
+    deleteTask(member, id) {
+        Meteor.users.update({_id: member}, { $pull: { "profile.tasks": {taskId: id}}});
         return;
     },
 
+    // fix this
     clearTasks(member) {
-        console.log(member);
-        Users.update({_id: member}, {$set: {tasks: []}});
+        Meteor.users.update({_id: member}, {$set: {"profile.tasks": []}});
         return;
     },
 
     fetchAllTasks(){
-        const allUsers = Users.find({});
+        let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
         let userObj = {};
 
-        allUsers.forEach((user => {
-            userObj[user._id] = {
-                name: user.name,
-                avatar:user.avatar,
-                tasks: user.tasks
-            }
-        }));
+        if (typeof group != "undefined") {
+            //get all the members in the group
+            group = group.profile.group;
+            const allUsers = Meteor.users.find({"profile.group" : group});
+
+            // get just the member ids
+            let listOfUsers = [];
+
+            allUsers.forEach(user => {
+                listOfUsers.push(user._id)
+            });
+
+            //get all the tasks
+            listOfUsers.map( user => {
+                let info =  Meteor.users.find({_id: user}).fetch()[0];
+                userObj[user] = {
+                    tasks: info.profile.tasks,
+                    group: group,
+                    name: info.profile.name,
+                    avatar: info.profile.avatar
+                };
+            });
+        }
 
         return userObj;
     }
