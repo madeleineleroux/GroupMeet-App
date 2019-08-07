@@ -53,11 +53,19 @@ class Group extends Component {
     }
 
     render() {
+        var screenHeight = screen.height;
+        if (screenHeight < 800) {
+            $('body').css('zoom', 0.8);
+        } else {
+            $('body').css('zoom', 1);
+        }
+
+
         return (
             <div>
-                <h2 id="groupHeader" className = 'loginRedirect'>Create or Join a Group</h2>
                 <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
                 <div id="allGroup">
+                    <h2 id="groupHeader" className = 'loginRedirect'>Create or Join a Group</h2>
                 <div className="createGroup" id="firstGroup">
                 <Form onSubmit={this.onSubmitCreate} className = 'loginForm'>
                     <FormGroup>

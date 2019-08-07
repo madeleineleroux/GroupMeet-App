@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Container from "react-bootstrap/Container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 // function LeftArrow(props) {
 //     const { onClick } = props;
@@ -31,8 +33,8 @@ const TaskGroup = ({ groupMembers }) => {
         slide: 'TaskMember',
         centerPadding: "60px",
         accessibility: false,
-        // prevArrow: <div id="calendarTriangle" className="triangle-left triangle" />
-        // nextArrow: <RightArrow/>
+        //prevArrow:  <FontAwesomeIcon icon={faCaretLeft} color="#124E78" />,
+        //nextArrow:  <FontAwesomeIcon icon={faCaretRight} color="#124E78" />
     };
 
     return (

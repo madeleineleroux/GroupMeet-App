@@ -26,15 +26,13 @@ class OverviewView extends Component {
             element[0] == user_id);
         console.log(memberTasks);
         return (
-            <div id="overview">
-                <Container>
+                <Container id="overview">
                     <GroupProgress groupMembers={this.props.groupMembers}/>
                     <MemberScheduleTasks
                         groupMember={user_id}
                         tasks={memberTasks[0] && memberTasks[0][1] && memberTasks[0][1].tasks}
                     />
                 </Container>
-            </div>
         );
     }
 }
