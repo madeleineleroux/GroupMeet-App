@@ -140,7 +140,7 @@ html .progress-bar {
 }
 
 #scrollable {
-    height: 500px;
+    height: 550px;
     margin-top: 25%;
 }
 
@@ -532,13 +532,16 @@ html .form-control {
 }
 
 #registerForm {
+    background-color: #ededed;
+    width: 40%;
+
+}
+
+#allRegister {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: #ededed;
-    width: 40%;
-
 }
 
 #regFG {

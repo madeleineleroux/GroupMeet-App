@@ -17,9 +17,7 @@ class Register extends React.Component {
     }
 
     handleClose() {
-        console.log("Closing");
         this.setState({ show: false });
-        console.log("Closing");
     }
 
     handleShow() {
@@ -77,7 +75,7 @@ class Register extends React.Component {
         }
 
         return (
-            <div>
+            <div class="allRegister">
                 <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
                 <h2 id="register" className = 'loginRedirect'>Register</h2>
                 <Form onSubmit={this.onSubmit} className = 'loginForm' id="registerForm">
@@ -96,9 +94,6 @@ class Register extends React.Component {
                         </p>
                     </FormGroup>
                 </Form>
-                <p className = 'loginRedirect'>
-                    Have an account? <Link to="/login">Login now!</Link>
-                </p>
 
                 <Modal show={this.state.show} onHide={this.handleClose} >
                     <Modal.Header closeButton>

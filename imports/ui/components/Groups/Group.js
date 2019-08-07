@@ -33,7 +33,6 @@ class Group extends Component {
         return new Promise((resolve, reject) => {
             Meteor.call('fetchGroups', (error, result) => {
               if (error) reject(error);
-              console.log(result)
               var reformattedArray = result.map(obj =>{ 
                 var rObj = {};
                 rObj = obj._id;

@@ -9,12 +9,10 @@ export const addTaskSuccess = ( text, member, id ) => {
 
 export const addTask = (text, member, id) => {
     return (dispatch) => {
-        //console.log(id);
         return Meteor.call('addTask', member, {taskId: id, description: text, status: 0}, (err, result) => {
             if (!err) {
                 dispatch(addTaskSuccess(text, member, id));
             } else {
-                console.log(err);
                 console.log('Did not submit');
             }
         });
@@ -57,7 +55,6 @@ export const toggleStatus = (id, member) => {
             if (!err) {
                 dispatch(toggleStatusSuccess(id, member));
             } else {
-                console.log(err);
                 console.log('Did not toggle');
             }
         });
@@ -70,7 +67,6 @@ export const deleteTask = (id, member) => {
             if (!err) {
                 dispatch(deleteTaskSuccess(id, member));
             } else {
-                console.log(err);
                 console.log('Did not delete task');
             }
         });
@@ -83,7 +79,6 @@ export const clearTasks = (member) => {
             if (!err) {
                 dispatch(clearTasksSuccess(member));
             } else {
-                console.log(err);
                 console.log('Did not clear tasks for', member);
             }
         });
@@ -122,7 +117,6 @@ export const editTask = (id, member, text) => {
             if (!err) {
                 dispatch(editTaskSuccess(id, member, text));
             } else {
-                console.log(err);
                 console.log('Did not edit task text');
             }
         });

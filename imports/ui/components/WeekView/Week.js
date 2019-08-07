@@ -32,7 +32,6 @@ class Week extends Component {
         moment.defaultFormat = "YYYYMMDD";
         let currMoment = moment(this.props.week.date, "YYYYMDD");
         let month = currMoment.startOf('week').format("MMMM");
-        //console.log(month);
 
         if (!currMoment.isValid()) {
             return <Spinner id="spinning" animation="border" role="status"/>

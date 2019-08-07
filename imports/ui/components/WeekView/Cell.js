@@ -13,7 +13,6 @@ class Cell extends React.Component {
     };
 
     render() {
-        console.log(this.props.availability);
         return (
             <td
                 id={this.props.availability ? 'active' : 'album'}

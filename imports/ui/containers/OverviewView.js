@@ -20,7 +20,6 @@ class OverviewView extends Component {
             return <Spinner id="spinning" animation="border" role="status"/>
         }
 
-        console.log(this.props.groupMembers);
         let memberTasks = Object.entries(this.props.groupMembers).filter( element =>
 
             element[0] == user_id);

@@ -17,7 +17,6 @@ export const submitSchedule = (schedule) => {
         if (!err) {
             dispatch(submitScheduleSuccess(result));
         } else {
-            console.log(err);
             console.log('Did not submit');
         }
     });
@@ -35,7 +34,6 @@ export const fetchSchedule = () => {
             if (!err) {
                 dispatch(fetchScheduleSuccess(result));
             } else {
-                console.log(err);
                 console.log('Availabilities did not update!');
             }
         });
@@ -59,7 +57,6 @@ export const nextWeekInd = (currWeek) => {
             if (!err) {
                 dispatch(nextWeekIndSuccess(result));
             } else {
-                console.log(err);
                 console.log('Availabilities did not update!');
             }
         });
@@ -79,7 +76,6 @@ export const prevWeekInd = (currWeek) => {
             if (!err) {
                 dispatch(prevWeekIndSuccess(result));
             } else {
-                console.log(err);
                 console.log('Availabilities did not update!');
             }
         });
