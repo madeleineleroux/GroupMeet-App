@@ -4,6 +4,7 @@ import Availability from '/imports/api/availability';
 import Users from '/imports/api/users';
 import GroupSchedule from '/imports/api/group'
 import Groups from '/imports/api/groups'
+import '../api/publish';
 import '../api/groups';
 import '../api/group'
 import '../api/users';

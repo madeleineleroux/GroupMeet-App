@@ -11,23 +11,25 @@ moment.defaultFormat = "YYYYMMDD";
 Meteor.methods({
     fetchGroupSchedule() {
         let group = Meteor.users.findOne({_id: Meteor.userId()});
-        group = group.profile.group;
-        let start = (moment().startOf('week').format());
-        let secondWeek = (moment().add(1, 'weeks').startOf('week').format());
+        if (typeof group !== 'undefined') {
+            group = group.profile.group;
+            let start = (moment().startOf('week').format());
+            let secondWeek = (moment().add(1, 'weeks').startOf('week').format());
 
-        if (GroupSchedule.find({date: start, group: group}).count() === 0) {
-            const allHours = booleanHours();
-            const gsInitState = Object.assign({}, allHours, {date: start, group: group});
-            GroupSchedule.insert(gsInitState);
+            if (GroupSchedule.find({date: start, group: group}).count() === 0) {
+                const allHours = booleanHours();
+                const gsInitState = Object.assign({}, allHours, {date: start, group: group, submitted: []});
+                GroupSchedule.insert(gsInitState);
+            }
+
+            if (GroupSchedule.find({date: secondWeek, group: group}).count() === 0) {
+                const allHours = booleanHours();
+                const gsSecondState = Object.assign({}, allHours, {date: secondWeek, group: group, submitted: []});
+                GroupSchedule.insert(gsSecondState);
+            }
+
+            return GroupSchedule.find({date: start, group: group}).fetch()[0];
         }
-
-        if (GroupSchedule.find({date: secondWeek, group: group}).count() === 0) {
-            const allHours = booleanHours();
-            const gsSecondState = Object.assign({}, allHours, {date: secondWeek, group: group});
-            GroupSchedule.insert(gsSecondState);
-        }
-
-        return GroupSchedule.find({date: start, group: group}).fetch()[0];
         },
 
     getPrevWeek(group, currWeek) {
@@ -36,7 +38,7 @@ Meteor.methods({
 
         if (GroupSchedule.find({date: prevWeek, group : group}).count() === 0) {
             const allHours = booleanHours();
-            const newWeek = Object.assign({}, allHours, {date: prevWeek, group: group});
+            const newWeek = Object.assign({}, allHours, {date: prevWeek, group: group, submitted: []});
             GroupSchedule.insert(newWeek);
             return GroupSchedule.find({group: group, date: prevWeek}).fetch()[0];
         } else {

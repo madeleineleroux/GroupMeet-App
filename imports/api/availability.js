@@ -16,6 +16,11 @@ Meteor.methods({
         let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
         group = group.profile.group;
         const groupSched = GroupSchedule.find({group : group, date: sched.date}).fetch()[0];
+
+        if (groupSched.submitted.indexOf(Meteor.userId()) === -1) {
+            groupSched.submitted.push(Meteor.userId());
+        }
+
         Object.keys(sched.hours.byId).map(function(key, index) {
             if (sched.hours.byId[key].availability && !groupSched[key].busyUsers.includes(Meteor.userId())) {
                 groupSched[key].availability = false;

@@ -7,11 +7,38 @@ import TaskInputForm from "./TaskInputForm";
 import TaskProgressBar from "./TaskProgressBar";
 import Avatar from "../Avatar";
 import ClearTaskButton from "./ClearTaskButton";
+import Spinner from "react-bootstrap/Spinner";
 
 const TaskMember = ({tasksByIds, tasks, name, idKey}) => {
+    if (typeof name !== 'undefined' && typeof tasksByIds[idKey] !== 'undefined') {
+        let url = "/avatars/";
+        let ending;
+
+        switch(tasksByIds[idKey].avatar) {
+            case 'GIRAFFE':
+                ending = "Giraffe.png";
+                break;
+            case 'PIG':
+                ending = "Pig.png";
+                break;
+            case 'FOX':
+                ending = "Fox.png";
+                break;
+            case 'PENGUIN':
+                ending = "Penguin.png";
+                break;
+            case 'LIZARD':
+                ending = "Lizard.png";
+                break;
+            default:
+                ending = "BearFace.png";
+                break;
+        }
+        url = url + ending;
+
         return (
             <Card id="scrollable">
-                <Avatar id={idKey} tasks={tasksByIds} />
+                <img className="avatar" src={url} />
                 <Card.Title id="cardTitleName" className="text-center">{name}</Card.Title>
                 <Card.Body>
                     <TaskInputForm key={idKey} groupMember={idKey}/>
@@ -29,6 +56,9 @@ const TaskMember = ({tasksByIds, tasks, name, idKey}) => {
                 </Card.Body>
             </Card>
         )
+    }
+
+   return <Spinner id="spinning" animation="border" role="status"/>
 };
 
 const mapStateToProps = state => ({
