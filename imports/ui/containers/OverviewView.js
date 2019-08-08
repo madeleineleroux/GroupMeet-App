@@ -29,11 +29,12 @@ class OverviewView extends Component {
     }
 
     render() {
-        let thisGroup;
+        //TODO: wonky rendering
+        let groupOverview;
         if (this.state.group) {
-            thisGroup = Meteor.user().profile.group;
+            groupOverview = <h1 id="pageTitle">{Meteor.user().profile.group} Overview</h1>
         } else {
-            thisGroup = "";
+            groupOverview = <h1 id="pageTitle"></h1>;
         }
 
         let user_id = Meteor.userId();
@@ -46,7 +47,7 @@ class OverviewView extends Component {
             element[0] == user_id);
         return (
             <Container id="overview">
-                <h1 id="pageTitle">{thisGroup} Overview</h1>
+                {groupOverview}
                 <GroupProgress groupMembers={this.props.groupMembers}/>
                 <MemberScheduleTasks
                     groupMember={user_id}
