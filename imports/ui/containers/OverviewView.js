@@ -29,16 +29,7 @@ class OverviewView extends Component {
     // }
 
     render() {
-        //TODO: wonky rendering
-
-        // let groupOverview;
-        // if (this.state.group) {
-        //     groupOverview = <h1 id="pageTitle">{Meteor.user().profile.group} Overview</h1>
-        // } else {
-        //     groupOverview = <h1 id="pageTitle"></h1>;
-        // }
-
-        let user_id = Meteor.userId();
+        let user_id = Meteor.userId(); 
         if (typeof user_id === 'undefined') {
             return <Spinner id="spinning" animation="border" role="status"/>
         }

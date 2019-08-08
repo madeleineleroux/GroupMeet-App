@@ -16,9 +16,11 @@ Meteor.methods({
         return;
     },
     addTask(memberId, task) {
+        let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
+        group = group.profile.group;
         Meteor.users.update({_id: memberId}, { $addToSet: { "profile.tasks": task }}, { upsert: false } );
-        let newTask = Object.assign({}, task, {user: memberId});
-        Users.insert(task);
+        let newTask = Object.assign({}, task, {user: memberId, group: group});
+        Users.insert(newTask);
         return;
     },
 

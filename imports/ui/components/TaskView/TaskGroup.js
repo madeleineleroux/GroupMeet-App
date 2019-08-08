@@ -6,7 +6,6 @@ import Slider from "react-slick";
 import Container from "react-bootstrap/Container";
 
 const TaskGroup = ({ groupMembers }) => {
-    console.log(groupMembers);
     let settings = {
         className:"TaskGroup",
         dots: true,

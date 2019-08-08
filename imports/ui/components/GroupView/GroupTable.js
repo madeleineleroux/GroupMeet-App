@@ -1,6 +1,7 @@
 import Hour from "./Hour";
 import React, { Component } from "react";
 import Table from "react-bootstrap/Table";
+import uuid from "uuid"
 
 
 class GroupTable extends Component {
@@ -36,7 +37,7 @@ class GroupTable extends Component {
                     </thead>
                     <tbody>
                     {HOURS.map(hour => (
-                        <Hour id={hour} key={hour} allHours={this.props.group}/>
+                        <Hour id={hour} key={this.props.hour} allHours={this.props.group}/>
                     ))}
                     </tbody>
                 </Table>
