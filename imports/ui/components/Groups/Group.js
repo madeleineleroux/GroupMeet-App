@@ -6,6 +6,7 @@ import { Meteor } from 'meteor/meteor';
 import Popup from 'react-popup';
 import Helmet from "react-helmet";
 import {Redirect} from 'react-router-dom'
+import Groups from '../../../api/groups';
 
 class Group extends Component {
 
@@ -16,6 +17,10 @@ class Group extends Component {
         };
         this.onSubmitCreate = this.onSubmitCreate.bind(this);
         this.onSubmitJoin = this.onSubmitJoin.bind(this);
+    }
+
+    componentWillMount(){
+        this.forceUpdate();
     }
 
     onSubmitCreate(e) {
@@ -54,6 +59,7 @@ class Group extends Component {
                 Meteor.users.update({_id: Meteor.userId()}, 
                 {$set: {"profile.group": name}});
                 alert(`You've just joined ${name}!`)
+                console.log(this.state.redirect);
                 this.setState({redirect: true});
                 console.log(this.state.redirect);
              }
@@ -66,7 +72,6 @@ class Group extends Component {
     }
 
     render() {
-        console.log(this.state.redirect);
         var screenHeight = screen.height;
         if (screenHeight < 800) {
             $('body').css('zoom', 0.8);
