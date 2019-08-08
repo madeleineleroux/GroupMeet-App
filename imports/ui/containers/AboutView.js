@@ -1,5 +1,7 @@
 import React from 'react';
 import {Card, Container} from "react-bootstrap";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faGithubSquare, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
 class AboutView extends React.Component {
     render() {
@@ -16,40 +18,52 @@ class AboutView extends React.Component {
                     </Card>
                     </div>
                     <div id="aboutBottom">
-                        <Card id="aboutCard">
-                            <Card.Title>Claire</Card.Title>
+                        <Card>
+                            <Card.Header>Claire</Card.Header>
                             <Card.Body>
-                                <Card.Link href="https://github.com/ciacono">Github</Card.Link>
-                                <Card.Link href="https://www.linkedin.com/in/claireiacono/">LinkedIn</Card.Link>
+                                <Card.Link href="https://github.com/ciacono">
+                                    <FontAwesomeIcon icon={faGithubSquare} color="#454545" size="2x"/>
+                                </Card.Link>
+                                <Card.Link href="https://www.linkedin.com/in/claireiacono/">
+                                    <FontAwesomeIcon icon={faLinkedin} color="#454545" size="2x"/>
+                                </Card.Link>
                             </Card.Body>
                             <Card.Header>Bio</Card.Header>
-                            <Card.Body>
+                            <Card.Body id="aboutCard">
                                 <Card.Text>
                                     Write some cool stuff about yourself here.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card id="aboutCard">
-                            <Card.Title>Ben</Card.Title>
+                        <Card>
+                            <Card.Header>Ben</Card.Header>
                             <Card.Body>
-                                <Card.Link href="/">Github</Card.Link>
-                                <Card.Link href="/">LinkedIn</Card.Link>
+                                <Card.Link href="https://github.com">
+                                    <FontAwesomeIcon icon={faGithubSquare} color="#454545" size="2x"/>
+                                </Card.Link>
+                                <Card.Link href="https://www.linkedin.com">
+                                    <FontAwesomeIcon icon={faLinkedin} color="#454545" size="2x"/>
+                                </Card.Link>
                             </Card.Body>
                             <Card.Header>Bio</Card.Header>
-                            <Card.Body>
+                            <Card.Body id="aboutCard">
                                 <Card.Text>
                                     Write some cool stuff about yourself here.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card id="aboutCard">
-                            <Card.Title>Madie</Card.Title>
+                        <Card>
+                            <Card.Header>Madie</Card.Header>
                             <Card.Body>
-                                <Card.Link href="/">Github</Card.Link>
-                                <Card.Link href="/">LinkedIn</Card.Link>
+                                <Card.Link href="https://github.com">
+                                    <FontAwesomeIcon icon={faGithubSquare} color="#454545" size="2x"/>
+                                </Card.Link>
+                                <Card.Link href="https://www.linkedin.com">
+                                    <FontAwesomeIcon icon={faLinkedin} color="#454545" size="2x"/>
+                                </Card.Link>
                             </Card.Body>
                             <Card.Header>Bio</Card.Header>
-                            <Card.Body>
+                            <Card.Body id="aboutCard">
                                 <Card.Text>
                                     Write some cool stuff about yourself here.
                                 </Card.Text>
