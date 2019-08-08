@@ -22,7 +22,6 @@ class NavbarB extends Component {
             let user = Meteor.user();
             if (user != undefined) {
                 context.setState({ name: user});
-                console.log(user)
             }
         });
     }
