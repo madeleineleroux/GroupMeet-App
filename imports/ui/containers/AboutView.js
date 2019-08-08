@@ -4,9 +4,8 @@ import {Card, Container} from "react-bootstrap";
 class AboutView extends React.Component {
     render() {
         return (
-            <div>
                 <Container>
-                    <h1 id="month">About us</h1>
+                    <h1 id="pageTitle">About us</h1>
                     <div id="aboutTop">
                     <Card>
                         <Card.Body>
@@ -58,7 +57,6 @@ class AboutView extends React.Component {
                         </Card>
                     </div>
                 </Container>
-            </div>
         )
     }
 }

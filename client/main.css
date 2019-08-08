@@ -444,23 +444,15 @@ h2.welcome {
   
 }
 
-#helpPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+/*#helpPage {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*}*/
 
 #helpAccordion {
     width: 100%;
     padding-bottom: 1%;
-}
-
-#helpHeader {
-    text-align: center;
-    color: #E2E2E2;
-    font-family: 'Fugaz One', cursive;
-    font-size: 3.5rem;
-    padding-bottom: 2%;
 }
 
 html label {
@@ -662,4 +654,13 @@ html .modal-footer {
 
 html .slick-prev:before {
     content: "";
+}
+
+#pageTitle {
+    color: #E2E2E2;
+    font-family: 'Fugaz One', cursive;
+    font-size: 3.5rem;
+    padding-bottom: 0;
+    margin-top: 4%;
+    text-align: center;
 }
