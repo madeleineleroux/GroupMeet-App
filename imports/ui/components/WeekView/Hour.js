@@ -9,7 +9,8 @@ const Hour = ({ id, key, allHours }) => {
             <tr>
                 <td id="groupSide">{id < 12 ? id + " AM" : (id == 12) ? "12 PM"  : (id - 12) + " PM"}</td>
                 {WEEKDAYS.map(day => (
-                    <Cell hours={allHours[day.concat("_", id)]}
+                    <Cell className="overviewCell"
+                          hours={allHours[day.concat("_", id)]}
                           id={day.concat("_", id)}
                           key={day.concat("_", id)}
                           availability={allHours.hours.byId[day.concat("_", id)].availability}

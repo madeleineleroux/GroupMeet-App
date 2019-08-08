@@ -15,7 +15,7 @@ class TodayRow extends React.Component {
                 <td id='groupSide'>
                     {hour < 12 ? hour + " AM" : (hour == 12) ? "12 PM"  : (hour - 12) + " PM"}
                 </td>
-                <td id={availability ? 'active' : 'album'} className="calCell">
+                <td id={availability ? 'active' : 'album'} className="overviewCell">
                     {availability}
                 </td>
             </tr>
