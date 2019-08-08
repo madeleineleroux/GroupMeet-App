@@ -12,30 +12,31 @@ import Spinner from "react-bootstrap/Spinner";
 class OverviewView extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            group: null
-        }
+        // this.state = {
+        //     group: null
+        // }
     }
 
-    componentDidMount() {
-        let context = this;
-        Tracker.autorun(function(){
-            let currGroup = Meteor.user();
-            if (currGroup != undefined) {
-                context.setState({ group: currGroup});
-                console.log(currGroup);
-            }
-        });
-    }
+    // componentDidMount() {
+    //     let context = this;
+    //     Tracker.autorun(function(){
+    //         let currGroup = Meteor.user();
+    //         if (currGroup != undefined) {
+    //             context.setState({ group: currGroup});
+    //             console.log(currGroup);
+    //         }
+    //     });
+    // }
 
     render() {
         //TODO: wonky rendering
-        let groupOverview;
-        if (this.state.group) {
-            groupOverview = <h1 id="pageTitle">{Meteor.user().profile.group} Overview</h1>
-        } else {
-            groupOverview = <h1 id="pageTitle"></h1>;
-        }
+
+        // let groupOverview;
+        // if (this.state.group) {
+        //     groupOverview = <h1 id="pageTitle">{Meteor.user().profile.group} Overview</h1>
+        // } else {
+        //     groupOverview = <h1 id="pageTitle"></h1>;
+        // }
 
         let user_id = Meteor.userId();
         if (typeof user_id === 'undefined') {
@@ -43,11 +44,11 @@ class OverviewView extends Component {
         }
 
         let memberTasks = Object.entries(this.props.groupMembers).filter( element =>
-
             element[0] == user_id);
+
         return (
             <Container id="overview">
-                {groupOverview}
+                <h1 id="pageTitle">Overview</h1>
                 <GroupProgress groupMembers={this.props.groupMembers}/>
                 <MemberScheduleTasks
                     groupMember={user_id}

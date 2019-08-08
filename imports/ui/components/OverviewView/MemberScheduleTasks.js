@@ -13,7 +13,7 @@ class MemberScheduleTasks extends React.Component {
 
                 <Card id='OverviewCard'>
                     <Card.Header id='CardHeader'>
-                        <Card.Title>Today's Availability</Card.Title>
+                        <Card.Title id='overviewCardHeader'>Today's Availability</Card.Title>
                     </Card.Header>
                     <Card.Body id="scrollableBody">
                         <TodayAvailability day={weekday}/>
@@ -22,7 +22,7 @@ class MemberScheduleTasks extends React.Component {
 
                 <Card id='OverviewCard'>
                     <Card.Header id='CardHeader'>
-                        <Card.Title>My Tasks</Card.Title>
+                        <Card.Title id='overviewCardHeader'>My Tasks</Card.Title>
                     </Card.Header>
                     <Card.Body>
                         <ListGroup id="scrollableBody" className="list-group-flush">

@@ -13,7 +13,9 @@ class TodayAvailability extends React.Component {
             <Table>
                 <tbody>
                     {HOURS.map(hour => (
-                        <TodayRow key={hour} hour={hour} day={this.props.day}/>
+                        <TodayRow key={hour}
+                                  hour={hour}
+                                  day={this.props.day}/>
                     ))}
                 </tbody>
             </Table>
