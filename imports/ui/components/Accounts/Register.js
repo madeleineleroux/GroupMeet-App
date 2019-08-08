@@ -4,16 +4,32 @@ import { Meteor } from 'meteor/meteor';
 import { withRouter, Link, Redirect } from 'react-router-dom'
 import { Modal} from "react-bootstrap";
 import Helmet from "react-helmet";
+import Tracker from 'tracker-component';
 
 class Register extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            show: false
+            show: false,
+            redirect: false
         };
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
+        this.checkLogin = this.checkLogin.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    checkLogin() {
+        console.log("inside checkLogin")
+        var context = this;
+        Tracker.autorun(function(){
+            let user = Meteor.userId();
+            if (user != undefined) {
+                context.setState({ redirect: true});
+            }
+        });
+        console.log("end of checkLogin")
     }
 
     handleClose() {
@@ -57,7 +73,7 @@ class Register extends React.Component {
                                 avatar: avatar
                         }
                     }});
-                    self.handleShow();
+                    self.checkLogin();
                 }
             });
         }
@@ -78,43 +94,46 @@ class Register extends React.Component {
             $('body').css('zoom', 1);
         }
 
-        return (
-            <div class="allRegister">
-                <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
-                <h2 id="register" className = 'loginRedirect'>Register</h2>
-                <Form onSubmit={this.onSubmit} className = 'loginForm' id="registerForm">
-                    <FormGroup id="regFG">
-                        <Label id="refLabFirst" for="exampleName">Name</Label>
-                        <Input type="text" name="text" id="name" placeholder="Enter your name" />
-                        <Label id="refLab"  for="exampleEmail">Email</Label>
-                        <Input type="email" name="email" id="email" placeholder="Enter your email address" />
-                        <Label id="refLab"  for="examplePassword">Password</Label>
-                        <Input type="password" name="password" id="password" placeholder="Enter a password" />
-                        <Label id="refLab"  for="examplePassword">Confirm Password</Label>
-                        <Input type="password" name="password" id="confirmPassword" placeholder="Confirm your password" />
-                        <a href="/groups">
-                        <Button id="regButton">Submit</Button>
+        if (this.state.redirect) { 
+            return <Redirect to='/groups' />
+         }
+         
+         else{
+            return (
+                <div className="allRegister">
+                    <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
+                    <h2 id="register" className = 'loginRedirect'>Register</h2>
+                    <Form onSubmit={this.onSubmit} className = 'loginForm' id="registerForm">
+                        <FormGroup id="regFG">
+                            <Label id="refLabFirst" for="exampleName">Name</Label>
+                            <Input type="text" name="text" id="name" placeholder="Enter your name" />
+                            <Label id="refLab"  for="exampleEmail">Email</Label>
+                            <Input type="email" name="email" id="email" placeholder="Enter your email address" />
+                            <Label id="refLab"  for="examplePassword">Password</Label>
+                            <Input type="password" name="password" id="password" placeholder="Enter a password" />
+                            <Label id="refLab"  for="examplePassword">Confirm Password</Label>
+                            <Input type="password" name="password" id="confirmPassword" placeholder="Confirm your password" />
+                            <Button id="regButton">Submit</Button>
+                            <p className = 'loginRedirect'>
+                                Have an account? <Link to="/login">Login now!</Link>
+                            </p>
+                        </FormGroup>
+                    </Form>
+
+
+                    <Modal show={this.state.show} onHide={this.handleClose} >
+                        <Modal.Header closeButton>
+                            <Modal.Title> Let's put you in a group </Modal.Title>
+                        </Modal.Header>
+                        <a href = "/groups">
+                            <Button id="modalButton">
+                                Let's Go
+                            </Button>
                         </a>
-                        <p className = 'loginRedirect'>
-                            Have an account? <Link to="/login">Login now!</Link>
-                        </p>
-                    </FormGroup>
-                </Form>
-
-                <Modal show={this.state.show} onHide={this.handleClose} >
-                    <Modal.Header closeButton>
-                        <Modal.Title> Let's put you in a group </Modal.Title>
-                    </Modal.Header>
-                    <a href = "/groups">
-                        <Button id="registerButton">
-                            Let's Go
-                        </Button>
-                    </a>
-
-                </Modal>
-
-          </div>
-    );
+                    </Modal>
+            </div>
+        );
+        }
   }
 }
 

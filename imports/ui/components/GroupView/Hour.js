@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import HourCell from "./HourCell";
 
-const Hour = ({ id, allHours }) => {
+const Hour = ({ id, allHours, key }) => {
     const WEEKDAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
     if (typeof allHours !== 'undefined') {
         return (

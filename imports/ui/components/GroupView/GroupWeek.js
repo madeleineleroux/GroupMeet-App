@@ -46,8 +46,12 @@ class GroupWeek extends Tracker.Component {
                 </div>
                 <div className="triangle-right triangle" onClick={this.handleNextWeek}></div>
                 <div>
+                    <h4>{this.props.groupSchedule.submitted.length + " member" +
+                    (this.props.groupSchedule.submitted.length > 1 || this.props.groupSchedule.submitted.length == 0 ? "s have" : " has") + " submitted their schedule"} </h4>
+                <div>
                     <div className="availableBox">Available</div>
                     <div className="busyBox">Busy</div>
+                </div>
                 </div>
             </div>
         )

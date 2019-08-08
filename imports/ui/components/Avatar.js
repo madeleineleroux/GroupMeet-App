@@ -10,7 +10,12 @@ class Avatar extends Component {
     getAvatar = () => {
         let url = "/avatars/";
         let ending;
-        switch(this.props.tasks[this.props.id].avatar) {
+        return "/avatars/Penguin.png";
+        if (typeof this.props.type === 'undefined') {
+            return "/avatars/Penguin.png";
+        }
+
+        switch(this.props.type) {
             case 'GIRAFFE':
                 ending = "Giraffe.png";
                 break;
@@ -32,10 +37,10 @@ class Avatar extends Component {
         }
         url = url + ending;
         return url;
-        }
+        };
 
         render() {
-        return <img className="avatar" src={this.getAvatar()} />
+        return <img className="avatar" src={"/avatars/Penguin.png"} />
     }
 }
 const mapStateToProps = state => ({

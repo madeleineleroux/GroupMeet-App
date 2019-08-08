@@ -27,7 +27,7 @@ class GroupProgress extends React.Component {
             <div id='groupProgress'>
                 <Card>
                     <Card.Header>
-                        <Card.Title>Group Project Progress</Card.Title>
+                        <Card.Title id='overviewCardHeader'>Group Project Progress</Card.Title>
                     </Card.Header>
                     <Card.Body>
                         <ProgressBar id='groupProgressBar'

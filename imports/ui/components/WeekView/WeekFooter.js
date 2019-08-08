@@ -18,7 +18,7 @@ const WeekFooter = (date) => {
 
     return (
         <div>
-            <h4>{weekLine}</h4>
+            {/*<h4>{weekLine}</h4>*/}
             <h5 id="footer">Select the times you are busy. </h5>
             <div id="footer-div">
             <ResetCalButton/>

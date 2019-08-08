@@ -1,0 +1,17 @@
+import Users from './users';
+import {Meteor} from "meteor/meteor";
+import GroupSchedule from "./group";
+
+Meteor.publish('tasks', function() {
+    let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
+    group = group.profile.group;
+    const allUsers = Meteor.users.find({"profile.group" : group});
+    return allUsers;
+});
+
+Meteor.publish('group', function() {
+    let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
+    group = group.profile.group;
+    const allGroup = GroupSchedule.find({group: group});
+    return allGroup;
+});
