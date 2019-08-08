@@ -663,3 +663,14 @@ html .modal-footer {
 html .slick-prev:before {
     content: "";
 }
+
+#registerButton {
+    width: 100%;
+    background-color: #1CCAD8;
+    border-color: #1CCAD8;
+}
+
+#registerButton:hover {
+    background-color: #124E78;
+    border-color: #124E78;
+}

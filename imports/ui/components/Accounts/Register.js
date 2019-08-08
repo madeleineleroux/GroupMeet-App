@@ -75,10 +75,14 @@ class Register extends React.Component {
                     }});
                     self.checkLogin();
                 }
-            })
+            });
         }
         else {
             alert("Your passwords must match")
+        }
+
+        if (flag) {
+            window.location.href = "/groups";
         }
     }
 
@@ -115,6 +119,7 @@ class Register extends React.Component {
                             </p>
                         </FormGroup>
                     </Form>
+
 
                     <Modal show={this.state.show} onHide={this.handleClose} >
                         <Modal.Header closeButton>

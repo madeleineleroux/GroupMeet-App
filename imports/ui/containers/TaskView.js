@@ -8,6 +8,8 @@ import { Meteor } from 'meteor/meteor';
 import Tracker from 'tracker-component';
 import {fetchTasks} from "../actions/TaskAction";
 
+//https://codebrahma.com/reactive-subscriptions-in-meteor/
+
 
 class TaskView extends Component {
     constructor(props) {
@@ -15,7 +17,7 @@ class TaskView extends Component {
     }
 
     render() {
-    return (
+        return (
             <div>
                 <div>
                     <TaskGroup />

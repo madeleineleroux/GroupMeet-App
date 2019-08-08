@@ -15,7 +15,8 @@ class OverviewView extends Component {
     }
     //TODO: user_id hardcoded id for testing purposes, will replace with Meteor.userId()
     render() {
-        let user_id = Meteor.userId(); //TODO: replace with Meteor.userId() when possible
+
+        let user_id = Meteor.userId(); 
         if (typeof user_id === 'undefined') {
             return <Spinner id="spinning" animation="border" role="status"/>
         }
