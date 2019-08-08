@@ -38,9 +38,6 @@ export const fetchTasksSuccess = (payload) => {
     }
 };
 
-
-
-//Toggles task status - complete/incomplete
 export const toggleStatusSuccess = (id, member) => {
     return {
         type: 'TOGGLE_STATUS',

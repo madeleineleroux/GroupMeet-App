@@ -228,7 +228,7 @@ html .table td {
     width: 80%;
     margin-left: 2%;
     margin-right: 2%;
-    margin-top: 2%;
+    margin-top: 0;
 }
 
 h4 {
@@ -238,7 +238,7 @@ h4 {
 
 .groupDiv {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 0;
 }
 
 .busyBox {
