@@ -27,10 +27,10 @@ class AboutView extends React.Component {
                             </Card.Body>
                             <Card.Body id="iconsBody">
                                 <Card.Link href="https://github.com/ciacono" target="_blank">
-                                    <FontAwesomeIcon id="icon" icon={faGithubSquare} color="#454545" size="3x"/>
+                                    <FontAwesomeIcon id="icon" icon={faGithubSquare} color="#454545" size="2x"/>
                                 </Card.Link>
                                 <Card.Link href="https://www.linkedin.com/in/claireiacono/" target="_blank">
-                                    <FontAwesomeIcon id="icon" icon={faLinkedin} color="#454545" size="3x"/>
+                                    <FontAwesomeIcon id="icon" icon={faLinkedin} color="#454545" size="2x"/>
                                 </Card.Link>
                             </Card.Body>
                         </Card>
@@ -43,10 +43,10 @@ class AboutView extends React.Component {
                             </Card.Body>
                             <Card.Body id="iconsBody">
                                 <Card.Link href="https://github.com" target="_blank">
-                                    <FontAwesomeIcon id="icon" icon={faGithubSquare} color="#454545" size="3x"/>
+                                    <FontAwesomeIcon id="icon" icon={faGithubSquare} color="#454545" size="2x"/>
                                 </Card.Link>
                                 <Card.Link href="https://www.linkedin.com" target="_blank">
-                                    <FontAwesomeIcon id="icon" icon={faLinkedin} color="#454545" size="3x"/>
+                                    <FontAwesomeIcon id="icon" icon={faLinkedin} color="#454545" size="2x"/>
                                 </Card.Link>
                             </Card.Body>
                         </Card>
@@ -59,10 +59,10 @@ class AboutView extends React.Component {
                             </Card.Body>
                             <Card.Body id="iconsBody">
                                 <Card.Link href="https://github.com" target="_blank">
-                                    <FontAwesomeIcon id="icon" icon={faGithubSquare} color="#454545" size="3x"/>
+                                    <FontAwesomeIcon id="icon" icon={faGithubSquare} color="#454545" size="2x"/>
                                 </Card.Link>
                                 <Card.Link href="https://www.linkedin.com" target="_blank">
-                                    <FontAwesomeIcon id="icon" icon={faLinkedin} color="#454545" size="3x"/>
+                                    <FontAwesomeIcon id="icon" icon={faLinkedin} color="#454545" size="2x"/>
                                 </Card.Link>
                             </Card.Body>
                         </Card>
