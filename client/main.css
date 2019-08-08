@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fugaz+One&display=swap');
 
-
 #month {
     color: #E2E2E2;
     font-family: 'Fugaz One', cursive;
@@ -674,10 +673,6 @@ html .modal-footer {
 
 .form-check-inline .form-check-input {
     transform: scale(1.5);
-}
-
-html .slick-prev:before {
-    content: "";
 }
 
 #pageTitle {
