@@ -17,12 +17,8 @@ class TaskView extends Component {
     }
 
     render() {
-        return (
-            <div>
-                <div>
-                    <TaskGroup groupMembers={this.props.userTasks} />
-                </div>
-            </div>
+    return (
+        <TaskGroup groupMembers={this.props.userTasks}/>
         );
     }
 }

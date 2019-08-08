@@ -5,9 +5,8 @@ import {Link} from "react-router-dom";
 class HelpView extends Component {
     render() {
         return (
-            <div>
                 <Container id='helpPage'>
-                    <h1 id="helpHeader">Help</h1>
+                    <h1 id="pageTitle">Help</h1>
                     <Accordion id="helpAccordion">
                         <Card>
                             <Card.Header>
@@ -93,7 +92,6 @@ class HelpView extends Component {
                         </Card>
                     </Accordion>
                 </Container>
-            </div>
         );
     }
 }

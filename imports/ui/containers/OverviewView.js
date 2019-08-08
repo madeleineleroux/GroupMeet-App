@@ -12,28 +12,42 @@ import Spinner from "react-bootstrap/Spinner";
 class OverviewView extends Component {
     constructor(props) {
         super(props);
+        // this.state = {
+        //     group: null
+        // }
     }
-    //TODO: user_id hardcoded id for testing purposes, will replace with Meteor.userId()
-    render() {
 
+    // componentDidMount() {
+    //     let context = this;
+    //     Tracker.autorun(function(){
+    //         let currGroup = Meteor.user();
+    //         if (currGroup != undefined) {
+    //             context.setState({ group: currGroup});
+    //             console.log(currGroup);
+    //         }
+    //     });
+    // }
+
+    render() {
         let user_id = Meteor.userId(); 
         if (typeof user_id === 'undefined') {
             return <Spinner id="spinning" animation="border" role="status"/>
         }
 
         let memberTasks = Object.entries(this.props.groupMembers).filter( element =>
-
             element[0] == user_id);
-        console.log(memberTasks);
+
         return (
-                <Container id="overview">
-                    <GroupProgress groupMembers={this.props.groupMembers}/>
-                    <MemberScheduleTasks
-                        groupMember={user_id}
-                        tasks={memberTasks[0] && memberTasks[0][1] && memberTasks[0][1].tasks}
-                    />
-                </Container>
+            <Container id="overview">
+                <h1 id="pageTitle">Overview</h1>
+                <GroupProgress groupMembers={this.props.groupMembers}/>
+                <MemberScheduleTasks
+                    groupMember={user_id}
+                    tasks={memberTasks[0] && memberTasks[0][1] && memberTasks[0][1].tasks}
+                />
+            </Container>
         );
+
     }
 }
 

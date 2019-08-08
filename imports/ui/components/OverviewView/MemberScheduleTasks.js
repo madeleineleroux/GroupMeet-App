@@ -13,19 +13,19 @@ class MemberScheduleTasks extends React.Component {
 
                 <Card id='OverviewCard'>
                     <Card.Header id='CardHeader'>
-                        <Card.Title>Today's Availability</Card.Title>
+                        <Card.Title id='overviewCardHeader'>Today's Availability</Card.Title>
                     </Card.Header>
-                    <Card.Body id="scrollableBody">
+                    <Card.Body id="overviewCardAvailability">
                         <TodayAvailability day={weekday}/>
                     </Card.Body>
                 </Card>
 
                 <Card id='OverviewCard'>
                     <Card.Header id='CardHeader'>
-                        <Card.Title>My Tasks</Card.Title>
+                        <Card.Title id='overviewCardHeader'>My Tasks</Card.Title>
                     </Card.Header>
-                    <Card.Body>
-                        <ListGroup id="scrollableBody" className="list-group-flush">
+                    <Card.Body id="overviewCardTask">
+                        <ListGroup className="list-group-flush">
                             {this.props.tasks && this.props.tasks.map(task => (
                                 <Task member={this.props.groupMember} key={task.taskId} id={task.taskId} status={task.status}
                                       text={task.description}/>
