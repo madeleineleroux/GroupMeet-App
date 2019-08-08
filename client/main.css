@@ -403,7 +403,7 @@ h2.welcome {
 }
 
 #groupProgressBar {
-    height: 35px;
+    height: 30px;
 }
 
 #overviewCardHeader {
@@ -421,13 +421,17 @@ h2.welcome {
 
 #OverviewCard {
     width: 49%;
-    max-height: 425px;
-    min-height: 425px;
+    max-height: 400px;
+    min-height: 400px;
 }
 
-#overviewCardBody {
+#overviewCardTask {
+     height: 20%;
+     overflow-y: auto;
+ }
+
+#overviewCardAvailability {
     height: 20%;
-    overflow-y: auto;
 }
 
 .overviewCell {
