@@ -21,7 +21,6 @@ import {faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 //     );
 // }
 const TaskGroup = ({ groupMembers, list }) => {
-    console.log(groupMembers);
     let settings = {
         className:"TaskGroup",
         dots: true,

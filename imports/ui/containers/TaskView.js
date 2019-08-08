@@ -20,30 +20,64 @@ class TaskView extends Component {
         return (
             <div>
                 <div>
-                    <TaskGroup />
+                    <TaskGroup groupMembers={this.props.userTasks} />
                 </div>
             </div>
         );
     }
 }
 
-// export const TaskTracker = withTracker(({ groupMembers }) => {
-//     Meteor.subscribe('users_tasks');
-//     const handle1 = Meteor.subscribe('users_tasks');
-//     const handle2 = Meteor.subscribe('users');
-//     const isReady1 = handle1.ready();
-//     const isReady2 = handle2.ready();
-//
-//     if (isReady1 && isReady2) {
-//         this.props.fetchTasks();
-//     }
-//
-//     return {userTasks: groupMembers}
-// })(TaskView);
+export const TaskTracker = withTracker(({ groupMembers }) => {
+    Meteor.subscribe('tasks');
+    const handle = Meteor.subscribe('tasks');
+    const isReady = handle.ready();
+    let userObj = {};
+
+    if (isReady) {
+        let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
+
+        if (typeof group != "undefined") {
+            //get all the members in the group
+            group = group.profile.group;
+            const allUsers = Meteor.users.find({"profile.group" : group});
+
+            // get just the member ids
+            let listOfUsers = [];
+
+            allUsers.forEach(user => {
+                listOfUsers.push(user._id)
+            });
+
+            //get all the tasks
+            listOfUsers.map( user => {
+                let info =  Meteor.users.find({_id: user}).fetch()[0];
+                userObj[user] = {
+                    tasks: info.profile.tasks,
+                    group: group,
+                    name: info.profile.name,
+                    avatar: info.profile.avatar
+                };
+            });
+        }
+    }
+
+    Object.size = function(obj) {
+        var size = 0, key;
+        for (key in obj) {
+            if (obj.hasOwnProperty(key)) size++;
+        }
+        return size;
+    };
+
+// Get the size of an object
+    var size = Object.size(userObj);
+    if (size) return {userTasks: userObj};
+    return {userTasks: groupMembers};
+})(TaskView);
 
 const mapStateToProps = state => ({
     groupMembers: state.TaskReducer
 });
 
 
-export default connect(mapStateToProps, null)(TaskGroup);
+export default connect(mapStateToProps, null)(TaskTracker);

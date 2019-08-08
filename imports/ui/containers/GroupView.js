@@ -6,6 +6,7 @@ import { Meteor } from 'meteor/meteor';
 import Tracker from 'tracker-component';
 import {nextWeekGroup, prevWeekGroup} from "../actions/GroupAction";
 import {connect} from "react-redux";
+import GroupSchedule from "../../api/group";
 
 class GroupView extends Component {
     render() {
@@ -28,5 +29,6 @@ const mapDispatchToProps = dispatch => {
 const mapStateToProps = state => ({
     group: state.GroupReducer
 });
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(GroupWeek)
