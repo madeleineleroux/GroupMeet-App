@@ -18,55 +18,52 @@ class AboutView extends React.Component {
                     </Card>
                     </div>
                     <div id="aboutBottom">
-                        <Card>
-                            <Card.Header>Claire</Card.Header>
-                            <Card.Body>
-                                <Card.Link href="https://github.com/ciacono">
-                                    <FontAwesomeIcon icon={faGithubSquare} color="#454545" size="2x"/>
-                                </Card.Link>
-                                <Card.Link href="https://www.linkedin.com/in/claireiacono/">
-                                    <FontAwesomeIcon icon={faLinkedin} color="#454545" size="2x"/>
-                                </Card.Link>
-                            </Card.Body>
-                            <Card.Header>Bio</Card.Header>
-                            <Card.Body id="aboutCard">
+                        <Card id="aboutCard">
+                            <Card.Header id="cardTitleName" className="text-center">Claire</Card.Header>
+                            <Card.Body id="aboutBio">
                                 <Card.Text>
                                     Write some cool stuff about yourself here.
                                 </Card.Text>
+                            </Card.Body>
+                            <Card.Body id="iconsBody">
+                                <Card.Link href="https://github.com/ciacono" target="_blank">
+                                    <FontAwesomeIcon id="icon" icon={faGithubSquare} color="#454545" size="3x"/>
+                                </Card.Link>
+                                <Card.Link href="https://www.linkedin.com/in/claireiacono/" target="_blank">
+                                    <FontAwesomeIcon id="icon" icon={faLinkedin} color="#454545" size="3x"/>
+                                </Card.Link>
                             </Card.Body>
                         </Card>
-                        <Card>
-                            <Card.Header>Ben</Card.Header>
-                            <Card.Body>
-                                <Card.Link href="https://github.com">
-                                    <FontAwesomeIcon icon={faGithubSquare} color="#454545" size="2x"/>
-                                </Card.Link>
-                                <Card.Link href="https://www.linkedin.com">
-                                    <FontAwesomeIcon icon={faLinkedin} color="#454545" size="2x"/>
-                                </Card.Link>
-                            </Card.Body>
-                            <Card.Header>Bio</Card.Header>
-                            <Card.Body id="aboutCard">
+                        <Card id="aboutCard">
+                            <Card.Header id="cardTitleName" className="text-center">Ben</Card.Header>
+                            <Card.Body id="aboutBio">
                                 <Card.Text>
                                     Write some cool stuff about yourself here.
                                 </Card.Text>
+                            </Card.Body>
+                            <Card.Body id="iconsBody">
+                                <Card.Link href="https://github.com" target="_blank">
+                                    <FontAwesomeIcon id="icon" icon={faGithubSquare} color="#454545" size="3x"/>
+                                </Card.Link>
+                                <Card.Link href="https://www.linkedin.com" target="_blank">
+                                    <FontAwesomeIcon id="icon" icon={faLinkedin} color="#454545" size="3x"/>
+                                </Card.Link>
                             </Card.Body>
                         </Card>
-                        <Card>
-                            <Card.Header>Madie</Card.Header>
-                            <Card.Body>
-                                <Card.Link href="https://github.com">
-                                    <FontAwesomeIcon icon={faGithubSquare} color="#454545" size="2x"/>
-                                </Card.Link>
-                                <Card.Link href="https://www.linkedin.com">
-                                    <FontAwesomeIcon icon={faLinkedin} color="#454545" size="2x"/>
-                                </Card.Link>
-                            </Card.Body>
-                            <Card.Header>Bio</Card.Header>
-                            <Card.Body id="aboutCard">
+                        <Card id="aboutCard">
+                            <Card.Header id="cardTitleName" className="text-center">Madie</Card.Header>
+                            <Card.Body id="aboutBio">
                                 <Card.Text>
                                     Write some cool stuff about yourself here.
                                 </Card.Text>
+                            </Card.Body>
+                            <Card.Body id="iconsBody">
+                                <Card.Link href="https://github.com" target="_blank">
+                                    <FontAwesomeIcon id="icon" icon={faGithubSquare} color="#454545" size="3x"/>
+                                </Card.Link>
+                                <Card.Link href="https://www.linkedin.com" target="_blank">
+                                    <FontAwesomeIcon id="icon" icon={faLinkedin} color="#454545" size="3x"/>
+                                </Card.Link>
                             </Card.Body>
                         </Card>
                     </div>

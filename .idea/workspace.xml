@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a74c8527-0da0-4283-bb1f-10970908e2e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imports/ui/containers/AboutView.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/containers/AboutView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
@@ -20,14 +17,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6295707">
+    <splitter split-orientation="horizontal" split-proportion="0.76947534">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="14" column="70" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="70" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/imports/ui/containers/AboutView.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+                <state relative-caret-position="224">
+                  <caret line="28" column="92" selection-start-line="28" selection-start-column="92" selection-end-line="28" selection-end-column="92" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -42,8 +51,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="213">
-                  <caret line="467" column="1" selection-start-line="467" selection-start-column="1" selection-end-line="467" selection-end-column="1" />
+                <state relative-caret-position="184">
+                  <caret line="465" column="12" lean-forward="true" selection-start-line="465" selection-start-column="12" selection-end-line="465" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -122,7 +131,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="52" />
     <option name="y" value="226" />
     <option name="width" value="1800" />
@@ -276,6 +285,14 @@
               <item name="C:\Users\Claire\Documents\CPSC 436I\GroupMeet\GroupMeet-App" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="imports" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="TaskView" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="GroupMeet-App" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Claire\Documents\CPSC 436I\GroupMeet\GroupMeet-App" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="imports" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="containers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
@@ -338,7 +355,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22920000" />
+    <option name="totallyTimeSpent" value="25451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
@@ -355,7 +372,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.27175844" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.26465365" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.18472469" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -695,16 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/GroupView/GroupTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -863,17 +870,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="70" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="467" column="1" selection-start-line="467" selection-start-column="1" selection-end-line="467" selection-end-column="1" />
+        <state relative-caret-position="184">
+          <caret line="465" column="12" lean-forward="true" selection-start-line="465" selection-start-column="12" selection-end-line="465" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/containers/AboutView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        <state relative-caret-position="224">
+          <caret line="28" column="92" selection-start-line="28" selection-start-column="92" selection-end-line="28" selection-end-column="92" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

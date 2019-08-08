@@ -464,7 +464,23 @@ h2.welcome {
 }
 
 #aboutCard {
-    height: 250px;
+    width: 32%;
+}
+
+#aboutBio {
+    height: 200px;
+}
+
+#icon {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#iconsBody {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-around;*/
+    justify-content: center;
 }
 
 /*#helpPage {*/
