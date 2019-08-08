@@ -5,8 +5,18 @@ import {connect} from "react-redux";
 import { Meteor } from 'meteor/meteor';
 import Popup from 'react-popup';
 import Helmet from "react-helmet";
+import {Redirect} from 'react-router-dom'
 
 class Group extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            redirect : false
+        };
+        this.onSubmitCreate = this.onSubmitCreate.bind(this);
+        this.onSubmitJoin = this.onSubmitJoin.bind(this);
+    }
 
     onSubmitCreate(e) {
         e.preventDefault();
@@ -19,6 +29,8 @@ class Group extends Component {
             Meteor.users.update({_id: Meteor.userId()}, 
             {$set: {"profile.group": name}});
             Popup.alert(`You've just created the group ${name}!`)
+            this.setState({redirect: true});
+            console.log(this.state.redirect);
         }
         else {
             Popup.alert("Sorry, we couldn't create that group.")
@@ -42,6 +54,8 @@ class Group extends Component {
                 Meteor.users.update({_id: Meteor.userId()}, 
                 {$set: {"profile.group": name}});
                 alert(`You've just joined ${name}!`)
+                this.setState({redirect: true});
+                console.log(this.state.redirect);
              }
              else {
                  alert(`Sorry, the group ${name} doesn't exist. You can create it above!`)
@@ -52,6 +66,7 @@ class Group extends Component {
     }
 
     render() {
+        console.log(this.state.redirect);
         var screenHeight = screen.height;
         if (screenHeight < 800) {
             $('body').css('zoom', 0.8);
@@ -59,35 +74,39 @@ class Group extends Component {
             $('body').css('zoom', 1);
         }
 
+        if (this.state.redirect) {
+            return <Redirect to='/welcome' />
+        }
 
-        return (
-            <div>
-                <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
-                <div id="allGroup">
-                    <h2 id="groupHeader" className = 'loginRedirect'>Create or Join a Group</h2>
-                <div className="createGroup" id="firstGroup">
-                <Form onSubmit={this.onSubmitCreate} className = 'loginForm'>
-                    <FormGroup>
-                        <Label for="exampleCreate">Create a group</Label>
-                        <Input type="text" name="text" id="createGroup" placeholder="Create a group name" />
-                    </FormGroup>
-                    <Button id="regButton">Submit</Button>
-                </Form>
-                </div>
+        else {
+            return (
+                <div>
+                    <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
+                    <div id="allGroup">
+                        <h2 id="groupHeader" className = 'loginRedirect'>Create or Join a Group</h2>
+                    <div className="createGroup" id="firstGroup">
+                    <Form onSubmit={this.onSubmitCreate} className = 'loginForm'>
+                        <FormGroup>
+                            <Label for="exampleCreate">Create a group</Label>
+                            <Input type="text" name="text" id="createGroup" placeholder="Create a group name" />
+                        </FormGroup>
+                        <Button id="regButton">Submit</Button>
+                    </Form>
+                    </div>
 
-                <div className="createGroup">
-                <Form onSubmit={this.onSubmitJoin} className = 'loginForm'>
-                    <FormGroup>
-                        <Label for="exampleJoin">Join a group</Label>
-                        <Input type="text" name="text" id="joinGroup" placeholder="Enter the group to join" />
-                    </FormGroup>
-                    <Button id="regButton">Submit</Button>
-                </Form>
+                    <div className="createGroup">
+                    <Form onSubmit={this.onSubmitJoin} className = 'loginForm'>
+                        <FormGroup>
+                            <Label for="exampleJoin">Join a group</Label>
+                            <Input type="text" name="text" id="joinGroup" placeholder="Enter the group to join" />
+                        </FormGroup>
+                        <Button id="regButton">Submit</Button>
+                    </Form>
+                    </div>
+                    </div>
                 </div>
-                </div>
-
-            </div>
-        )
+            )
+        }
     }
 }
 

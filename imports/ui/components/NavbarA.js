@@ -18,18 +18,17 @@ export default class NavbarA extends Component {
                             <Nav.Link href="/overview">Overview</Nav.Link>
                             <Nav.Link href="/about">About Us</Nav.Link>
                             <Nav.Link href="/help">Help</Nav.Link>
+                            <Nav.Link href="/calendar">Calendar</Nav.Link>
+                            <Nav.Link href="/tasks">Tasks</Nav.Link>
+                            <Nav.Link href="/group">Group Schedule</Nav.Link>
 
 
                             {/*Dropdown*/}
-                            <NavDropdown title="Tools" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="/calendar">Calendar</NavDropdown.Item>
-                                <NavDropdown.Item href="/tasks">Tasks</NavDropdown.Item>
-                                <NavDropdown.Item href="/group">Group Schedule</NavDropdown.Item>
+                            {/* <NavDropdown title="Tools" id="collasible-nav-dropdown">
                                 <NavDropdown.Divider />
-                            </NavDropdown>
+                            </NavDropdown> */}
                             </Nav>
                             <Nav>
-                                <Nav.Link href="/groups">Group Management</Nav.Link>
                                 <Nav.Link href="/login">Login</Nav.Link>
                                 <Nav.Link href="/register">Register</Nav.Link>
                             </Nav>
