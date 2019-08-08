@@ -20,7 +20,7 @@ import {faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 //         <div className="triangle-right triangle" onClick={onClick}></div>
 //     );
 // }
-const TaskGroup = ({ groupMembers }) => {
+const TaskGroup = ({ groupMembers, list }) => {
     console.log(groupMembers);
     let settings = {
         className:"TaskGroup",

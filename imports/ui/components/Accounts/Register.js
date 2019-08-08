@@ -59,10 +59,14 @@ class Register extends React.Component {
                     }});
                     self.handleShow();
                 }
-            })
+            });
         }
         else {
             alert("Your passwords must match")
+        }
+
+        if (flag) {
+            window.location.href = "/groups";
         }
     }
 
@@ -88,7 +92,9 @@ class Register extends React.Component {
                         <Input type="password" name="password" id="password" placeholder="Enter a password" />
                         <Label id="refLab"  for="examplePassword">Confirm Password</Label>
                         <Input type="password" name="password" id="confirmPassword" placeholder="Confirm your password" />
+                        <a href="/groups">
                         <Button id="regButton">Submit</Button>
+                        </a>
                         <p className = 'loginRedirect'>
                             Have an account? <Link to="/login">Login now!</Link>
                         </p>
@@ -100,7 +106,7 @@ class Register extends React.Component {
                         <Modal.Title> Let's put you in a group </Modal.Title>
                     </Modal.Header>
                     <a href = "/groups">
-                        <Button id="modalButton">
+                        <Button id="registerButton">
                             Let's Go
                         </Button>
                     </a>
