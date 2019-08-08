@@ -5,6 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Table from "react-bootstrap/Table";
 
 const Welcome = () => {
+    var screenHeight = screen.height;
+    if (screenHeight < 800) {
+        $('body').css('zoom', 0.8);
+    } else {
+        $('body').css('zoom', 1);
+    }
+
     return <div className="welcome">
         <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
         <h1 className="welcome">Welcome</h1>

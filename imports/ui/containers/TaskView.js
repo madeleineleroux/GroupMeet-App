@@ -17,7 +17,7 @@ class TaskView extends Component {
     }
 
     render() {
-    return (
+        return (
             <div>
                 <div>
                     <TaskGroup />

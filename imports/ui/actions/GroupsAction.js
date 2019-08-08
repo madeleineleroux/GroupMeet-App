@@ -12,7 +12,6 @@ export const fetchGroup = () => {
         return Meteor.call('fetchGroups', (err, result) => {
             if (!err) {
                 dispatch(fetchGroupsSuccess(result));
-                console.log('No errors')
             } else {
                 console.log(err);
             }
@@ -21,11 +20,10 @@ export const fetchGroup = () => {
 };
 
 export const updateGroupSuccess = (payload) => (
-    console.log('updateGroupSuccess'),
     {
     type: 'UPDATE_GROUP',
     payload
-})
+});
 
 export const updateGroup = (name) => {
     // return (dispatch) => {
@@ -40,11 +38,10 @@ export const updateGroup = (name) => {
 };
 
 export const getGroupSuccess = (payload) => (
-    console.log('getGroupSuccess'),
     {
     type: 'UPDATE_GROUP',
     payload
-})
+});
 
 export const getGroup = (name) => {
         return Meteor.call('getGroup', name, (err, result) => {

@@ -140,7 +140,7 @@ html .progress-bar {
 }
 
 #scrollable {
-    height: 500px;
+    height: 550px;
     margin-top: 25%;
 }
 
@@ -283,6 +283,13 @@ html .table thead th {
 
 #clearTasksButton {
     margin-bottom: 2%;
+    background-color: #124E78;
+    border-radius: 2%;
+    border-color: transparent;
+}
+
+#clearTasksButton:hover {
+    background-color: #F99820;
 }
 
 #cardTitleName {
@@ -353,7 +360,7 @@ h1.welcome {
     text-align: center;
     align-items: center;
     margin-top: 10%;
-    margin-bottom: -2%;
+    margin-bottom: 0;
 }
 
 h2.welcome {
@@ -397,8 +404,13 @@ h2.welcome {
     text-decoration: none;
 }
 
-#groupProgress {
+#overview {
     text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    widht: 100%;
 }
 
 #groupProgressBar {
@@ -520,13 +532,16 @@ html .form-control {
 }
 
 #registerForm {
+    background-color: #ededed;
+    width: 40%;
+
+}
+
+#allRegister {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: #ededed;
-    width: 40%;
-
 }
 
 #regFG {
@@ -593,7 +608,7 @@ html .createGroup {
     margin: 0;
     text-align: center;
     left: 50%;
-    top: 50%;
+    top: 33%;
     transform: translate(-50%, -50%);
     width: 100%;
 
@@ -643,4 +658,19 @@ html .modal-footer {
 
 .form-check-inline .form-check-input {
     transform: scale(1.5);
+}
+
+html .slick-prev:before {
+    content: "";
+}
+
+#registerButton {
+    width: 100%;
+    background-color: #1CCAD8;
+    border-color: #1CCAD8;
+}
+
+#registerButton:hover {
+    background-color: #124E78;
+    border-color: #124E78;
 }

@@ -15,26 +15,24 @@ class OverviewView extends Component {
     }
     //TODO: user_id hardcoded id for testing purposes, will replace with Meteor.userId()
     render() {
+
         let user_id = Meteor.userId(); 
         if (typeof user_id === 'undefined') {
             return <Spinner id="spinning" animation="border" role="status"/>
         }
 
-        console.log(this.props.groupMembers);
         let memberTasks = Object.entries(this.props.groupMembers).filter( element =>
 
             element[0] == user_id);
         console.log(memberTasks);
         return (
-            <div id="overview">
-                <Container>
+                <Container id="overview">
                     <GroupProgress groupMembers={this.props.groupMembers}/>
                     <MemberScheduleTasks
                         groupMember={user_id}
                         tasks={memberTasks[0] && memberTasks[0][1] && memberTasks[0][1].tasks}
                     />
                 </Container>
-            </div>
         );
     }
 }

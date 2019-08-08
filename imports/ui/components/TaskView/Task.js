@@ -24,8 +24,7 @@ class Task extends React.Component {
 
     render() {
         return (
-            <ListGroupItem style={{textDecoration: this.props.status % 2 === 1 ? 'line-through' : 'none',
-                background: this.props.status % 2 === 1 ? '#1CCAD8' : '#FFFFFF'}}>
+            <ListGroupItem style={{ background: this.props.status % 2 === 1 ? '#1CCAD8' : '#FFFFFF'}}>
                 <div id="taskListGroup">
                     <div id="taskBody">
                         <FormCheck inline id="taskCheckbox" checked={this.props.status % 2 === 1}

@@ -5,15 +5,53 @@ import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import { Button } from 'react-bootstrap';
 import {withRouter} from 'react-router-dom'
+import Spinner from "react-bootstrap/Spinner";
+import { Accounts } from 'meteor/accounts-base';
+import { Route, Switch } from 'react-router-dom';
+import { Tracker } from 'meteor/tracker';
 
 class NavbarB extends Component {
 
+    state = {
+        name: null
+    }
+
+    componentDidMount() {
+        var context = this;
+        Tracker.autorun(function(){
+            let user = Meteor.user();
+            if (user != undefined) {
+                context.setState({ name: user});
+                console.log(user)
+            }
+        });
+    }
+
     handleLogout() {
-        Meteor.logout();
-        window.location.reload();
+        Meteor.logout(function(err){ 
+            console.log(err);
+            window.location.reload();
+        });        
     }
 
     render() {
+        let name;
+        if (this.state.name) {
+            name = <Nav.Link href="/overview">Welcome, {Meteor.user().profile.name}!</Nav.Link>
+        }
+
+        else {
+            name = <p></p>
+        }
+
+        let button;
+        if (this.state.name) {
+            button = <Button variant="outline-success" onClick={this.handleLogout}>Logout</Button>
+        }
+        else {
+            button = <p></p>
+        }
+
         return (
             <div>
                 <Container >
@@ -25,32 +63,33 @@ class NavbarB extends Component {
                             <Nav.Link href="/overview">Overview</Nav.Link>
                             <Nav.Link href="/about">About Us</Nav.Link>
                             <Nav.Link href="/help">Help</Nav.Link>
+                            <Nav.Link href="/group">Group Schedule</Nav.Link>
+                            <Nav.Link href="/calendar">My Schedule</Nav.Link>
+                            <Nav.Link href="/tasks">Tasks</Nav.Link>
+
 
 
                                 {/*Dropdown*/}
-                            <NavDropdown title="Tools" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="/calendar">Calendar</NavDropdown.Item>
-                                <NavDropdown.Item href="/tasks">Tasks</NavDropdown.Item>
-                                <NavDropdown.Item href="/group">Group Schedule</NavDropdown.Item>
+                            {/* <NavDropdown title="Tools" id="collasible-nav-dropdown">
                                 <NavDropdown.Divider />
-                            </NavDropdown>
+                            </NavDropdown> */}
+
                             </Nav>
                             <Nav>
-                            <Nav.Link href="/groups">Group Management</Nav.Link>
-                            <Button variant="outline-success" onClick={this.handleLogout}>Logout</Button>
+                            {name}
+                            {button}
+                            {/* <Button variant="outline-success" onClick={this.handleLogout}>Logout</Button> */}
                             </Nav>
                             {/* Tab at the very right */}
-
-
                             {/* Modal button */}
 
                         </Navbar.Collapse>
                     </Navbar>
-                </Container>  
-
+                </Container>
             </div>
         )
     }
 }
+
 
 export default withRouter(NavbarB);

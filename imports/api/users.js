@@ -12,15 +12,15 @@ if (Meteor.isServer) {
 }
 Meteor.methods({
     editTaskText(id, member, text) {
-        //console.log(text);
         Meteor.users.update({ _id: member, "tasks.taskId": id }, { $set: {"profile.tasks.$.description" : text}});
         return;
     },
     addTask(memberId, task) {
-        console.log(memberId);
+        let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
+        group = group.profile.group;
         Meteor.users.update({_id: memberId}, { $addToSet: { "profile.tasks": task }}, { upsert: false } );
-        let newTask = Object.assign({}, task, {user: memberId});
-        Users.insert(task);
+        let newTask = Object.assign({}, task, {user: memberId, group: group});
+        Users.insert(newTask);
         return;
     },
 

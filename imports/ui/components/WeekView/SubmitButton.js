@@ -16,9 +16,7 @@ class SubmitButton extends Component {
     }
 
     handleClose() {
-        console.log("Closing");
         this.setState({ show: false });
-        console.log("Closing");
     }
 
     handleShow() {
@@ -29,7 +27,6 @@ class SubmitButton extends Component {
         e.preventDefault();
         this.handleShow();
         this.props.onSubmitSchedule(this.props.schedule);
-        console.log(this.state.show);
 
     }
 

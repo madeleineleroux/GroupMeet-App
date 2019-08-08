@@ -10,7 +10,6 @@ class Avatar extends Component {
     getAvatar = () => {
         let url = "/avatars/";
         let ending;
-        console.log(this.props.tasks);
         switch(this.props.tasks[this.props.id].avatar) {
             case 'GIRAFFE':
                 ending = "Giraffe.png";

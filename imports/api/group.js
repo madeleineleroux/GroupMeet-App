@@ -48,7 +48,6 @@ Meteor.methods({
         let nextWeek = currMoment.add(7, 'days').startOf('week').format();
 
         if (GroupSchedule.find({group: group, date: nextWeek}).count() === 0) {
-            console.log("This is the most recent week");
             return GroupSchedule.find({group: group, date: currWeek}).fetch()[0];
         } else {
             return GroupSchedule.find({group: group, date: nextWeek}).fetch()[0];
