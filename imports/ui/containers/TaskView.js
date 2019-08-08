@@ -16,11 +16,7 @@ class TaskView extends Component {
 
     render() {
     return (
-            <div>
-                <div>
-                    <TaskGroup />
-                </div>
-            </div>
+        <TaskGroup />
         );
     }
 }
