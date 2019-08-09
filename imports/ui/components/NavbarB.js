@@ -51,7 +51,7 @@ class NavbarB extends Component {
             <div>
                 <Container >
                     <Navbar id="navbar" fixed="top" collapseOnSelect expand="sm" variant="dark">
-                        <Navbar.Brand href="#home">GroupMeet</Navbar.Brand>
+                        <Navbar.Brand href="/">GroupMeet</Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mr-auto">
