@@ -1,5 +1,3 @@
-//initial state loaded with sample data SINGLE GROUP
-
 const TaskReducer = (state = {}, action) => {
     switch(action.type) {
         case 'ADD_TASK':

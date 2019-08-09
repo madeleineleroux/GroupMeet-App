@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import {fetchGroup} from "../../actions/GroupAction";
 
 class HourCell extends Component {
 
