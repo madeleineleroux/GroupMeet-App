@@ -41,8 +41,8 @@ class Register extends React.Component {
     onSubmit = (e) => {
         e.preventDefault();
         var self = this;
-        let avatarArr = ['GIRAFFE', 'PIG', 'FOX', 'PENGUIN', 'LIZARD'];
-        let index = Math.floor(Math.random() * 5);
+        let avatarArr = ['GIRAFFE', 'PIG', 'FOX', 'PENGUIN', 'LIZARD', 'BEAR', 'BEAR_FACE', 'ELEPHANT', 'TIGER', 'BLUE_FISH', 'YELLOW_FISH', 'CRAB', 'SQUID', 'JELLYFISH', 'ZEBRA', 'LION', 'DUCK', 'FLAMINGO', 'BUNNY'];
+        let index = Math.floor(Math.random() * 19);
         let avatar = avatarArr[index];
         const ele = $(e.target);
         const email = ele.find("#email").val();
