@@ -1,8 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import HourCell from "./HourCell";
+import uuid from "uuid";
 
-const Hour = ({ id, allHours, key }) => {
+const Hour = ({ id, allHours}) => {
     const WEEKDAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
     if (typeof allHours !== 'undefined') {
         return (
@@ -16,7 +16,7 @@ const Hour = ({ id, allHours, key }) => {
     } else {
         return <tr>
             {WEEKDAYS.map(day => (
-                <td></td>
+                <td key={uuid.v4()}></td>
             ))}
         </tr>
 

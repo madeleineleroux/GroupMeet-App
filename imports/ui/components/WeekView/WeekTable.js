@@ -1,9 +1,12 @@
 import Hour from "./Hour";
 import React, { Component } from "react";
-import TableDragSelect from "react-table-drag-select";
-import { toggleAvail } from "../../actions/DayAction";
+import GroupSchedule from "../../../api/group"
 import { connect } from 'react-redux';
 import Table from "react-bootstrap/Table";
+import {Meteor} from "meteor/meteor";
+import { withTracker } from 'meteor/react-meteor-data';
+import uuid from "uuid";
+import Spinner from "react-bootstrap/Spinner";
 
 
 class WeekTable extends Component {
@@ -11,29 +14,16 @@ class WeekTable extends Component {
         super(props);
     }
 
-    componentDidMount() {
-        const HOURS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-        const DAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "sunday"];
-        HOURS.map(hour =>
-            DAYS.map( day=> this.state.cells[hour].push(this.props.week.hours.byId[day.concat("_", hour + 8)].availability)));
-    }
-
-    state = {
-        cells: [[], [], [], [], [], [], [], [], [], []]
-    };
-
-
-
-
-    handleClick(){
-        cells => this.setState({ cells });
-        this.props.toggleAvail(this.props.id);
-    };
-
     render() {
+        let moment = require('moment/moment');
+        moment.defaultFormat = "YYYYMMDD";
         const HOURS = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
         const DAYS = [0, 1, 2, 3, 4, 5];
+        let copy = moment(this.props.week.date, "YYYYMDD");
 
+        if (typeof this.props.group === 'undefined') {
+            return <Spinner id="spinning" animation="border" role="status"/>
+        }
 
         return (
             <Table className="groupTable">
@@ -52,20 +42,22 @@ class WeekTable extends Component {
                 <thead>
                 <tr>
                     <th></th>
-                    <th>{this.props.moment.date()}</th>
+                    <th>{copy.date()}</th>
                     {DAYS.map( day => (
-                        <th>{this.props.moment.add(1, 'd').date()}</th>
+                        <th key={uuid.v4()}>{copy.add(1, 'd').date()}</th>
                     ))}
                 </tr>
                 </thead>
                 <tbody>
                 {HOURS.map(hour => (
-                    <Hour h={hour} id={hour} key={hour} allHours={this.props.week}/>
+                    <Hour h={hour} id={hour} key={uuid.v4()} allHours={this.props.week} group={this.props.group}/>
                 ))}
                 </tbody>
             </Table>
         )
+
     }
 }
 
-export default connect(null,{ toggleAvail })(WeekTable)
+
+export default WeekTable;

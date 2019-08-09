@@ -15,7 +15,7 @@ class Cell extends React.Component {
     render() {
         return (
             <td
-                id={this.props.availability ? 'active' : 'album'}
+                id={this.props.availability ? 'active' : (this.props.group[this.props.id].availability ? 'album' : 'groupBusyCell')}
                 className="calCell"
                 onMouseDown={this.handleClick}
             >

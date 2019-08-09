@@ -1,9 +1,10 @@
 import React from 'react';
 import Cell from "./Cell";
+import uuid from "uuid";
 
-const Hour = ({ id, key, allHours }) => {
+const Hour = ({ id, allHours, group }) => {
     const WEEKDAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
-    if (typeof allHours !== 'undefined' && id !== 'undefined') {
+    if (typeof allHours !== 'undefined' && typeof id !== 'undefined' && typeof group !== 'undefined') {
         return (
             <tr>
                 <td id="groupSide">{id < 12 ? id + " AM" : (id == 12) ? "12 PM"  : (id - 12) + " PM"}</td>
@@ -11,8 +12,9 @@ const Hour = ({ id, key, allHours }) => {
                     <Cell className="overviewCell"
                           hours={allHours[day.concat("_", id)]}
                           id={day.concat("_", id)}
-                          key={day.concat("_", id)}
+                          key={uuid.v4()}
                           availability={allHours.hours.byId[day.concat("_", id)].availability}
+                          group={group}
                     />
                 ))}
             </tr>
@@ -20,7 +22,7 @@ const Hour = ({ id, key, allHours }) => {
     } else {
         return <tr>
             {WEEKDAYS.map(day => (
-                <td></td>
+                <td key={uuid.v4()}></td>
             ))}
         </tr>
 

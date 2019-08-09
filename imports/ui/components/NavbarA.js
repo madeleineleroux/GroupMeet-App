@@ -2,7 +2,6 @@ import Navbar from 'react-bootstrap/Navbar'
 import React, { Component } from 'react'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
 
 export default class NavbarA extends Component {
 
@@ -21,27 +20,14 @@ export default class NavbarA extends Component {
                             <Nav.Link href="/calendar">Calendar</Nav.Link>
                             <Nav.Link href="/tasks">Tasks</Nav.Link>
                             <Nav.Link href="/group">Group Schedule</Nav.Link>
-
-
-                            {/*Dropdown*/}
-                            {/* <NavDropdown title="Tools" id="collasible-nav-dropdown">
-                                <NavDropdown.Divider />
-                            </NavDropdown> */}
                             </Nav>
                             <Nav>
                                 <Nav.Link href="/login">Login</Nav.Link>
                                 <Nav.Link href="/register">Register</Nav.Link>
                             </Nav>
-                            {/* Tab at the very right */}
-
-
-                            {/* Modal button */}
-                            {/* <Button variant="outline-success" onClick={this.handleShow}>Login or Signup</Button> */}
-
                         </Navbar.Collapse>
                     </Navbar>
-                </Container>  
-
+                </Container>
             </div>
         )
     }

@@ -21,7 +21,6 @@ class Register extends React.Component {
     }
 
     checkLogin() {
-        console.log("inside checkLogin")
         var context = this;
         Tracker.autorun(function(){
             let user = Meteor.userId();
@@ -29,7 +28,6 @@ class Register extends React.Component {
                 context.setState({ redirect: true});
             }
         });
-        console.log("end of checkLogin")
     }
 
     handleClose() {
@@ -43,8 +41,8 @@ class Register extends React.Component {
     onSubmit = (e) => {
         e.preventDefault();
         var self = this;
-        let avatarArr = ['GIRAFFE', 'PIG', 'FOX', 'PENGUIN', 'LIZARD'];
-        let index = Math.floor(Math.random() * 5);
+        let avatarArr = ['GIRAFFE', 'PIG', 'FOX', 'PENGUIN', 'LIZARD', 'BEAR', 'BEAR_FACE', 'ELEPHANT', 'TIGER', 'BLUE_FISH', 'YELLOW_FISH', 'CRAB', 'SQUID', 'JELLYFISH', 'ZEBRA', 'LION', 'DUCK', 'FLAMINGO', 'BUNNY'];
+        let index = Math.floor(Math.random() * 19);
         let avatar = avatarArr[index];
         const ele = $(e.target);
         const email = ele.find("#email").val();
@@ -80,10 +78,6 @@ class Register extends React.Component {
         else {
             alert("Your passwords must match")
         }
-
-        if (flag) {
-            window.location.href = "/groups";
-        }
     }
 
     render() {
@@ -103,6 +97,7 @@ class Register extends React.Component {
                 <div className="allRegister">
                     <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
                     <h2 id="register" className = 'loginRedirect'>Register</h2>
+                    <div>
                     <Form onSubmit={this.onSubmit} className = 'loginForm' id="registerForm">
                         <FormGroup id="regFG">
                             <Label id="refLabFirst" for="exampleName">Name</Label>
@@ -119,6 +114,7 @@ class Register extends React.Component {
                             </p>
                         </FormGroup>
                     </Form>
+                    </div>
 
 
                     <Modal show={this.state.show} onHide={this.handleClose} >

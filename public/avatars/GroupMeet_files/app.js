@@ -104,7 +104,6 @@ class GroupTable extends Component {
     const HOURS = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
     const DAYS = [0, 1, 2, 3, 4, 5, 6];
     let d = this.props.moment.startOf('week').date();
-    console.log(this.props.group._id);
     return React.createElement(Table, {
       hover: true,
       className: "groupTable"
@@ -259,12 +258,10 @@ const TableTracker = withTracker((_ref) => {
   const isReady = handle.ready();
 
   if (!isReady) {
-    console.log("NO");
     return {
       groupSchedule: groupSchedule
     };
   } else {
-    console.log("CHANGE");
     return {
       groupSchedule: GroupSchedule.find({
         _id: groupSchedule._id
@@ -1042,7 +1039,6 @@ class Cell extends React.Component {
 
   handleClick() {
     this.props.toggleAvail(this.props.id);
-    console.log(this.props.id, this.props.availability);
   }
 
   render() {
@@ -1243,7 +1239,6 @@ class SubmitButton extends Component {
       e.preventDefault();
       this.handleShow();
       this.props.onSubmitSchedule(this.props.schedule);
-      console.log(this.state.show);
     };
 
     this.state = {
@@ -1254,11 +1249,9 @@ class SubmitButton extends Component {
   }
 
   handleClose() {
-    console.log("Closing");
     this.setState({
       show: false
     });
-    console.log("Closing");
   }
 
   handleShow() {
@@ -1867,7 +1860,6 @@ const addTaskSuccess = (text, member, id) => {
 
 const addTask = (text, member, id) => {
   return dispatch => {
-    console.log(id);
     return Meteor.call('addTask', member, {
       taskId: id,
       description: text,
@@ -2176,7 +2168,6 @@ const TaskTracker = withTracker((_ref) => {
         tasks: user.tasks
       };
     });
-    console.log(userObj);
     return {
       userTasks: userObj
     };
@@ -2414,7 +2405,6 @@ const TaskReducer = function () {
       });
 
     case 'TOGGLE_STATUS':
-      console.log(action.member);
       return (0, _objectSpread2.default)({}, state, {
         [action.member]: (0, _objectSpread2.default)({}, state[action.member], {
           tasks: state[action.member].tasks.map(task => task.taskId === action.id ? (0, _objectSpread2.default)({}, task, {
@@ -2767,7 +2757,6 @@ Meteor.methods({
     if (GroupSchedule.find({
       _id: prevWeek
     }).count() === 0) {
-      console.log("This is the most earliest week");
       return GroupSchedule.find({
         _id: currWeek
       }).fetch()[0];
@@ -2785,7 +2774,6 @@ Meteor.methods({
     if (GroupSchedule.find({
       _id: nextWeek
     }).count() === 0) {
-      console.log("This is the most recent week");
       return GroupSchedule.find({
         _id: currWeek
       }).fetch()[0];
@@ -2837,7 +2825,6 @@ if (Meteor.isServer) {
 
 Meteor.methods({
   addTask(memberId, task) {
-    console.log(task);
     Users.update({
       _id: memberId
     }, {
@@ -2866,12 +2853,10 @@ Meteor.methods({
   },
 
   deleteTask(id, member) {
-    console.log(id, member);
     return;
   },
 
   clearTasks(member) {
-    console.log(member);
     Users.update({
       _id: member
     }, {

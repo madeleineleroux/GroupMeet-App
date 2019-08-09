@@ -35,7 +35,6 @@ class Group extends Component {
             {$set: {"profile.group": name}});
             Popup.alert(`You've just created the group ${name}!`)
             this.setState({redirect: true});
-            console.log(this.state.redirect);
         }
         else {
             Popup.alert("Sorry, we couldn't create that group.")
@@ -59,9 +58,7 @@ class Group extends Component {
                 Meteor.users.update({_id: Meteor.userId()}, 
                 {$set: {"profile.group": name}});
                 alert(`You've just joined ${name}!`)
-                console.log(this.state.redirect);
                 this.setState({redirect: true});
-                console.log(this.state.redirect);
              }
              else {
                  alert(`Sorry, the group ${name} doesn't exist. You can create it above!`)
