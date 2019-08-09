@@ -31,13 +31,13 @@ class GroupTable extends Component {
                     <th></th>
                         <th>{this.props.moment.date()}</th>
                     {DAYS.map( day => (
-                        <th>{this.props.moment.add(1, 'd').date()}</th>
+                        <th key={uuid.v4()}>{this.props.moment.add(1, 'd').date()}</th>
                     ))}
                     </tr>
                     </thead>
                     <tbody>
                     {HOURS.map(hour => (
-                        <Hour id={hour} key={this.props.hour} allHours={this.props.group}/>
+                        <Hour id={hour} key={uuid.v4()} allHours={this.props.group}/>
                     ))}
                     </tbody>
                 </Table>
