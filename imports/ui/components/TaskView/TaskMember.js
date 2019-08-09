@@ -30,6 +30,9 @@ const TaskMember = ({tasksByIds, tasks, name, idKey}) => {
             case 'LIZARD':
                 ending = "Lizard.png";
                 break;
+            case 'BEAR':
+                ending ='Bear.png';
+                break;
             default:
                 ending = "BearFace.png";
                 break;
