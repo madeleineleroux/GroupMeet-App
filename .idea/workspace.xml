@@ -2,6 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af0f3ae7-2208-4e57-a4c6-0ca42712b209" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/avatars/Blue_Fish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/Bunny.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/Duck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/Elephant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/Flamingo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/Jellyfish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/Lion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/Squid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/Tiger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/Yellow_Fish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/Zebra.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/crab.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js" afterDir="false" />
     </list>
@@ -15,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            <state relative-caret-position="329">
+              <caret line="71" column="25" lean-forward="true" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -37,7 +49,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="project_final_weekfix" />
+        <entry key="$PROJECT_DIR$" value="project_final" />
       </map>
     </option>
   </component>
@@ -47,6 +59,10 @@
         <option value="$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js" />
       </list>
     </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
@@ -103,6 +119,14 @@
               <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="TaskView" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="GroupMeet-App" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/436/GroupMeet-App" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="imports" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="WelcomePage" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="GroupMeet-App" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -227,6 +251,11 @@
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/avatars" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -243,10 +272,18 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="added more avatars">
+      <created>1565381610820</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565381610820</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="528000" />
+    <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -307,6 +344,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added more avatars" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more avatars" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/imports/api/publish.js">
@@ -417,8 +458,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/TaskView/TaskMember.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        <state relative-caret-position="329">
+          <caret line="71" column="25" lean-forward="true" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
