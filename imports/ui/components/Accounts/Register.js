@@ -21,7 +21,6 @@ class Register extends React.Component {
     }
 
     checkLogin() {
-        console.log("inside checkLogin")
         var context = this;
         Tracker.autorun(function(){
             let user = Meteor.userId();
@@ -29,7 +28,6 @@ class Register extends React.Component {
                 context.setState({ redirect: true});
             }
         });
-        console.log("end of checkLogin")
     }
 
     handleClose() {
@@ -79,10 +77,6 @@ class Register extends React.Component {
         }
         else {
             alert("Your passwords must match")
-        }
-
-        if (flag) {
-            window.location.href = "/groups";
         }
     }
 
