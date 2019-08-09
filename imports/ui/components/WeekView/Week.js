@@ -52,7 +52,7 @@ class Week extends Component {
                 <div id={weekLine ? "noClick" : "clickRight"}className="triangle-left triangle" onClick={this.prevWeek}></div>
                 <div id="table">
                     <h1 id="month">{month}</h1>
-                    <WeekTable moment={currMoment} week={this.props.week}/>
+                    <WeekTable moment={currMoment} week={this.props.week} group={this.props.gs}/>
                 </div>
                 <div id={weekLine ? "clickLeft" : "noClick"} className="triangle-right triangle" onClick={this.nextWeek}></div>
                 <WeekFooter date={this.props.availability.date}/>
@@ -61,9 +61,33 @@ class Week extends Component {
     }
 }
 
+export const WeekTracker = withTracker(({ availability }) => {
+    Meteor.subscribe('group-indi', availability.date);
+    const handle = Meteor.subscribe('group-indi', availability.date);
+    const isReady = handle.ready();
+
+    if (isReady) {
+        let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
+
+        if (typeof group != "undefined") {
+            //get all the members in the group
+            group = group.profile.group;
+            let final = GroupSchedule.find({group: group, date: availability.date}).fetch()[0];
+            console.log("this " + availability.date);
+            return {
+                gs: final, week: availability
+            }
+        }
+    } else {
+        return {week:availability}
+    }
+
+
+})(Week);
+
 const mapStateToProps = state => ({
     availability: state.WeekReducer
 });
 
 
-export default connect(mapStateToProps)(Week);
+export default connect(mapStateToProps)(WeekTracker);
