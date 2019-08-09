@@ -102,6 +102,7 @@ const WeekReducer = (state = initState, action) => {
             return action.schedule;
 
         case 'FETCH_SCHEDULE':
+            console.log(action.schedule);
             return action.schedule;
         case 'NEXT_WEEK':
             return action.currWeek;

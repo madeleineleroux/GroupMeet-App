@@ -14,9 +14,12 @@ class WeekTable extends Component {
     }
 
     render() {
+        let moment = require('moment/moment');
+        moment.defaultFormat = "YYYYMMDD";
         const HOURS = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
         const DAYS = [0, 1, 2, 3, 4, 5];
-
+        let copy = moment(this.props.week.date, "YYYYMDD");
+        console.log('WEEK:' + this.props.week.date);
 
         return (
             <Table className="groupTable">
@@ -35,9 +38,9 @@ class WeekTable extends Component {
                 <thead>
                 <tr>
                     <th></th>
-                    <th>{this.props.moment.date()}</th>
+                    <th>{copy.date()}</th>
                     {DAYS.map( day => (
-                        <th key={uuid.v4()}>{this.props.moment.add(1, 'd').date()}</th>
+                        <th key={uuid.v4()}>{copy.add(1, 'd').date()}</th>
                     ))}
                 </tr>
                 </thead>
@@ -54,8 +57,8 @@ class WeekTable extends Component {
 
 
 export const WeekTracker = withTracker(({ availability }) => {
-    Meteor.subscribe('group');
-    const handle = Meteor.subscribe('group');
+    Meteor.subscribe('group-indi', availability.date);
+    const handle = Meteor.subscribe('group-indi', availability.date);
     const isReady = handle.ready();
 
     if (isReady) {
@@ -65,6 +68,7 @@ export const WeekTracker = withTracker(({ availability }) => {
             //get all the members in the group
             group = group.profile.group;
             let final = GroupSchedule.find({group: group, date: availability.date}).fetch()[0];
+            console.log("this " + availability.date);
             return {
                 gs: final, week: availability
             }

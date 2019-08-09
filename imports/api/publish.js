@@ -15,3 +15,10 @@ Meteor.publish('group', function() {
     const allGroup = GroupSchedule.find({group: group});
     return allGroup;
 });
+
+Meteor.publish('group-indi', function(date) {
+    let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
+    group = group.profile.group;
+    const allGroup = GroupSchedule.find({group: group, date:date});
+    return allGroup;
+});

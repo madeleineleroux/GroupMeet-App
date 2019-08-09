@@ -27,6 +27,7 @@ class Week extends Component {
     };
 
     render() {
+        console.log(this.props.availability.date);
         let moment = require('moment/moment');
         moment.defaultFormat = "YYYYMMDD";
 
