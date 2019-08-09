@@ -99,7 +99,7 @@ class HelpView extends Component {
                                         On the <Link to="/tasks">Tasks</Link> page, add your tasks, delete tasks, check them off as done, and watch your individual progress update along the way!
                                         <br/>
                                         <br/>
-                                        <Image id="helpImage" src="/screenshots/tasks.PNG"/>
+                                        <Image id="helpImage" src="/screenshots/tasks_1.PNG"/>
                                         <br/>
                                         <br/>
                                         The task progress of the whole group will determine the overall group project progress, seen in the <Link to="/overview">Overview</Link> page.
