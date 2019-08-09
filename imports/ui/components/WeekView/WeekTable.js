@@ -37,7 +37,7 @@ class WeekTable extends Component {
                     <th></th>
                     <th>{this.props.moment.date()}</th>
                     {DAYS.map( day => (
-                        <th>{this.props.moment.add(1, 'd').date()}</th>
+                        <th key={uuid.v4()}>{this.props.moment.add(1, 'd').date()}</th>
                     ))}
                 </tr>
                 </thead>
