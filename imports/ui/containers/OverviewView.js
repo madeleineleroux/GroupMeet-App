@@ -29,7 +29,7 @@ class OverviewView extends Component {
     // }
 
     render() {
-        let user_id = Meteor.userId(); 
+        let user_id = Meteor.userId();
         if (typeof user_id === 'undefined') {
             return <Spinner id="spinning" animation="border" role="status"/>
         }
@@ -37,9 +37,14 @@ class OverviewView extends Component {
         let memberTasks = Object.entries(this.props.groupMembers).filter( element =>
             element[0] == user_id);
 
+        let user = this.props.groupMembers[user_id];
+        if (typeof user === 'undefined') {
+            return <Spinner id="spinning" animation="border" role="status"/>
+        }
+
         return (
             <Container id="overview">
-                <h1 id="pageTitle">Overview</h1>
+                <h1 id="pageTitle">{user.group} Overview</h1>
                 <GroupProgress groupMembers={this.props.groupMembers}/>
                 <MemberScheduleTasks
                     groupMember={user_id}

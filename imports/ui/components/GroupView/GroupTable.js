@@ -1,7 +1,7 @@
 import Hour from "./Hour";
 import React, { Component } from "react";
 import Table from "react-bootstrap/Table";
-import uuid from "uuid"
+import uuid from "uuid";
 
 
 class GroupTable extends Component {
