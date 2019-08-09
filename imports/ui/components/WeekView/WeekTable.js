@@ -48,6 +48,7 @@ class WeekTable extends Component {
                 </tbody>
             </Table>
         )
+
     }
 }
 
