@@ -2,10 +2,8 @@ import React, {Component} from 'react';
 import Container from "react-bootstrap/Container";
 import GroupProgress from "../components/OverviewView/GroupProgress";
 import MemberScheduleTasks from "../components/OverviewView/MemberScheduleTasks";
-import Users from "../../api/users";
 import { withTracker } from 'meteor/react-meteor-data';
 import { Meteor } from 'meteor/meteor';
-import Tracker from 'tracker-component';
 import { connect } from 'react-redux';
 import Spinner from "react-bootstrap/Spinner";
 
