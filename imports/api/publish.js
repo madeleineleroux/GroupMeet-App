@@ -11,10 +11,14 @@ Meteor.publish('tasks', function() {
 
 Meteor.publish('group', function() {
     let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
-    group = group.profile.group;
-    const allGroup = GroupSchedule.find({group: group});
-    return allGroup;
-});
+    if (typeof group !== undefined) {
+        group = group.profile.group;
+        const allGroup = GroupSchedule.find({group: group});
+        return allGroup;
+    } else {
+        return {};
+    }
+ });
 
 Meteor.publish('group-indi', function(date) {
     let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];

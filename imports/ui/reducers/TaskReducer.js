@@ -10,7 +10,6 @@ const TaskReducer = (state = {}, action) => {
                             status: 0
                         })}};
         case 'TOGGLE_STATUS':
-            console.log(action.member);
             return {...state,
             [action.member]:
                 {...state[action.member],
@@ -35,7 +34,6 @@ const TaskReducer = (state = {}, action) => {
                 [action.member]:
                     {...state[action.member],
                         tasks: state[action.member].tasks.filter(task=> task.taskId !== action.id)}};
-            console.log(state[action.member].tasks);
                 return obj;
         case 'CLEAR_TASKS':
             return {...state,

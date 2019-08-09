@@ -27,7 +27,6 @@ class Week extends Component {
     };
 
     render() {
-        console.log(this.props.availability.date);
         let moment = require('moment/moment');
         moment.defaultFormat = "YYYYMMDD";
 
@@ -73,7 +72,6 @@ export const WeekTracker = withTracker(({ availability }) => {
             //get all the members in the group
             group = group.profile.group;
             let final = GroupSchedule.find({group: group, date: availability.date}).fetch()[0];
-            console.log("this " + availability.date);
             return {
                 gs: final, week: availability
             }

@@ -7,7 +7,6 @@ const GroupReducer = (state = {}, action) => {
         case 'NEXT_WEEK_GROUP':
             return action.payload;
         case 'NO_LAST_WEEK':
-            console.log("HI");
             return Object.assign({}, state, {_id: action.payload});
         default:
             return state;
