@@ -2,11 +2,8 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import Container from "react-bootstrap/Container";
 import TaskGroup from "../components/TaskView/TaskGroup";
-import Users from "../../api/users";
 import { withTracker } from 'meteor/react-meteor-data';
 import { Meteor } from 'meteor/meteor';
-import Tracker from 'tracker-component';
-import {fetchTasks} from "../actions/TaskAction";
 
 //https://codebrahma.com/reactive-subscriptions-in-meteor/
 

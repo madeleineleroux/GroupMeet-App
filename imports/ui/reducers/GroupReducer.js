@@ -1,8 +1,3 @@
-import {booleanHours} from "./WeekReducer";
-const allHours = booleanHours();
-
-const defaultState = {};
-
 const GroupReducer = (state = {}, action) => {
     switch(action.type) {
         case 'FETCH_GROUP':
