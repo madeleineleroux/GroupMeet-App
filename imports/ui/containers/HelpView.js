@@ -59,15 +59,12 @@ class HelpView extends Component {
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
-                                    <Card.Text>Update your availability in your <Link to="/calendar">Calendar</Link> by clicking the times you are busy.
-                                        <br/>
-                                        <br/>
-                                        Once you are ready, hit "Submit".
+                                    <Card.Text>Update your availability in your <Link to="/calendar">Calendar</Link> by clicking the times you are busy. Once you are ready, hit "Submit".
                                         <br/>
                                         <br/>
                                     </Card.Text>
                                     <div id="imageDiv">
-                                        <Image src="/screenshots/submit.PNG"/>
+                                        <Image id="helpImage" src="/screenshots/my_schedule.PNG"/>
                                     </div>
                                     <Card.Text>
                                         <br/>
@@ -81,7 +78,10 @@ class HelpView extends Component {
                                         <br/>
                                         <br/>
                                         Once all your group members have added their availability, the <Link to="/group">Group Schedule</Link> will show you the availability for your whole group. Now scheduling meetings is a breeze!
+                                        <br/>
+                                        <br/>
                                     </Card.Text>
+                                    <Image id="helpImage" src="/screenshots/group_schedule.PNG"/>
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
@@ -90,31 +90,22 @@ class HelpView extends Component {
                         <Card>
                             <Card.Header>
                                 <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                                    Managing tasks
+                                    Managing tasks and progress
                                 </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="1">
                                 <Card.Body>
                                     <Card.Text>
                                         On the <Link to="/tasks">Tasks</Link> page, add your tasks, delete tasks, check them off as done, and watch your individual progress update along the way!
+                                        <br/>
+                                        <br/>
+                                        <Image id="helpImage" src="/screenshots/tasks.PNG"/>
+                                        <br/>
+                                        <br/>
                                         The task progress of the whole group will determine the overall group project progress, seen in the <Link to="/overview">Overview</Link> page.
-                                    </Card.Text>
-                                </Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-                    </Accordion>
-                    <Accordion id="helpAccordion">
-                        <Card>
-                            <Card.Header>
-                                <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                                    Project progress
-                                </Accordion.Toggle>
-                            </Card.Header>
-                            <Accordion.Collapse eventKey="1">
-                                <Card.Body>
-                                    <Card.Text>
-                                        Check your own progress on the <Link to="/tasks">Tasks</Link> page,
-                                        and keep up to date on the group's progress as a whole on the <Link to="/overview">Overview</Link> page.
+                                        <br/>
+                                        <br/>
+                                        <Image id="helpImage" src="/screenshots/overview.PNG"/>
                                     </Card.Text>
                                 </Card.Body>
                             </Accordion.Collapse>
