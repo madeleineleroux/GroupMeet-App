@@ -704,3 +704,12 @@ html .modal-footer {
 #groupBusyCell:hover {
     background-color: #1CCAD8;
 }
+
+#helpImage {
+    width: 100%
+}
+
+#imageDiv {
+    display: flex;
+    justify-content: center;
+}

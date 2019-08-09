@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Accordion, Card, Button, Container} from "react-bootstrap";
+import {Accordion, Card, Button, Container, Image} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 class HelpView extends Component {
@@ -17,9 +17,14 @@ class HelpView extends Component {
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
                                     <Card.Text>
-                                        Create a new group after registering by selecting 'Create Group' and then choose a group name.
+                                        Create a new group after registering by selecting "Create Group" and then choose a group name.
                                         Your group members can now join your group when they register.
+                                        <br/>
+                                        <br/>
                                     </Card.Text>
+                                    <div id="imageDiv">
+                                        <Image src="/screenshots/create_group_1.PNG"/>
+                                    </div>
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
@@ -34,8 +39,13 @@ class HelpView extends Component {
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
                                     <Card.Text>
-                                        Join a pre-existing group after registering by selecting 'Join Group' and then enter your group's name.
+                                        Join a pre-existing group after registering by selecting "Join Group" and then enter your group's name.
+                                        <br/>
+                                        <br/>
                                     </Card.Text>
+                                    <div id="imageDiv">
+                                        <Image src="/screenshots/join_group_1.PNG"/>
+                                    </div>
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
@@ -49,9 +59,28 @@ class HelpView extends Component {
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
-                                    <Card.Text>Update your availability in your <Link to="/calendar">Calendar</Link> by clicking the times you are busy. Once you are ready, hit 'Submit'.
-                                    <br/>
-                                    Once all your group members have added their availability, the <Link to="/group">Group Schedule</Link> will show you the availability for your whole group. Now scheduling meetings is a breeze!
+                                    <Card.Text>Update your availability in your <Link to="/calendar">Calendar</Link> by clicking the times you are busy.
+                                        <br/>
+                                        <br/>
+                                        Once you are ready, hit "Submit".
+                                        <br/>
+                                        <br/>
+                                    </Card.Text>
+                                    <div id="imageDiv">
+                                        <Image src="/screenshots/submit.PNG"/>
+                                    </div>
+                                    <Card.Text>
+                                        <br/>
+                                        <br/>
+                                        Shaded times are when your group mates have selected they are busy.
+                                        <br/>
+                                        <br/>
+                                    </Card.Text>
+                                        <Image id="helpImage" src="/screenshots/schedule_shaded.PNG"/>
+                                    <Card.Text>
+                                        <br/>
+                                        <br/>
+                                        Once all your group members have added their availability, the <Link to="/group">Group Schedule</Link> will show you the availability for your whole group. Now scheduling meetings is a breeze!
                                     </Card.Text>
                                 </Card.Body>
                             </Accordion.Collapse>
