@@ -72,7 +72,6 @@ export const initState = {
 const WeekReducer = (state = initState, action) => {
     switch(action.type) {
         case 'TOGGLE_AVAIL':
-            console.log(Meteor.userId());
             return {
                 ...state,
                 hours : {

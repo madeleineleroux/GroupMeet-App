@@ -705,6 +705,15 @@ html .modal-footer {
     background-color: #1CCAD8;
 }
 
+#helpImage {
+    width: 100%
+}
+
+#imageDiv {
+    display: flex;
+    justify-content: center;
+}
+
 #clickLeft:hover {
     color: #E2E2E2;
     border-top: 12px solid transparent;
