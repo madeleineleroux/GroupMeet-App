@@ -2,12 +2,8 @@ import Navbar from 'react-bootstrap/Navbar'
 import React, { Component } from 'react'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
 import { Button } from 'react-bootstrap';
 import {withRouter} from 'react-router-dom'
-import Spinner from "react-bootstrap/Spinner";
-import { Accounts } from 'meteor/accounts-base';
-import { Route, Switch } from 'react-router-dom';
 import { Tracker } from 'meteor/tracker';
 
 class NavbarB extends Component {
@@ -65,23 +61,11 @@ class NavbarB extends Component {
                             <Nav.Link href="/group">Group Schedule</Nav.Link>
                             <Nav.Link href="/calendar">My Schedule</Nav.Link>
                             <Nav.Link href="/tasks">Tasks</Nav.Link>
-
-
-
-                                {/*Dropdown*/}
-                            {/* <NavDropdown title="Tools" id="collasible-nav-dropdown">
-                                <NavDropdown.Divider />
-                            </NavDropdown> */}
-
                             </Nav>
                             <Nav>
                             {name}
                             {button}
-                            {/* <Button variant="outline-success" onClick={this.handleLogout}>Logout</Button> */}
                             </Nav>
-                            {/* Tab at the very right */}
-                            {/* Modal button */}
-
                         </Navbar.Collapse>
                     </Navbar>
                 </Container>
