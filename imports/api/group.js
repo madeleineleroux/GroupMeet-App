@@ -16,6 +16,7 @@ Meteor.methods({
             let start = (moment().startOf('week').format());
             let secondWeek = (moment().add(1, 'weeks').startOf('week').format());
 
+
             if (GroupSchedule.find({date: start, group: group}).count() === 0) {
                 const allHours = booleanHours();
                 const gsInitState = Object.assign({}, allHours, {date: start, group: group, submitted: []});

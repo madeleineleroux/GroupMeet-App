@@ -45,13 +45,15 @@ Meteor.methods({
             Availability.insert(userInitState);
         }
 
+        let result = Availability.find({user: Meteor.userId(), date:start}).fetch()[0];
+
         let nextWeek = moment().add(1, 'week').startOf('week').format();
         if (Availability.find({user: Meteor.userId(), date: nextWeek}).count() === 0) {
             const userSecondState = Object.assign({}, initState, {user: Meteor.userId(), date: nextWeek});
             Availability.insert(userSecondState);
         }
 
-        return Availability.find({user: Meteor.userId()}).fetch()[0];
+        return result;
     },
     nextWeekAvailability(currWeek) {
         let nextWeek = moment(currWeek.date, "YYYYMDD").add(1, 'week').startOf('week').format();

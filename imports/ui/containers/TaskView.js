@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import Container from "react-bootstrap/Container";
 import TaskGroup from "../components/TaskView/TaskGroup";
 import { withTracker } from 'meteor/react-meteor-data';
 import { Meteor } from 'meteor/meteor';
-
-//https://codebrahma.com/reactive-subscriptions-in-meteor/
-
 
 class TaskView extends Component {
     constructor(props) {

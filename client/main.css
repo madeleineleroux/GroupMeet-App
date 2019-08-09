@@ -713,3 +713,19 @@ html .modal-footer {
     display: flex;
     justify-content: center;
 }
+
+#clickLeft:hover {
+    color: #E2E2E2;
+    border-top: 12px solid transparent;
+    border-left: 25px solid #E2E2E2;
+    border-bottom: 12px solid transparent;
+    cursor: auto;
+}
+
+#clickRight:hover {
+    color: #E2E2E2;
+    border-top: 12px solid transparent;
+    border-right: 25px solid #E2E2E2;
+    border-bottom: 12px solid transparent;
+    cursor: auto;
+}
