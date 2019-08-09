@@ -22,11 +22,13 @@ class TaskInputForm extends React.Component {
         this.setState( {
             body: e.target.value
         })
-    }
+    };
 
     submitTask() {
         const input = this.taskInput.current.value;
-        this.props.addTask(input, this.props.groupMember, uuid.v4());
+        if (input.trim().length > 0) {
+            this.props.addTask(input, this.props.groupMember, uuid.v4());
+        }
         this.handleReset();
     };
 
