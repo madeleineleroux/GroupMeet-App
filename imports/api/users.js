@@ -12,7 +12,7 @@ if (Meteor.isServer) {
 }
 Meteor.methods({
     editTaskText(id, member, text) {
-        Meteor.users.update({ _id: member, "tasks.taskId": id }, { $set: {"profile.tasks.$.description" : text}});
+        Meteor.users.update({ _id: member, "profile.tasks.taskId": id }, { $set: {"profile.tasks.$.description" : text}});
         return;
     },
     addTask(memberId, task) {
