@@ -12,21 +12,7 @@ import Spinner from "react-bootstrap/Spinner";
 class OverviewView extends Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     group: null
-        // }
     }
-
-    // componentDidMount() {
-    //     let context = this;
-    //     Tracker.autorun(function(){
-    //         let currGroup = Meteor.user();
-    //         if (currGroup != undefined) {
-    //             context.setState({ group: currGroup});
-    //             console.log(currGroup);
-    //         }
-    //     });
-    // }
 
     render() {
         let user_id = Meteor.userId();
@@ -56,30 +42,58 @@ class OverviewView extends Component {
     }
 }
 
-// export const OverviewTaskTracker = withTracker(({ groupMembers }) => {
-//     Meteor.subscribe('users_tasks');
-//     const handle = Meteor.subscribe('users_tasks');
-//     const isReady = handle.ready();
-//
-//     if (!isReady) {
-//         return {
-//             userTasks: groupMembers
-//         };
-//     } else {
-//         const allUsers = Users.find({});
-//         let userObj = {};
-//
-//         allUsers.forEach((user => {
-//             userObj[user._id] = {
-//                 tasks: user.tasks
-//             }
-//         }));
-//         return {userTasks: userObj};
-//     }
-// })(OverviewView);
+
+export const overTracker = withTracker(({ groupMembers }) => {
+    Meteor.subscribe('tasks');
+    const handle = Meteor.subscribe('tasks');
+    const isReady = handle.ready();
+    let userObj = {};
+
+    if (isReady) {
+        let group = Meteor.users.find({_id: Meteor.userId()}).fetch()[0];
+
+        if (typeof group != "undefined") {
+            //get all the members in the group
+            group = group.profile.group;
+            const allUsers = Meteor.users.find({"profile.group" : group});
+
+            // get just the member ids
+            let listOfUsers = [];
+
+            allUsers.forEach(user => {
+                listOfUsers.push(user._id)
+            });
+
+            //get all the tasks
+            listOfUsers.map( user => {
+                let info =  Meteor.users.find({_id: user}).fetch()[0];
+                userObj[user] = {
+                    tasks: info.profile.tasks,
+                    group: group,
+                    name: info.profile.name,
+                    avatar: info.profile.avatar
+                };
+            });
+        }
+    }
+
+    Object.size = function(obj) {
+        var size = 0, key;
+        for (key in obj) {
+            if (obj.hasOwnProperty(key)) size++;
+        }
+        return size;
+    };
+
+// Get the size of an object
+    var size = Object.size(userObj);
+    if (size) return {groupMembers: userObj};
+    return {groupMembers: groupMembers};
+})(OverviewView);
 
 const mapStateToProps = state => ({
     groupMembers: state.TaskReducer
 });
 
-export default connect(mapStateToProps)(OverviewView);
+
+export default connect(mapStateToProps, null)(overTracker);
