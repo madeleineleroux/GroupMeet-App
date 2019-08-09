@@ -4,7 +4,6 @@ import {withTracker} from "meteor/react-meteor-data";
 import {Meteor} from "meteor/meteor";
 import GroupSchedule from "../../../api/group";
 import {connect} from "react-redux";
-import Tracker from 'tracker-component';
 import Spinner from "react-bootstrap/Spinner";
 import WeekFooter from "./WeekFooter";
 

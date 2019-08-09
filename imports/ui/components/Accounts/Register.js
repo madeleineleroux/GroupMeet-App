@@ -103,6 +103,7 @@ class Register extends React.Component {
                 <div className="allRegister">
                     <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
                     <h2 id="register" className = 'loginRedirect'>Register</h2>
+                    <div>
                     <Form onSubmit={this.onSubmit} className = 'loginForm' id="registerForm">
                         <FormGroup id="regFG">
                             <Label id="refLabFirst" for="exampleName">Name</Label>
@@ -119,6 +120,7 @@ class Register extends React.Component {
                             </p>
                         </FormGroup>
                     </Form>
+                    </div>
 
 
                     <Modal show={this.state.show} onHide={this.handleClose} >

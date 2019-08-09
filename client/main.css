@@ -696,3 +696,11 @@ html .modal-footer {
     background-color: #124E78;
     border-color: #124E78;
 }
+
+#groupBusyCell {
+    background-color: #b8d4d8;
+}
+
+#groupBusyCell:hover {
+    background-color: #1CCAD8;
+}

@@ -20,9 +20,9 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="allRegister">
                 <Helmet bodyAttributes={{style: 'background-color : #E2E2E2'}}/>
-                <h2 id="loginHeader" className = 'loginRedirect'>Sign In</h2>
+                <h2 id="register" className = 'loginRedirect'>Sign In</h2>
                 <div id="login">
                 <Form onSubmit={this.onSubmit} className = 'loginForm'>
                     <FormGroup>
