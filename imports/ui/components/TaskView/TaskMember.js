@@ -33,6 +33,45 @@ const TaskMember = ({tasksByIds, tasks, name, idKey}) => {
             case 'BEAR':
                 ending ='Bear.png';
                 break;
+            case 'GIRAFFE':
+                ending = "Giraffe.png";
+                break;
+            case 'SQUID':
+                ending = "Squid.png";
+                break;
+            case 'BLUE_FISH':
+                ending = "Blue_Fish.png";
+                break;
+            case 'BUNNY':
+                ending = "Bunny.png";
+                break;
+            case 'CRAB':
+                ending = "crab.png";
+                break;
+            case 'DUCK':
+                ending ='Duck.png';
+                break;
+            case 'ELEPHANT':
+                ending = "Elephant.png";
+                break;
+            case 'FLAMINGO':
+                ending = "Flamingo.png";
+                break;
+            case 'JELLYFISH':
+                ending = "Jellyfish.png";
+                break;
+            case 'LION':
+                ending = "Lion.png";
+                break;
+            case 'TIGER':
+                ending = "Tiger.png";
+                break;
+            case 'YELLOW_FISH':
+                ending ='Yellow_Fish.png';
+                break;
+            case 'ZEBRA':
+                ending ='Zebra.png';
+                break;
             default:
                 ending = "BearFace.png";
                 break;
