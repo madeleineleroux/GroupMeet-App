@@ -48,12 +48,14 @@ class Week extends Component {
 
         return (
             <div className="groupDiv">
-                <div id={weekLine ? "noClick" : "clickRight"}className="triangle-left triangle" onClick={this.prevWeek}></div>
+                <div id={typeof this.props.group === undefined ? "unloaded" : weekLine ? "noClick" : "clickRight"}
+                     className="triangle-left triangle" onClick={this.prevWeek}></div>
                 <div id="table">
                     <h1 id="month">{month}</h1>
                     <WeekTable moment={currMoment} week={this.props.week} group={this.props.gs}/>
                 </div>
-                <div id={weekLine ? "clickLeft" : "noClick"} className="triangle-right triangle" onClick={this.nextWeek}></div>
+                <div id={typeof this.props.group === undefined ? "unloaded" : weekLine ? "clickLeft" : "noClick"}
+                     className="triangle-right triangle" onClick={this.nextWeek}></div>
                 <WeekFooter group={this.props.gs} week={this.props.week}/>
             </div>
         )

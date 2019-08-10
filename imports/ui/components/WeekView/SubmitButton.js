@@ -15,6 +15,7 @@ class SubmitButton extends Component {
         this.handleClose = this.handleClose.bind(this);
     }
 
+
     handleClose() {
         this.setState({ show: false });
     }
