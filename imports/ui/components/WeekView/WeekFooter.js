@@ -2,7 +2,7 @@ import React from 'react';
 import ResetCalButton from "./ResetCalButton";
 import SubmitButton from './SubmitButton'
 
-const WeekFooter = (date) => {
+const WeekFooter = (date, group) => {
     let weekLine;
     let moment = require('moment/moment');
     moment.defaultFormat = "YYYYMMDD";
@@ -15,6 +15,8 @@ const WeekFooter = (date) => {
     } else {
         weekLine = "Current Week";
     }
+
+    if (typeof group === 'undefined') return <div></div>
 
     return (
         <div>
