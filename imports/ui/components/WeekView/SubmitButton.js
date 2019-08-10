@@ -31,6 +31,7 @@ class SubmitButton extends Component {
     }
 
     render() {
+
         return (<div className="resetDiv">
             <Button  id="footer-button"  onClick={this.handleSubmitSchedule}> Submit </Button>
 
