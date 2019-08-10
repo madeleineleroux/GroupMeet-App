@@ -16,7 +16,17 @@ const WeekFooter = (date, group) => {
         weekLine = "Current Week";
     }
 
-    if (typeof group === 'undefined') return <div></div>
+    Object.size = function(obj) {
+        var size = 0, key;
+        for (key in obj) {
+            if (obj.hasOwnProperty(key)) return true
+        }
+        return false;
+    };
+
+    var size = Object.size(group);
+
+    if (size) return <div></div>
 
     return (
         <div>

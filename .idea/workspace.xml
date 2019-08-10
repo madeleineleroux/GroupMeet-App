@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8eb9e2e1-2377-4954-91b2-88867b2b50a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/api/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/components/WeekView/WeekFooter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +21,34 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/WeekView/Week.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-322">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/WeekView/WeekFooter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/api/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
+            <state relative-caret-position="-74">
               <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -40,16 +64,6 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/avatars/crab.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/avatars/Lizard.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/avatars/Pig.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
@@ -83,6 +97,8 @@
       <list>
         <option value="$PROJECT_DIR$/client/main.css" />
         <option value="$PROJECT_DIR$/imports/api/users.js" />
+        <option value="$PROJECT_DIR$/imports/ui/components/WeekView/Week.js" />
+        <option value="$PROJECT_DIR$/imports/ui/components/WeekView/WeekFooter.js" />
       </list>
     </option>
   </component>
@@ -247,7 +263,23 @@
               <item name="imports" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="OverviewView" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="GroupMeet-App" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/436/GroupMeet-App" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="imports" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="TaskView" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="GroupMeet-App" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/436/GroupMeet-App" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="imports" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="WeekView" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="GroupMeet-App" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -293,10 +325,18 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Fix spinner in week">
+      <created>1565401018178</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565401018178</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="751000" />
+    <option name="totallyTimeSpent" value="1343000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="810" extended-state="0" />
@@ -313,9 +353,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.27710843" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49964765" visible="true" weight="0.33844012" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003524" side_tool="true" visible="true" weight="0.33844012" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49964765" weight="0.27576602" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4989429" visible="true" weight="0.33844012" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010571" side_tool="true" visible="true" weight="0.33844012" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -357,6 +397,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix spinner in week" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix spinner in week" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/imports/api/publish.js">
@@ -442,10 +486,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/api/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
+        <state relative-caret-position="-74">
           <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/WeekView/WeekTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="23" selection-start-line="23" selection-end-line="25" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/WeekView/Week.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-322">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/WeekView/WeekFooter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
