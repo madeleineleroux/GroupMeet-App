@@ -729,3 +729,18 @@ html .modal-footer {
     border-bottom: 12px solid transparent;
     cursor: auto;
 }
+
+#unloaded {
+    cursor: auto;
+    border-top: 12px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 12px solid transparent;
+
+}
+
+#unloaded:hover {
+    cursor: auto;
+    border-top: 12px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 12px solid transparent;
+}
