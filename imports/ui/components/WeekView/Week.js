@@ -54,7 +54,7 @@ class Week extends Component {
                     <WeekTable moment={currMoment} week={this.props.week} group={this.props.gs}/>
                 </div>
                 <div id={weekLine ? "clickLeft" : "noClick"} className="triangle-right triangle" onClick={this.nextWeek}></div>
-                <WeekFooter date={this.props.availability.date}/>
+                <WeekFooter group={this.props.gs} date={this.props.availability.date}/>
             </div>
         )
     }
