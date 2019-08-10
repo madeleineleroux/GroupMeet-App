@@ -6,6 +6,8 @@ import GroupSchedule from "../../../api/group";
 import {connect} from "react-redux";
 import Spinner from "react-bootstrap/Spinner";
 import WeekFooter from "./WeekFooter";
+import ResetCalButton from "./ResetCalButton";
+import SubmitButton from "./SubmitButton";
 
 
 class Week extends Component {
@@ -54,7 +56,14 @@ class Week extends Component {
                     <WeekTable moment={currMoment} week={this.props.week} group={this.props.gs}/>
                 </div>
                 <div id={weekLine ? "clickLeft" : "noClick"} className="triangle-right triangle" onClick={this.nextWeek}></div>
-                <WeekFooter group={this.props.gs} date={this.props.availability.date}/>
+                <div>
+                    {/*<h4>{weekLine}</h4>*/}
+                    <h5 id="footer">Select the times you are busy. </h5>
+                    <div id="footer-div">
+                        <ResetCalButton/>
+                        <SubmitButton />
+                    </div>
+                </div>
             </div>
         )
     }
